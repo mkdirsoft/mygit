@@ -14,6 +14,8 @@ public class HxArea implements java.io.Serializable {
 	private String areaCode;
 	private String areaName;
 	private Integer aa;
+	private Integer aa2;
+	private Integer aa1;
 
 	public HxArea() {
 	}
