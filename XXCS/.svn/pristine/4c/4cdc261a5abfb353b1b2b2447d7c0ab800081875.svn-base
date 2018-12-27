@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>飞利信内部控制系统</title>
+
+        <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="coder" />
+
+        <link rel="icon" type="image/x-icon" href="/view/flxoa/page/nk/public/img/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/css/font.css" />
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/themify-icons/themify-icons.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/icofont/css/icofont.css" />
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/css/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/pages/chart/radial/css/radial.css" media="all"> 
+        
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/pages/data-table/css/buttons.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/weather-icons/css/weather-icons.min.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/weather-icons/css/weather-icons-wind.min.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/SVG-animated/svg-weather.css">
+
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/css/public.css" />
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/oyxq/css/oy.css" />
+        <link href="/view/flxoa/page/nk/files/assets/pages/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css" type="text/css" rel="stylesheet"/>
+        <link href="/view/flxoa/page/nk/files/assets/pages/jquery.filer/css/jquery.filer.css" type="text/css" rel="stylesheet"/>
+        <style type="text/css">
+            .jFiler-theme-default .jFiler-item { margin-bottom: 1px; padding:2px; }
+            .jFiler-theme-default .jFiler-item .jFiler-item-others{ margin-left: 15px; }
+            .jFiler-theme-default .jFiler-item .jFiler-item-icon{ font-size: 16px; float: left;}
+            .jFiler-theme-default .jFiler-item .Filer-item-info { float: left;}
+            .jFiler-theme-default .jFiler-item .jFiler-item-title{ float: left; }
+            .jFiler-theme-default .jFiler-item .jFiler-item-others{  float: left; }
+            .jFiler-theme-default .jFiler-item-assets a { background:transparent; border: 0; padding: 1px; }
+            .jFiler-theme-default li{ list-style: none; }    
+        </style>
+    </head>
+
+    <body themebg-pattern="pattern1" class="index-body">
+        <div id="pcoded" class="pcoded" nav-type="st2" theme-layout="vertical" vertical-placement="left" vertical-layout="wide" pcoded-device-type="desktop" vertical-nav-type="expanded" vertical-effect="shrink" vnavigation-view="view1" fream-type="theme1" sidebar-img="true" sidebar-img-type="img1" layout-type="img">
+            <div class="pcoded-overlay-box"></div>
+            <div class="pcoded-container navbar-wrapper">
+                <nav class="navbar header-navbar pcoded-header" header-theme="theme1" pcoded-header-position="fixed">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-logo">
+                            <a class="mobile-menu" id="mobile-collapse" href="index.html#!">
+                                <i class="ti-menu"></i>
+                            </a>
+                            <div class="mobile-search">
+                                <div class="header-search">
+                                    <div class="main-search morphsearch-search">
+                                        <div class="input-group">
+                                            <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                            <input type="text" class="form-control" placeholder="Enter Keyword">
+                                            <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="index.html">
+                                <img class="img-fluid" src="/view/flxoa/page/nk/files/assets/images/logo.png" alt="Theme-Logo" style="height: 32px;" />
+                            </a>
+                            <a class="mobile-options">
+                                <i class="ti-more"></i>
+                            </a>
+                        </div>
+                        <div class="navbar-container container-fluid">
+                            <ul class="nav-left">
+                                <li>
+                                    <div class="sidebar_toggle">
+                                        <a href="javascript:void(0)"><i class="ti-menu"></i></a>
+                                    </div>
+                                </li>
+                                <li class="header-search">
+                                    <div class="main-search morphsearch-search">
+                                        <div class="input-group">
+                                            <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="index.html#!" onclick="javascript:toggleFullScreen()">
+                                        <i class="ti-fullscreen"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav-right">
+                                <li class="header-notification">
+                                    <a href="index.html#!">
+                                        <i class="ti-bell"></i>
+                                        <span class="badge bg-c-pink"></span>
+                                    </a>
+                                    <ul class="show-notification">
+                                        <li>
+                                            <h6>Notifications</h6>
+                                            <label class="label label-danger">New</label>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">John Doe</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Joseph William</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Sara Soudein</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="index.html#!" class="displayChatbox">
+                                        <i class="ti-comments"></i>
+                                        <span class="badge bg-c-green"></span>
+                                    </a>
+                                </li>
+                                <li class="user-profile header-notification">
+                                    <a href="index.html#!">
+                                        <img src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                        <span>John Doe</span>
+                                        <i class="ti-angle-down"></i>
+                                    </a>
+                                    <ul class="show-notification profile-notification">
+                                        <li>
+                                            <a href="index.html#!">
+                                                <i class="ti-settings"></i> Settings
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="user-profile.html">
+                                                <i class="ti-user"></i> Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="email-inbox.html">
+                                                <i class="ti-email"></i> My Messages
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="auth-lock-screen.html">
+                                                <i class="ti-lock"></i> Lock Screen
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="auth-normal-sign-in.html">
+                                                <i class="ti-layout-sidebar-left"></i> Logout
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="sidebar" class="users p-chat-user showChat">
+                    <div class="had-container">
+                        <div class="card card_main p-fixed users-main">
+                            <div class="user-box">
+                                <div class="chat-search-box">
+                                    <a class="back_friendlist">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </a>
+                                    <div class="right-icon-control">
+                                        <input type="text" class="form-control  search-text" placeholder="Search Friend" id="search-friends">
+                                        <div class="form-icon">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-friend-list">
+                                    <div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
+                                        <a class="media-left" href="index.html#!">
+                                            <img class="media-object img-radius img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image ">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Josephin Doe</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
+                                        <a class="media-left" href="index.html#!">
+                                            <img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Lary Doe</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
+                                        <a class="media-left" href="index.html#!">
+                                            <img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Alice</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
+                                        <a class="media-left" href="index.html#!">
+                                            <img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Alia</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
+                                        <a class="media-left" href="index.html#!">
+                                            <img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Suzen</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showChat_inner">
+                    <div class="media chat-inner-header">
+                        <a class="back_chatBox">
+                            <i class="fa fa-chevron-left"></i> Josephin Doe
+                        </a>
+                    </div>
+                    <div class="media chat-messages">
+                        <a class="media-left photo-table" href="index.html#!">
+                            <img class="media-object img-radius img-radius m-t-5" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                        </a>
+                        <div class="media-body chat-menu-content">
+                            <div class="">
+                                <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+                                <p class="chat-time">8:20 a.m.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media chat-messages">
+                        <div class="media-body chat-menu-reply">
+                            <div class="">
+                                <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+                                <p class="chat-time">8:20 a.m.</p>
+                            </div>
+                        </div>
+                        <div class="media-right photo-table">
+                            <a href="index.html#!">
+                                <img class="media-object img-radius img-radius m-t-5" src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="chat-reply-box p-b-20">
+                        <div class="right-icon-control">
+                            <input type="text" class="form-control search-text" placeholder="Share Your Thoughts">
+                            <div class="form-icon">
+                                <i class="fa fa-paper-plane"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcoded-main-container" style="margin-top: 56px;">
+                    <div class="pcoded-wrapper">
+                        <nav class="pcoded-navbar" navbar-theme="theme1" active-item-theme="theme5" sub-item-theme="theme2" active-item-style="style0" pcoded-navbar-position="fixed">
+                            <div class="sidebar_toggle">
+                                <a href="index.html#"><i class="icon-close icons"></i></a>
+                            </div>
+                            <div class="pcoded-inner-navbar main-menu">
+                                <!--<div class="pcoded-navigation-label" menu-title-theme="theme6">Navigation</div>-->
+                                <ul class="pcoded-item pcoded-left-item" id="navi">
+                                   
+                                </ul>
+                            </div>
+                        </nav>
+                        
+                        <div class="pcoded-content">
+                            <div class="pcoded-inner-content">
+
+                                <div class="main-body">
+                                    <div class="page-wrapper">
+
+                                        <div class="page-body">                                                                                            
+                                            <div class="row" id="syFiveWrap">
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2dot4-oy">
+                                                    <div class="card bg-c-blue order-card">
+                                                        <div class="card-block">
+                                                            <h6 class="m-b-20">合同额</h6>
+                                                            <h2 class="text-right"><i class="fa fa-file-text f-left"></i><span class="all_contract_amount"></span></h2>
+                                                            <p class="m-b-0">本月<span class="f-right contract_amount"></span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2dot4-oy">
+                                                    <div class="card bg-c-green order-card">
+                                                        <div class="card-block">
+                                                            <h6 class="m-b-20">回款</h6>
+                                                            <h2 class="text-right"><i class="fa fa-retweet f-left"></i><span class="all_return_money"></span></h2>
+                                                            <p class="m-b-0">本月<span class="f-right return_money"></span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2dot4-oy">
+                                                    <div class="card bg-c-yellow order-card">
+                                                        <div class="card-block">
+                                                            <h6 class="m-b-20">费用</h6>
+                                                            <h2 class="text-right"><i class="fa fa-credit-card-alt f-left"></i><span class="all_cost"></span></h2>
+                                                            <p class="m-b-0">本月<span class="f-right cost"></span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2dot4-oy">
+                                                    <div class="card bg-c-pink order-card">
+                                                        <div class="card-block">
+                                                            <h6 class="m-b-20">中标</h6>
+                                                            <h2 class="text-right"><i class="fa fa-gavel f-left"></i><span class="all_bid_money"></span></h2>
+                                                            <p class="m-b-0">本月<span class="f-right bid_money"></span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2dot4-oy">
+                                                    <div class="card bg-c-orenge order-card">
+                                                        <div class="card-block">
+                                                            <h6 class="m-b-20">储备</h6>
+                                                            <h2 class="text-right"><i class="fa fa-database f-left"></i><span class="all_reserve"></span></h2>
+                                                            <p class="m-b-0">本月<span class="f-right reserve"></span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                            
+                                            <div class="row">
+                                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                    <div class="card widget-statstic-card borderless-card pay-borrow-card pay-borrow-card1">
+                                                        <div class="card-header card-header-small-oy">
+                                                            <div class="card-header-left">
+                                                                <h5>我的报销</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block card-block-small">
+                                                            <i class="fa fa-calendar st-icon bg-primary"></i>
+                                                            <div class="text-left">
+                                                                <h3 class="clearfix"><em>本年</em><span></span></h3>
+                                                                <p class="p-t-10 m-b-0 text-muted clearfix"><em>本月</em><span></span></p>
+                                                                <div class="clearfix"><em>未打款</em><span class="f-left bg-success">开发中</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                                    <div class="card widget-statstic-card borderless-card pay-borrow-card pay-borrow-card2">
+                                                        <div class="card-header card-header-small-oy">
+                                                            <div class="card-header-left">
+                                                                <h5>我的借款</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block card-block-small">
+                                                            <i class="fa fa-users st-icon bg-warning txt-lite-color"></i>
+                                                            <div class="text-left">
+                                                                <h3 class="clearfix"><em>本年</em><span></span></h3>
+                                                                <p class="p-t-10 m-b-0 text-muted clearfix"><em>本月</em><span></span></p>
+                                                                <div class="clearfix"><em>未还</em><span class="f-left bg-danger">开发中</span></div>                                                        
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="card weather-card-oy">
+                                                        <div class="card-header card-header-small-oy">
+                                                            <h5>近期天气</h5>
+                                                            <div class="card-header-right">
+                                                                <ul class="list-unstyled card-option">
+                                                                    <li><i class="fa fa-chevron-left"></i></li>
+                                                                    <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                    <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                    <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                    <li><i class="fa fa-times close-card"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block card-block-small p-b-10">                                                           
+                                                            <div class="weather-wrap">
+                                                                <div class="weather-today">
+                                                                                                                           天气数据正在拼命加载中，请稍后~~~                                                                    
+                                                                </div>          
+                                                                <div class="weather-future">
+                                                                    <ul class="clearfix">
+                                                                        
+                                                                    </ul>
+                                                                </div>  
+                                                                <div style="clear: both;"></div>
+                                                            </div>
+                                                        </div>                                                        
+                                                    </div>                                                    
+                                                </div>                                                                                                                                                                                            
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                                    <div class="card">
+                                                        <div class="card-header card-header-small-oy">
+                                                            <h5><a href="/flxoa/signin/goShow">我的考勤</a></h5>
+                                                            <div class="card-header-right">
+                                                                <ul class="list-unstyled card-option">
+                                                                    <li><i class="fa fa-chevron-left"></i></li>
+                                                                    <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                    <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                    <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                    <li><i class="fa fa-times close-card"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block card-block-small p-b-0">                                                           
+                                                            <div id="syMyAttendanceDiv" style="width: 100%;height: 276px;"></div>
+                                                        </div>
+                                                        <!--<div class="card-footer card-footer-small-oy p-t-0">
+                                                            <button class="btn btn-primary btn-sm f-right">更多</button>
+                                                        </div>-->
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                                                    <div class="card">
+                                                        <div class="card-header card-header-small-oy">
+                                                            <h5>我的申请退回（总计：<a class="sy-my-applyBack-total"></a>）</h5>                                                           
+                                                            <div class="card-header-right">
+                                                                <ul class="list-unstyled card-option">
+                                                                    <li><i class="fa fa-chevron-left"></i></li>
+                                                                    <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                    <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                    <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                    <li><i class="fa fa-times close-card"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block card-block-small p-b-0">
+                                                            <ul class="basic-list list-icons m-t-20 sy-my-project" id="sy-my-applyBack">                                                                
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card-footer card-footer-small-oy p-t-0">
+                                                            <button class="btn btn-primary btn-sm f-right" id="sy-my-applyBack-more">更多</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row" id="syReturnMoneyWrap">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                    <div class="card">
+                                                        <div class="card-header card-header-small-oy">
+                                                            <h5>各中心每月回款情况统计</h5>                                                           
+                                                            <div class="card-header-right">
+                                                                <ul class="list-unstyled card-option">
+                                                                    <li><i class="fa fa-chevron-left"></i></li>
+                                                                    <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                    <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                    <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                    <li><i class="fa fa-times close-card"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block card-block-small p-b-0">
+                                                            <div id="syReturnMoneyDiv" style="width: 100%;height: 300px;"></div>
+                                                        </div>
+                                                        <!--<div class="card-footer card-footer-small-oy p-t-0">
+                                                            <button class="btn btn-primary btn-sm f-right">更多</button>
+                                                        </div>-->
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                            
+                                            <div class="row" id="syProjStageWrap">
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="card">
+                                                        <div class="card-header card-header-small-oy">
+                                                            <h5>按项目阶段查询（总计：<a class="syProjStageWrap-total"></a>）</h5>
+                                                            <div class="card-header-right">
+                                                                <ul class="list-unstyled card-option">
+                                                                    <li><i class="fa fa-chevron-left"></i></li>
+                                                                    <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                    <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                    <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                    <li><i class="fa fa-times close-card"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block">
+                                                            <ul class="xmgl-multi-tab-tit clearfix">
+                                                                <li class="proj_before_set">
+                                                                    <i><img src="/view/flxoa/page/nk/oyxq/img/xmgl-tab-1.png" alt="未立项" /></i>
+                                                                    <span></span>
+                                                                    <a>未立项</a>
+                                                                    <em></em>
+                                                                </li>
+                                                                <li class="proj_after_set">
+                                                                    <i><img src="/view/flxoa/page/nk/oyxq/img/xmgl-tab-2.png" alt="已立项" /></i>
+                                                                    <span></span>
+                                                                    <a>已立项</a>
+                                                                    <em></em>
+                                                                </li>
+                                                                <li class="proj_bid_signup">
+                                                                    <i><img src="/view/flxoa/page/nk/oyxq/img/xmgl-tab-3.png" alt="投标报名中" /></i>
+                                                                    <span></span>
+                                                                    <a>投标报名中</a>
+                                                                    <em></em>
+                                                                </li>
+                                                                <li class="proj_bid_prepare">
+                                                                    <i><img src="/view/flxoa/page/nk/oyxq/img/xmgl-tab-4.png" alt="投标准备中" /></i>
+                                                                    <span></span>
+                                                                    <a>投标准备中</a>
+                                                                    <em></em>
+                                                                </li>
+                                                                <li class="proj_bidding">
+                                                                    <i><img src="/view/flxoa/page/nk/oyxq/img/xmgl-tab-5.png" alt="投标中" /></i>
+                                                                    <span></span>
+                                                                    <a>投标中</a>
+                                                                    <em></em>
+                                                                </li>
+                                                                <li class="proj_bid_results">
+                                                                    <i><img src="/view/flxoa/page/nk/oyxq/img/xmgl-tab-6.png" alt="投标结果" /></i>
+                                                                    <span></span>
+                                                                    <a>投标结果</a>
+                                                                    <em></em>
+                                                                </li>
+                                                                <li class="proj_sign_contract">
+                                                                    <i><img src="/view/flxoa/page/nk/oyxq/img/xmgl-tab-7.png" alt="签合同" /></i>
+                                                                    <span></span>
+                                                                    <a>签合同</a>
+                                                                    <em></em>
+                                                                </li>
+                                                                <li class="proj_carry_out">
+                                                                    <i><img src="/view/flxoa/page/nk/oyxq/img/xmgl-tab-8.png" alt="实施" /></i>
+                                                                    <span></span>
+                                                                    <a>实施</a>
+                                                                    <em></em>
+                                                                </li>
+                                                                <li class="proj_operation">
+                                                                    <i><img src="/view/flxoa/page/nk/oyxq/img/xmgl-tab-9.png" alt="运维" /></i>
+                                                                    <span></span>
+                                                                    <a>运维</a>
+                                                                    <em></em>
+                                                                </li>
+                                                                <li class="proj_close">
+                                                                    <i><img src="/view/flxoa/page/nk/oyxq/img/xmgl-tab-10.png" alt="关闭" /></i>
+                                                                    <span></span>
+                                                                    <a>关闭</a>
+                                                                    <em></em>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                                    <div class="card">
+                                                        <div class="card-header card-header-small-oy bg-success">
+                                                            <h5 class="text-c-white-oy">我的项目（总计：<a class="sy-my-project-total"></a>）</h5>
+                                                            <div class="card-header-right">
+                                                                <ul class="list-unstyled card-option">
+                                                                    <li><i class="fa fa-chevron-left text-c-white-oy"></i></li>
+                                                                    <li><i class="fa fa-window-maximize full-card text-c-white-oy"></i></li>
+                                                                    <li><i class="fa fa-minus minimize-card text-c-white-oy"></i></li>
+                                                                    <li><i class="fa fa-refresh reload-card text-c-white-oy"></i></li>
+                                                                    <li><i class="fa fa-times close-card text-c-white-oy"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block card-block-small p-b-0">
+                                                            <ul class="basic-list list-icons m-t-20 sy-my-project" id="sy-my-project">
+                                                                <!--<li>
+                                                                    <h6>我的项目</h6>
+                                                                    <p><a>测试项目1测试项目1测试项目1</a><i class="icofont icofont-ui-love-add text-c-blue" data-toggle="tooltip" data-placement="right" title="" data-original-title="添加关注"></i><span>部门经理审核</span></p>
+                                                                </li>
+                                                                <li>
+                                                                    <h6>我的项目</h6>
+                                                                    <p><a>测试项目2</a><i class="icofont icofont-ui-love-add text-c-blue" data-toggle="tooltip" data-placement="right" title="" data-original-title="添加关注"></i><span>部门经理审核</span></p>
+                                                                </li>
+                                                                <li>
+                                                                    <h6>我的项目</h6>
+                                                                    <p><a>测试项目3</a><i class="icofont icofont-ui-love-add text-c-blue" data-toggle="tooltip" data-placement="right" title="" data-original-title="添加关注"></i><span>部门经理审核</span></p>
+                                                                </li>-->
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card-footer card-footer-small-oy p-t-0">
+                                                            <button class="btn btn-primary btn-sm f-right" id="sy-my-project-more">更多</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                                    <div class="card">
+                                                        <div class="card-header card-header-small-oy bg-success">
+                                                            <h5 class="text-c-white-oy">我的关注（总计：<a class="sy-my-focus-total"></a>）</h5>
+                                                            <div class="card-header-right">
+                                                                <ul class="list-unstyled card-option">
+                                                                    <li><i class="fa fa-chevron-left text-c-white-oy"></i></li>
+                                                                    <li><i class="fa fa-window-maximize full-card text-c-white-oy"></i></li>
+                                                                    <li><i class="fa fa-minus minimize-card text-c-white-oy"></i></li>
+                                                                    <li><i class="fa fa-refresh reload-card text-c-white-oy"></i></li>
+                                                                    <li><i class="fa fa-times close-card text-c-white-oy"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block card-block-small p-b-0">
+                                                            <ul class="basic-list list-icons m-t-20 sy-my-project" id="sy-my-focus">
+                                                                <!--<li>
+                                                                    <h6>我的关注</h6>
+                                                                    <p><a>测试项目1测试项目1测试项目1</a><i class="icofont icofont-ui-love-remove text-c-blue" data-toggle="tooltip" data-placement="right" title="" data-original-title="取消关注"></i><span>部门经理审核</span></p>
+                                                                </li>
+                                                                <li>
+                                                                    <h6>我的关注</h6>
+                                                                    <p><a>测试项目2</a><i class="icofont icofont-ui-love-remove text-c-blue" data-toggle="tooltip" data-placement="right" title="" data-original-title="取消关注"></i><span>部门经理审核</span></p>
+                                                                </li>
+                                                                <li>
+                                                                    <h6>我的关注</h6>
+                                                                    <p><a>测试项目3</a><i class="icofont icofont-ui-love-remove text-c-blue" data-toggle="tooltip" data-placement="right" title="" data-original-title="取消关注"></i><span>部门经理审核</span></p>
+                                                                </li>-->
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card-footer card-footer-small-oy p-t-0">
+                                                            <button class="btn btn-primary btn-sm f-right" id="sy-my-focus-more">更多</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                                                    <div class="card">
+                                                        <div class="card-header card-header-small-oy bg-success">
+                                                            <h5 class="text-c-white-oy">待审批&审核中（总计：<a class="sy-before-approval-total"></a>）</h5>
+                                                            <div class="card-header-right">
+                                                                <ul class="list-unstyled card-option">
+                                                                    <li><i class="fa fa-chevron-left text-c-white-oy"></i></li>
+                                                                    <li><i class="fa fa-window-maximize full-card text-c-white-oy"></i></li>
+                                                                    <li><i class="fa fa-minus minimize-card text-c-white-oy"></i></li>
+                                                                    <li><i class="fa fa-refresh reload-card text-c-white-oy"></i></li>
+                                                                    <li><i class="fa fa-times close-card text-c-white-oy"></i></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block card-block-small p-b-0">
+                                                            <ul class="basic-list list-icons m-t-20 sy-my-project" id="sy-before-approval">
+                                                                <!--<li>
+                                                                    <h6>我的项目</h6>
+                                                                    <p><a>测试项目1测试项目1测试项目1</a><i class="icofont icofont-ui-love-add text-c-blue" data-toggle="tooltip" data-placement="right" title="" data-original-title="添加关注"></i><span>部门经理审核</span></p>
+                                                                </li>
+                                                                <li>
+                                                                    <h6>我的项目</h6>
+                                                                    <p><a>测试项目2</a><i class="icofont icofont-ui-love-add text-c-blue" data-toggle="tooltip" data-placement="right" title="" data-original-title="添加关注"></i><span>部门经理审核</span></p>
+                                                                </li>
+                                                                <li>
+                                                                    <h6>我的项目</h6>
+                                                                    <p><a>测试项目3</a><i class="icofont icofont-ui-love-add text-c-blue" data-toggle="tooltip" data-placement="right" title="" data-original-title="添加关注"></i><span>部门经理审核</span></p>
+                                                                </li>-->
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card-footer card-footer-small-oy p-t-0">
+                                                            <button class="btn btn-primary btn-sm f-right" id="sy-before-approval-more">更多</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="styleSelector"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+       
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery/js/jquery.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/popper.js/js/popper.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/widget/excanvas.js"></script>
+
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+
+        <script src="/view/flxoa/page/nk/files/bower_components/modernizr/js/modernizr.js"></script>
+
+        <script src="/view/flxoa/page/nk/files/assets/js/SmoothScroll.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script> 
+        
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/data-table/js/jszip.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/data-table/js/pdfmake.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/data-table/js/vfs_fonts.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+        <script src="/view/flxoa/page/nk/files/bower_components/chart.js/js/Chart.js"></script> 
+        <!--script src="/view/flxoa/page/nk/files/assets/pages/widget/amchart/amcharts.js"></script>  
+        <script src="/view/flxoa/page/nk/files/assets/pages/widget/amchart/pie.js"></script>  
+        <script src="/view/flxoa/page/nk/files/assets/pages/widget/amchart/serial.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/widget/amchart/light.js"></script>-->    
+        
+        <script src="/view/flxoa/page/nk/files/bower_components/amcharts/amcharts.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/amcharts/pie.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/amcharts/serial.js"></script>        
+        <script src="/view/flxoa/page/nk/files/bower_components/amcharts/plugins/export/export.min.js"></script>
+        <link rel="stylesheet" href="/view/flxoa/page/nk/files/bower_components/amcharts/plugins/export/export.css" type="text/css" media="all" />
+        <script src="/view/flxoa/page/nk/files/bower_components/amcharts/themes/light.js"></script>
+
+        <script src="/view/flxoa/page/nk/files/assets/js/pcoded.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/navbar-image/vertical-layout.min.js"></script>
+            
+        <script src="/view/flxoa/page/nk/files/assets/pages/jquery.filer/js/jquery.filer.min.js"></script>
+        <script type="text/javascript" src="/view/flxoa/page/nk/public/js/ajaxfileupload.js"></script>
+                
+        <script src="/view/flxoa/page/nk/files/assets/icon/weather-icons/weather-custom.js"></script>
+    
+        <script src="/view/flxoa/page/nk/files/assets/pages/dashboard/custom-dashboard.js"></script>
+        <!--<script src="/view/flxoa/page/nk/files/assets/pages/dashboard/analytic-dashboard.js"></script>-->
+        <script src="/view/flxoa/page/nk/files/assets/js/script.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/app.js"></script>
+        <script src="/view/flxoa/page/nk/public/layer/layer.js"></script> 
+        <script src="/view/flxoa/page/nk/public/js/echarts.simple.min.js"></script>
+        <script src="/view/flxoa/page/nk/public/js/public.js"></script> 
+        <script src="/view/flxoa/page/nk/oyxq/js/oy.js"></script>
+        
+        
+        <script>  
+
+
+
+        $(function(){ 
+            //我的报销&我的借款
+           // myPayYear();
+           // myPayMonth();
+          //  myBorrowYear();
+          // myBorrowMonth();
+           // function myPayYear(){                                
+                $.ajax({
+                	type:"post",
+                	url:"/flxoa/homepage/showmymoney",
+                	async:true,
+                	dataType:"json",
+                	data:{
+                	    templateId:48,
+                	    dateType:2
+                	},
+                	success:function(data){
+                	    var myPayYear = data.sum;
+                	    myPayYear = formatMoney(myPayYear,2,"￥");
+                	    $(".pay-borrow-card1 .card-block .text-left h3 span").text(myPayYear);
+                	}
+                });
+          //  };
+           // function myPayMonth(){                                
+                $.ajax({
+                    type:"post",
+                    url:"/flxoa/homepage/showmymoney",
+                    async:true,
+                    dataType:"json",
+                    data:{
+                        templateId:48,
+                        dateType:1
+                    },
+                    success:function(data){
+                        var myPayMonth = data.sum;
+                        myPayMonth = formatMoney(myPayMonth,2,"￥");
+                        $(".pay-borrow-card1 .card-block .text-left p span").text(myPayMonth);
+                    }
+                });
+          // };
+           // function myBorrowYear(){                                
+                $.ajax({
+                    type:"post",
+                    url:"/flxoa/homepage/showmymoney",
+                    async:true,
+                    dataType:"json",
+                    data:{
+                        templateId:47,
+                        dateType:2
+                    },
+                    success:function(data){
+                        var myBorrowYear = data.sum;
+                        myBorrowYear = formatMoney(myBorrowYear,2,"￥");
+                        $(".pay-borrow-card2 .card-block .text-left h3 span").text(myBorrowYear);
+                    }
+                });
+           // };
+            //function myBorrowMonth(){                                
+                $.ajax({
+                    type:"post",
+                    url:"/flxoa/homepage/showmymoney",
+                    async:true,
+                    dataType:"json",
+                    data:{
+                        templateId:47,
+                        dateType:1
+                    },
+                    success:function(data){
+                        var myBorrowMonth = data.sum;
+                        myBorrowMonth = formatMoney(myBorrowMonth,2,"￥");
+                        $(".pay-borrow-card2 .card-block .text-left p span").text(myBorrowMonth);
+                    }
+                });
+            //};
+
+        	}); 
+        
+
+
+
+
+
+
+
+
+        
+            //定义变量-金额
+            var all_contract_amount;
+            var all_return_money;
+            var all_cost;
+            var all_bid_money;
+            var all_reserve;
+            var contract_amount;
+            var return_money;
+            var cost;
+            var bid_money;
+            var reserve;     
+            var syMyAttendanceData;
+            var syReturnMoneyData;            
+            
+            
+            //当前页索引
+            var nowPageIndex1 = 0;
+            
+            
+            //先删除session
+            sessionStorage.removeItem("approveStatus");
+            sessionStorage.removeItem("stateId");
+            sessionStorage.removeItem("myProjMore");
+            sessionStorage.removeItem("flag");            
+            sessionStorage.removeItem("more");      
+            
+            
+            //普通用户隐藏
+            $("#syFiveWrap").hide();
+            $("#syReturnMoneyWrap").hide();
+            $("#syProjStageWrap").hide();
+            //根据权限显示按钮
+            var listPath = GetUrlRelativePath();
+            $.ajax({
+                type: "get",
+                url: "/flxoa/function/getbuttonid",
+                data: {
+                    "listPath":listPath
+                },
+                async: true,
+                //默认是true  ajax请求是异步的
+                success: function(data) {
+                    //console.info(data);
+                    if("" != data){
+                        if(-1 != data.indexOf(",")){
+                            var temp = data.split(",");
+                            var i = 0;
+                            for(i;i<temp.length;i++){
+                                //$("#btnSave").css("visibility","hidden");
+                                //$("#"+temp[i]).css("visibility","visible");
+                                $(temp[i]).show();
+                                if(temp[i] == "#syFiveWrap"){
+                                    syFiveFun();
+                                };
+                                if(temp[i] == "#syReturnMoneyWrap"){
+                                    syReturnMoneyFun();
+                                };
+                                if(temp[i] == "#syProjStageWrap"){
+                                    syProjStageFun();
+                                };
+                            }
+                        }else{
+                            //$("#"+data).css("visibility","visible");
+                            $(data).show();
+                            if(data == "#syFiveWrap"){
+                                syFiveFun();
+                            };
+                            if(data == "#syReturnMoneyWrap"){
+                                syReturnMoneyFun();
+                            };
+                            if(data == "#syProjStageWrap"){
+                                syProjStageFun();
+                            };
+                        }           
+                    }
+                },
+                error: function() {
+                    
+                }
+            });            
+            
+          
+            
+   
+            
+            
+            //金额（五大板块）
+            function syFiveFun(){
+                $.ajax({
+                    type:"post",
+                    url:"/flxoa/homepage/money",
+                    async:true,
+                    dataType:"json",
+                    data:{
+                        
+                    },
+                    success:function(data){
+                        var jsonData = data[0];
+                        //获取json数据
+                        all_contract_amount = jsonData.allHeTongMoney;
+                        contract_amount = jsonData.heTongMoney;
+                        all_return_money = jsonData.allHuiKuanMoney;
+                        return_money = jsonData.huiKuanMoney;
+                        all_cost = jsonData.allBaoXiaoMoney;
+                        cost = jsonData.baoXiaoMoney;
+                        all_bid_money = jsonData.allZhongBiaoMoney;
+                        bid_money = jsonData.zhongBiaoMoney;
+                        all_reserve = jsonData.allChuBeiMoney;
+                        reserve = jsonData.chuBeiMoney;      
+                        //判断是否为空
+                        all_contract_amount == "" ? all_contract_amount = "0" : all_contract_amount = all_contract_amount;
+                        contract_amount == "" ? contract_amount = "0" : contract_amount = contract_amount;
+                        all_return_money == "" ? all_return_money = "0" : all_return_money = all_return_money;
+                        return_money == "" ? return_money = "0" : return_money = return_money;
+                        all_cost == "" ? all_cost = "0" : all_cost = all_cost;
+                        cost == "" ? cost = "0" : cost = cost;
+                        all_bid_money == "" ? all_bid_money = "0" : all_bid_money = all_bid_money;
+                        bid_money == "" ? bid_money = "0" : bid_money = bid_money;
+                        all_reserve == "" ? all_reserve = "0" : all_reserve = all_reserve;
+                        reserve == "" ? reserve = "0" : reserve = reserve;
+                        //科学计数 转换成 数值
+                        all_contract_amount = new Number(all_contract_amount);
+                        contract_amount = new Number(contract_amount);
+                        all_return_money = new Number(all_return_money);
+                        return_money = new Number(return_money);
+                        all_cost = new Number(all_cost);
+                        cost = new Number(cost);
+                        all_bid_money = new Number(all_bid_money);
+                        bid_money = new Number(bid_money);
+                        all_reserve = new Number(all_reserve);
+                        reserve = new Number(reserve);         
+                        //数值 转换成 货币格式
+                        all_contract_amount = formatMoney(all_contract_amount,0,"￥");
+                        contract_amount = formatMoney(contract_amount,0,"￥");                   
+                        all_return_money = formatMoney(all_return_money,0,"￥");                 
+                        return_money = formatMoney(return_money,0,"￥");                 
+                        all_cost = formatMoney(all_cost,0,"￥");                 
+                        cost = formatMoney(cost,0,"￥");                 
+                        all_bid_money = formatMoney(all_bid_money,0,"￥");                   
+                        bid_money = formatMoney(bid_money,0,"￥");                   
+                        all_reserve = formatMoney(all_reserve,0,"￥");                   
+                        reserve = formatMoney(reserve,0,"￥");                   
+                        //赋值
+                        $(".all_contract_amount").text(all_contract_amount);
+                        $(".contract_amount").text(contract_amount);
+                        $(".all_return_money").text(all_return_money);
+                        $(".return_money").text(return_money);
+                        $(".all_cost").text(all_cost);
+                        $(".cost").text(cost);
+                        $(".all_bid_money").text(all_bid_money);
+                        $(".bid_money").text(bid_money);
+                        $(".all_reserve").text(all_reserve);
+                        $(".reserve").text(reserve);
+                    }
+                });
+            };            
+            
+                        
+            //我的考勤
+            $.ajax({
+            	type:"post",
+            	url:"/flxoa/homepage/signinpersonal",
+            	async:true,
+            	dataType:"json",
+            	data:{
+            	    
+            	},
+            	success:function(data){
+            	    syMyAttendanceData = data[0].data;     
+            	    // 基于准备好的dom，初始化echarts实例
+                    var myChart = echarts.init(document.getElementById('syMyAttendanceDiv'));            
+                    // 指定图表的配置项和数据
+                    var option = {               
+                        tooltip : {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },  
+                        color:['#4099ff','#FFB64D','#2ed8b6',"#FF5370",'#00bcd4','#fc7777','#3c5a99','#DD4B39','#BDC3C7','#CB2027','#81e73e','#ff8933','#4ea5e0','#ba33ff','#ea6557'],  
+                        series : [
+                            {
+                                name: '次数',
+                                type: 'pie',
+                                radius: ['30%', '45%'],
+                                center: ['50%', '50%'],
+                                label: {
+                                    normal: {
+                                        formatter: '  {b|{b}：}{c}  ',
+                                        /*backgroundColor: '#eee',
+                                        borderColor: '#aaa',
+                                        borderWidth: 1,
+                                        borderRadius: 4,*/     
+                                        fontSize: 12,
+                                        rich: {
+                                            a: {
+                                                color: '#999',
+                                                lineHeight: 22,
+                                                align: 'center'
+                                            },                                           
+                                            hr: {
+                                                borderColor: '#aaa',
+                                                width: '100%',
+                                                borderWidth: 0.5,
+                                                height: 0
+                                            },
+                                            b: {
+                                                fontSize: 12,
+                                                lineHeight: 33
+                                            },
+                                            per: {
+                                                color: '#eee',
+                                                backgroundColor: '#334455',
+                                                padding: [2, 4],
+                                                borderRadius: 2
+                                            }
+                                        }
+                                    }
+                                },
+                                labelLine: {
+                                    normal: {                                        
+                                        smooth: 0.2,
+                                        length: 5,
+                                        length2: 5
+                                    }
+                                },
+                                data:syMyAttendanceData,
+                                itemStyle: {
+                                    emphasis: {
+                                        shadowBlur: 10,
+                                        shadowOffsetX: 0,
+                                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                    }
+                                }
+                            }
+                        ]
+                    };        
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+            	}
+            });
+            
+            
+            //我的申请退回
+            myApplyBack();
+            function myApplyBack(){
+                $.ajax({
+                    type:"post",
+                    url:"/flxoa/approve/myapplicationformlist",
+                    async:true,
+                    dataType:"json",
+                    data:{
+                        "approveStatus":"-1"
+                    },
+                    success:function(data){  
+                        //console.log(JSON.stringify(data));
+                        var jsonData = data; 
+                        var totalCount = jsonData.length;
+                        $(".sy-my-applyBack-total").text(totalCount);                        
+                        $("#sy-my-applyBack").empty();
+                        for(var i=0;i<jsonData.length;i++){
+                            //var id = jsonData[i].id;  
+                            var approveType = jsonData[i].approveType;
+                            var approveTime = jsonData[i].approveTime;
+                            var approveRemark = jsonData[i].approveRemark;                              
+                            $("#sy-my-applyBack").append('<li>'+                                                        
+                                                        '<p><a title="'+approveType+'">'+approveType+'</a><a title="'+approveTime+'">'+approveTime+'</a><a title="'+approveRemark+'">'+approveRemark+'</a><a><i class="fa fa-pencil text-c-blue" title="再次申请" onclick="return editFormData('+jsonData[i].submitStatus+','+jsonData[i].id+','+jsonData[i].templateId+')"></i></a></p>'+
+                                                    '</li>');
+                        };                                                 
+                        //操作按钮hover提示效果
+                        selfTips("#sy-my-applyBack li p a i","再次申请");                        
+                    }
+                });
+            };           
+            //修改【再次申请】
+            function editFormData(submitStatus,id,templateId){
+                if("0" == submitStatus || "-1" == submitStatus ){
+                    $.ajax({
+                        type:"post",
+                        url:"/flxoa/approve/getformdatadetail",
+                        data:{
+                            "formId":id,
+                            "templateId":templateId
+                        },
+                        success: function(data){
+                                var json = eval('(' + data + ')'); 
+                                initTable(json,"app",'',''); 
+                                $('#app').append('<input type="hidden" name="formId" value="'+id+'" />'); 
+                                $('#app').append('<input type="hidden" name="templateId" value="'+templateId+'" />'); 
+                                $('#app').append('<div class="text-center"> <button type="button" onclick=itemSubmit("app",true) class="btn btn-success btn-sm ">保 存</button> &nbsp; <button  onclick=itemSubmit("app",false) type="button" class="btn btn-primary btn-sm ">提 交</button></div>'); 
+                        }
+                    });     
+                }else if("3" == submitStatus || "4" == submitStatus){
+                    layer.msg('审批已结束、不能修改');
+                    return;
+                }else{
+                    layer.msg('已在审批中、不能修改');
+                    return;
+                }                
+            };
+            
+            
+            //各中心每月回款情况统计
+            function syReturnMoneyFun(){
+                $.ajax({
+                    type:"post",
+                    url:"/flxoa/homepage/huikuan",
+                    async:true,
+                    dataType:"json",
+                    data:{
+                        
+                    },
+                    success:function(data){
+                        //alert(JSON.stringify(data));
+                        syReturnMoneyData = data;   
+                        var syReturnMoneyCenterName;
+                        //定义数组
+                        var arr = [];
+                        //循环
+                        for(var i=0;i<data.length;i++){
+                            syReturnMoneyCenterName = data[i].name;
+                            //放入数组
+                            arr.push(syReturnMoneyCenterName);
+                        };
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('syReturnMoneyDiv'));            
+                        // 指定图表的配置项和数据
+                        var option = {
+                            /*title : {
+                                text: '各中心每月回款情况统计',
+                                subtext: '数据未更新'
+                            },*/
+                            tooltip : {
+                                trigger: 'axis'
+                            },
+                            legend: {
+                                data:arr
+                            },
+                            /*toolbox: {
+                                show : true,
+                                feature : {
+                                    dataView : {show: true, readOnly: false},
+                                    magicType : {show: true, type: ['line', 'bar']},
+                                    restore : {show: true},
+                                    saveAsImage : {show: true}
+                                }
+                            },*/
+                            calculable : true,
+                            xAxis : [
+                                {
+                                    type : 'category',
+                                    data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+                                }
+                            ],
+                            yAxis : [
+                                {
+                                    type : 'value'
+                                }
+                            ],
+                            series : syReturnMoneyData
+                        };        
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    }
+                });
+            };            
+              
+            
+            //项目管理-阶段
+            function syProjStageFun(){
+                $.ajax({
+                    type:"post",
+                    url:"/flxoa/project",
+                    async:true,
+                    dataType:"json",
+                    data:{
+                        
+                    },
+                    success:function(data){    
+                        var totalCount = data[0].totalCount;                                        
+                        $(".syProjStageWrap-total").text(totalCount);  
+                        var jsonData = data[0].otherData;
+                        //console.log(JSON.stringify(jsonData));
+                        /*$(".proj_before_set span").text(jsonData[0][2]);
+                        $(".proj_after_set span").text(jsonData[1][2]);
+                        $(".proj_bid_signup span").text(jsonData[2][2]);*/
+                        $(".xmgl-multi-tab-tit li").each(function(){
+                            var idx = $(this).index();
+                            var proj_num = jsonData[idx].counttype;                     
+                            var proj_name = jsonData[idx].enumeration_value;
+                            var proj_id = jsonData[idx].enumeration_key;
+                            if(proj_num == null){
+                                proj_num = "0";
+                            }else{
+                                proj_num = proj_num;
+                            };
+                            $(this).find("span").text(proj_num);                        
+                            $(this).find("a").text(proj_name);                      
+                            $(this).find("em").text(proj_id);
+                            $(this).find("em").hide();
+                            $(this).on("click",function(){
+                                sessionStorage.setItem("stateId", proj_id);                                                         
+                                window.location.href = "/flxoa/projectlist";                            
+                            });
+                        });
+                    }
+                });
+            };            
+            
+            
+            //我的项目
+            myProject();
+            function myProject(){
+                $.ajax({
+                    type:"post",
+                    url:"/flxoa/homepage/myproject",
+                    async:true,
+                    dataType:"json",
+                    data:{
+                        
+                    },
+                    success:function(data){
+                        var totalCount = data[0].totalCount;
+                        $(".sy-my-project-total").text(totalCount);
+                        var jsonData = data[0].data;
+                        //alert(JSON.stringify(jsonData));
+                        $("#sy-my-project").empty();
+                        for(var i=0;i<jsonData.length;i++){
+                            var projName = jsonData[i].projname;
+                            var projState = jsonData[i].projstate;
+                            var projId = jsonData[i].projId;                           
+                            /*var flag = jsonData[i].flag;
+                            if(flag == 1){
+                                $("#sy-my-project").append('<li>'+                                                        
+                                                            '<p><a>'+projName+'</a><i class="icofont icofont-ui-love-add text-c-grey" data-toggle="tooltip" data-placement="right" title="" data-original-title="已关注"></i><span>'+projState+'</span></p>'+
+                                                        '</li>');
+                            }else{
+                                $("#sy-my-project").append('<li>'+                                                        
+                                                            '<p><a>'+projName+'</a><i class="icofont icofont-ui-love-add text-c-blue" data-toggle="tooltip" data-placement="right" title="" data-original-title="添加关注" onclick="return addfocus('+projId+')"></i><span>'+projState+'</span></p>'+
+                                                        '</li>');
+                            };*/   
+                            $("#sy-my-project").append('<li>'+                                                        
+                                                        '<p><a title="'+projName+'">'+projName+'</a><span title="'+projState+'">'+projState+'</span></p>'+
+                                                    '</li>');
+                        };                  
+                    }
+                });
+            };
+            
+            
+            //我的关注
+            myFocus();
+            function myFocus(){
+                $.ajax({
+                    type:"post",
+                    url:"/flxoa/homepage/showmyfocusproject",
+                    async:true,
+                    dataType:"json",
+                    data:{
+                    },
+                    success:function(data){ 
+                        //alert(JSON.stringify(data));
+                        var totalCount = data[0].totalCount;
+                        $(".sy-my-focus-total").text(totalCount);
+                        var jsonData = data[0].data;
+                        $("#sy-my-focus").empty();
+                        for(var i=0;i<jsonData.length;i++){
+                            var projName = jsonData[i].projname;
+                            var projState = jsonData[i].projstate;
+                            var projId = jsonData[i].projId;
+                            var fId = jsonData[i].fId;                            
+                            $("#sy-my-focus").append('<li>'+                                                        
+                                                            '<p><a title="'+projName+'">'+projName+'</a><span title="'+projState+'">'+projState+'<i class="fa fa-heart text-c-blue" title="取消关注" onclick="return cancelfocus('+fId+')"></i></span></p>'+
+                                                        '</li>');
+                        };                                                
+                        //操作按钮hover提示效果
+                        selfTips("#sy-my-focus li p i","取消关注");                        
+                    }
+                });            
+            };                                    
+            //添加关注
+            function addfocus(projId){
+            	$.ajax({
+            		type:"post",
+            		url:"/flxoa/projectFocus",
+            		async:true,
+            		dataType:"json",
+            		data:{
+            			"projid":projId,
+                    	"foucs":0,
+            		},
+            		success:function(data){
+            			if(data ==1 ){
+                   		 	layer.msg("关注成功！");  
+                   		 	myProject();
+                   		 	myFocus();
+                   		 	
+                        }else if(data ==2){
+                   			layer.msg("该项目已关注！");
+                   	 	};
+            		}
+            	});
+            };
+            //取消关注
+            function cancelfocus(fId){
+            	$.ajax({
+            		type:"post",
+            		url:"/flxoa/projectFocus",
+            		async:true,
+                    dataType:"json",
+                    data:{
+                    	"focusid":fId,
+                    	"proj_is_focus":1,
+                    },
+                    success:function(data){
+                    	if(data == 0 ){
+                    		layer.msg("取消关注！");
+                    		myProject();
+                            myFocus();
+                    	};
+                    }
+            	});
+            };
+            
+            
+            //待审批
+            $.ajax({
+                type:"post",
+                url:"/flxoa/homepage/formnoapply",
+                async:true,
+                dataType:"json",
+                data:{
+                    
+                },
+                success:function(data){                 
+                    var totalCount = data[0].totalCount;
+                    $(".sy-before-approval-total").text(totalCount);
+                    var jsonData = data[0].data;
+                    for(var i=0;i<jsonData.length;i++){
+                        var projName = jsonData[i].fname;
+                        var projState = jsonData[i].submitstatus;
+                        if(projState=='1'){
+                        	projState="待审批";
+                        }else if(projState="2"){
+                        	projState="审核中";
+                        };
+                        $("#sy-before-approval").append('<li>'+                                                        
+                                                        '<p><a title="'+projName+'">'+projName+'</a><span title="'+projState+'">'+projState+'</span></p>'+
+                                                    '</li>');
+                    };                  
+                }
+            });
+            
+            
+            //我的申请退回 更多
+            $("#sy-my-applyBack-more").on("click",function(){                  
+                sessionStorage.setItem("approveStatus", "-1");                 
+                window.location.href = "/flxoa/approve/gomyapplicationformlist";  
+            });
+            
+            
+            //我的项目 更多
+            $("#sy-my-project-more").on("click",function(){
+            	sessionStorage.setItem("myProjMore", "moreproj");                 
+                window.location.href = "/flxoa/projectlist";             
+            });
+            
+            
+            //我的关注 更多
+            $("#sy-my-focus-more").on("click",function(){
+                sessionStorage.setItem("flag", "1");                 
+                window.location.href = "/flxoa/projectlist";
+            });
+            
+            
+            //待审批 更多
+            $("#sy-before-approval-more").on("click",function(){
+            	sessionStorage.setItem("more", "1,2");                
+                window.location.href = "/flxoa/approve/gomyapplicationformlist";
+            });
+            
+            
+            
+            
+            
+            
+            //把数字转换成金钱格式
+            function formatMoney(number, places, symbol, thousand, decimal) {
+                number = number || 0;
+                places = !isNaN(places = Math.abs(places)) ? places : 2;
+                symbol = symbol !== undefined ? symbol : "$";
+                thousand = thousand || ",";
+                decimal = decimal || ".";
+                var negative = number < 0 ? "-" : "",
+                    i = parseInt(number = Math.abs(+number || 0).toFixed(places), 10) + "",
+                    j = (j = i.length) > 3 ? j % 3 : 0;
+                return symbol + negative + (j ? i.substr(0, j) + thousand : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousand) + (places ? decimal + Math.abs(number - i).toFixed(places).slice(2) : "");
+            };            
+        </script>
+        
+        
+        
+      
+        
+        
+        <script>
+            //获取地点
+            //var city = remote_ip_info.city+"市";
+            var city;
+            if( !function(){try{return remote_ip_info,true}catch(e){}}() ){
+                city = "北京市"
+            }else{
+                city = remote_ip_info.city+"市"
+            };
+            //天气
+            var url = "http://restapi.amap.com/v3/weather/weatherInfo";
+            var postData1 = {
+                key: "dfb9a576fbcb2c9a13a65ab736e47004",
+                city: city             
+            };
+            var postData2 = {
+                key: "dfb9a576fbcb2c9a13a65ab736e47004",
+                city: city,
+                extensions: "all"
+            };                  
+            $.ajax({
+                type:"post",
+                url:url,                
+                async:true,
+                data:postData2,
+                success:function(data){
+                    //console.log(data);
+                    var jsonData = data.forecasts[0].casts;
+                    //console.log(jsonData);
+                    //今天天气
+                    var dateToday = jsonData[0].date;
+                    var weekToday = jsonData[0].week;
+                    var dayweatherToday = jsonData[0].dayweather;
+                    var daytempToday = jsonData[0].daytemp;
+                    var nighttempToday = jsonData[0].nighttemp;
+                    var daywindToday = jsonData[0].daywind;
+                    var daypowerToday = jsonData[0].daypower;
+                    var iconToday;
+                    if(weekToday == "1"){
+                        weekToday = "星期一";
+                    }else if(weekToday == "2"){
+                        weekToday = "星期二";
+                    }else if(weekToday == "3"){
+                        weekToday = "星期三";
+                    }else if(weekToday == "4"){
+                        weekToday = "星期四";
+                    }else if(weekToday == "5"){
+                        weekToday = "星期五";
+                    }else if(weekToday == "6"){
+                        weekToday = "星期六";
+                    }else if(weekToday == "7"){
+                        weekToday = "星期日";
+                    };
+                    if(dayweatherToday == "晴"){
+                        iconToday = '<svg version="1.1" class="climacon climacon_sunFill" viewBox="15 15 70 70">'+
+                                        '<g class="climacon_iconWrap climacon_iconWrap-sunFill">'+
+                                            '<g class="climacon_componentWrap climacon_componentWrap-sun">'+
+                                                '<g class="climacon_componentWrap climacon_componentWrap-sunSpoke">'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-east" d="M72.03,51.999h-3.998c-1.105,0-2-0.896-2-1.999s0.895-2,2-2h3.998c1.104,0,2,0.896,2,2S73.136,51.999,72.03,51.999z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-northEast" d="M64.175,38.688c-0.781,0.781-2.049,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l2.828-2.828c0.779-0.781,2.047-0.781,2.828,0c0.779,0.781,0.779,2.047,0,2.828L64.175,38.688z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-north" d="M50.034,34.002c-1.105,0-2-0.896-2-2v-3.999c0-1.104,0.895-2,2-2c1.104,0,2,0.896,2,2v3.999C52.034,33.106,51.136,34.002,50.034,34.002z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-northWest" d="M35.893,38.688l-2.827-2.828c-0.781-0.781-0.781-2.047,0-2.828c0.78-0.781,2.047-0.781,2.827,0l2.827,2.828c0.781,0.781,0.781,2.047,0,2.828C37.94,39.469,36.674,39.469,35.893,38.688z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-west" d="M34.034,50c0,1.104-0.896,1.999-2,1.999h-4c-1.104,0-1.998-0.896-1.998-1.999s0.896-2,1.998-2h4C33.14,48,34.034,48.896,34.034,50z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-southWest" d="M35.893,61.312c0.781-0.78,2.048-0.78,2.827,0c0.781,0.78,0.781,2.047,0,2.828l-2.827,2.827c-0.78,0.781-2.047,0.781-2.827,0c-0.781-0.78-0.781-2.047,0-2.827L35.893,61.312z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-south" d="M50.034,65.998c1.104,0,2,0.895,2,1.999v4c0,1.104-0.896,2-2,2c-1.105,0-2-0.896-2-2v-4C48.034,66.893,48.929,65.998,50.034,65.998z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-southEast" d="M64.175,61.312l2.828,2.828c0.779,0.78,0.779,2.047,0,2.827c-0.781,0.781-2.049,0.781-2.828,0l-2.828-2.827c-0.781-0.781-0.781-2.048,0-2.828C62.126,60.531,63.392,60.531,64.175,61.312z" />'+
+                                                '</g>'+
+                                                '<g class="climacon_componentWrap climacon_componentWrap_sunBody">'+
+                                                    '<circle class="climacon_component climacon_component-stroke climacon_component-stroke_sunBody" cx="50.034" cy="50" r="11.999" />'+
+                                                    '<circle class="climacon_component climacon_component-fill climacon_component-fill_sunBody" fill="#FFFFFF" cx="50.034" cy="50" r="7.999" />'+
+                                                '</g>'+
+                                            '</g>'+
+                                        '</g>'+
+                                    '</svg>'
+                    }else if(dayweatherToday == "多云" || dayweatherToday == "多云转晴" || dayweatherToday == "晴转多云"){
+                        iconToday = '<svg version="1.1" class="climacon climacon_cloudSunFill" viewBox="15 15 70 70">'+
+                                        '<g class="climacon_iconWrap climacon_cloudSunFill-iconWrap">'+
+                                            '<g class="climacon_componentWrap climacon_componentWrap-sun climacon_componentWrap-sun_cloud">'+
+                                                '<g class="climacon_componentWrap climacon_componentWrap_sunSpoke">'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-north" d="M80.029,43.611h-3.998c-1.105,0-2-0.896-2-1.999s0.895-2,2-2h3.998c1.104,0,2,0.896,2,2S81.135,43.611,80.029,43.611z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-north" d="M72.174,30.3c-0.781,0.781-2.049,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l2.828-2.828c0.779-0.781,2.047-0.781,2.828,0c0.779,0.781,0.779,2.047,0,2.828L72.174,30.3z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-north" d="M58.033,25.614c-1.105,0-2-0.896-2-2v-3.999c0-1.104,0.895-2,2-2c1.104,0,2,0.896,2,2v3.999C60.033,24.718,59.135,25.614,58.033,25.614z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-north" d="M43.892,30.3l-2.827-2.828c-0.781-0.781-0.781-2.047,0-2.828c0.78-0.781,2.047-0.781,2.827,0l2.827,2.828c0.781,0.781,0.781,2.047,0,2.828C45.939,31.081,44.673,31.081,43.892,30.3z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-north" d="M42.033,41.612c0,1.104-0.896,1.999-2,1.999h-4c-1.104,0-1.998-0.896-1.998-1.999s0.896-2,1.998-2h4C41.139,39.612,42.033,40.509,42.033,41.612z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-north" d="M43.892,52.925c0.781-0.78,2.048-0.78,2.827,0c0.781,0.78,0.781,2.047,0,2.828l-2.827,2.827c-0.78,0.781-2.047,0.781-2.827,0c-0.781-0.78-0.781-2.047,0-2.827L43.892,52.925z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-north" d="M58.033,57.61c1.104,0,2,0.895,2,1.999v4c0,1.104-0.896,2-2,2c-1.105,0-2-0.896-2-2v-4C56.033,58.505,56.928,57.61,58.033,57.61z" />'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-north" d="M72.174,52.925l2.828,2.828c0.779,0.78,0.779,2.047,0,2.827c-0.781,0.781-2.049,0.781-2.828,0l-2.828-2.827c-0.781-0.781-0.781-2.048,0-2.828C70.125,52.144,71.391,52.144,72.174,52.925z" />'+
+                                                '</g>'+
+                                                '<g class="climacon_wrapperComponent climacon_wrapperComponent-sunBody">'+
+                                                    '<circle class="climacon_component climacon_component-stroke climacon_component-stroke_sunBody" cx="58.033" cy="41.612" r="11.999" />'+
+                                                    '<circle class="climacon_component climacon_component-fill climacon_component-fill_sunBody" fill="#FFFFFF" cx="58.033" cy="41.612" r="7.999" />'+
+                                                '</g>'+
+                                            '</g>'+
+                                            '<g class="climacon_wrapperComponent climacon_wrapperComponent-cloud">'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_cloud" d="M44.033,65.641c-8.836,0-15.999-7.162-15.999-15.998c0-8.835,7.163-15.998,15.999-15.998c6.006,0,11.233,3.312,13.969,8.203c0.664-0.113,1.338-0.205,2.033-0.205c6.627,0,11.998,5.373,11.998,12c0,6.625-5.371,11.998-11.998,11.998C57.26,65.641,47.23,65.641,44.033,65.641z" />'+
+                                                '<path class="climacon_component climacon_component-fill climacon_component-fill_cloud" fill="#FFFFFF" d="M60.035,61.641c4.418,0,8-3.582,8-7.998c0-4.418-3.582-8-8-8c-1.6,0-3.082,0.481-4.334,1.291c-1.23-5.316-5.976-9.29-11.668-9.29c-6.627,0-11.999,5.372-11.999,11.999c0,6.627,5.372,11.998,11.999,11.998C47.65,61.641,57.016,61.641,60.035,61.641z" />'+
+                                            '</g>'+
+                                        '</g>'+
+                                    '</svg>'
+                    }else if(dayweatherToday == "阴"){
+                        iconToday = '<svg version="1.1" class="climacon climacon_cloud" viewBox="15 15 70 70">'+
+                                        '<clipPath>'+
+                                            '<path d="M15,15v70h70V15H15z M59.943,61.639c-3.02,0-12.381,0-15.999,0c-6.626,0-11.998-5.371-11.998-11.998c0-6.627,5.372-11.999,11.998-11.999c5.691,0,10.434,3.974,11.665,9.29c1.252-0.81,2.733-1.291,4.334-1.291c4.418,0,8,3.582,8,8C67.943,58.057,64.361,61.639,59.943,61.639z" />'+
+                                        '</clipPath>'+
+                                        '<g class="climacon_iconWrap climacon_iconWrap-cloud">'+
+                                            '<g class="climacon_componentWrap climacon_componentWrap_cloud" clip-path="url(#cloudFillClip)">'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_cloud" d="M43.945,65.639c-8.835,0-15.998-7.162-15.998-15.998c0-8.836,7.163-15.998,15.998-15.998c6.004,0,11.229,3.312,13.965,8.203c0.664-0.113,1.338-0.205,2.033-0.205c6.627,0,11.998,5.373,11.998,12c0,6.625-5.371,11.998-11.998,11.998C57.168,65.639,47.143,65.639,43.945,65.639z" />'+
+                                            '</g>'+
+                                        '</g>'+
+                                    '</svg>'
+                    }else if(dayweatherToday == "阵雨"){
+                        iconToday = '<svg version="1.1" class="climacon climacon_cloudDrizzleFill" viewBox="15 15 70 70">'+
+                                        '<g class="climacon_iconWrap climacon_iconWrap-cloudDrizzleFill">'+
+                                            '<g class="climacon_wrapperComponent climacon_wrapperComponent-drizzle">'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_drizzle climacon_component-stroke_drizzle-left" d="M42.001,53.644c1.104,0,2,0.896,2,2v3.998c0,1.105-0.896,2-2,2c-1.105,0-2.001-0.895-2.001-2v-3.998C40,54.538,40.896,53.644,42.001,53.644z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_drizzle climacon_component-stroke_drizzle-middle" d="M49.999,53.644c1.104,0,2,0.896,2,2v4c0,1.104-0.896,2-2,2s-1.998-0.896-1.998-2v-4C48.001,54.54,48.896,53.644,49.999,53.644z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_drizzle climacon_component-stroke_drizzle-right" d="M57.999,53.644c1.104,0,2,0.896,2,2v3.998c0,1.105-0.896,2-2,2c-1.105,0-2-0.895-2-2v-3.998C55.999,54.538,56.894,53.644,57.999,53.644z" />'+
+                                            '</g>'+
+                                            '<g class="climacon_componentWrap climacon_componentWrap_cloud">'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_cloud" d="M43.945,65.639c-8.835,0-15.998-7.162-15.998-15.998c0-8.836,7.163-15.998,15.998-15.998c6.004,0,11.229,3.312,13.965,8.203c0.664-0.113,1.338-0.205,2.033-0.205c6.627,0,11.998,5.373,11.998,12c0,6.625-5.371,11.998-11.998,11.998C57.168,65.639,47.143,65.639,43.945,65.639z" />'+
+                                                '<path class="climacon_component climacon_component-fill climacon_component-fill_cloud" fill="#FFFFFF" d="M59.943,61.639c4.418,0,8-3.582,8-7.998c0-4.417-3.582-8-8-8c-1.601,0-3.082,0.481-4.334,1.291c-1.23-5.316-5.973-9.29-11.665-9.29c-6.626,0-11.998,5.372-11.998,11.999c0,6.626,5.372,11.998,11.998,11.998C47.562,61.639,56.924,61.639,59.943,61.639z" />'+
+                                            '</g>'+
+                                        '</g>'+
+                                    '</svg>'
+                    }else if(dayweatherToday == "雷阵雨"){
+                        iconToday = '<svg version="1.1" class="climacon climacon_cloudLightningFill" viewBox="15 15 70 70">'+
+                                        '<g class="climacon_iconWrap climacon_iconWrap-cloudLightningFill">'+
+                                            '<g class="climacon_wrapperComponent climacon_wrapperComponent-lightning">'+
+                                                '<polygon class="climacon_component climacon_component-stroke climacon_component-stroke_lightning" points="48.001,51.641 57.999,51.641 52,61.641 58.999,61.641 46.001,77.639 49.601,65.641 43.001,65.641 " />'+
+                                            '</g>'+
+                                            '<g class="climacon_componentWrap climacon_componentWrap_cloud">'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_cloud" d="M43.945,65.639c-8.835,0-15.998-7.162-15.998-15.998c0-8.836,7.163-15.998,15.998-15.998c6.004,0,11.229,3.312,13.965,8.203c0.664-0.113,1.338-0.205,2.033-0.205c6.627,0,11.998,5.373,11.998,12c0,6.625-5.371,11.998-11.998,11.998C57.168,65.639,47.143,65.639,43.945,65.639z" />'+
+                                                '<path class="climacon_component climacon_component-fill climacon_component-fill_cloud" fill="#FFFFFF" d="M59.943,61.639c4.418,0,8-3.582,8-7.998c0-4.417-3.582-8-8-8c-1.601,0-3.082,0.481-4.334,1.291c-1.23-5.316-5.973-9.29-11.665-9.29c-6.626,0-11.998,5.372-11.998,11.999c0,6.626,5.372,11.998,11.998,11.998C47.562,61.639,56.924,61.639,59.943,61.639z" />'+
+                                            '</g>'+
+                                        '</g>'+
+                                    '</svg>'
+                    }else if(dayweatherToday == "雾" || dayweatherToday == "大雾" || dayweatherToday == "小雾"){
+                        iconToday = '<svg version="1.1" class="climacon climacon_cloudFogFill" viewBox="15 15 70 70">'+
+                                        '<g class="climacon_iconWrap climacon_iconWrap-cloudFog">'+
+                                            '<g class="climacon_wrapperComponent climacon_wrapperComponent-Fog">'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_fogLine climacon_component-stroke_fogLine-top" d="M69.998,57.641H30.003c-1.104,0-2-0.895-2-2c0-1.104,0.896-2,2-2h39.995c1.104,0,2,0.896,2,2C71.998,56.746,71.104,57.641,69.998,57.641z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_fogLine climacon_component-stroke_fogLine-middle" d="M69.998,65.641H30.003c-1.104,0-2-0.896-2-2s0.896-2,2-2h39.995c1.104,0,2,0.896,2,2C71.998,64.744,71.104,65.641,69.998,65.641z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_fogLine climacon_component-stroke_fogLine-bottom" d="M30.003,69.639h39.995c1.104,0,2,0.896,2,2c0,1.105-0.896,2-2,2H30.003c-1.104,0-2-0.895-2-2C28.003,70.535,28.898,69.639,30.003,69.639z" />'+
+                                            '</g>'+
+                                            '<g class="climacon_wrapperComponent climacon_wrapperComponent-cloud">'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_cloud" d="M59.999,45.643c-1.601,0-3.083,0.48-4.333,1.291c-1.232-5.317-5.974-9.291-11.665-9.291c-6.626,0-11.998,5.373-11.998,12h-4c0-8.835,7.163-15.999,15.998-15.999c6.004,0,11.229,3.312,13.965,8.204c0.664-0.113,1.337-0.205,2.033-0.205c5.222,0,9.651,3.342,11.301,8h-4.381C65.535,47.253,62.958,45.643,59.999,45.643z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_cloud" d="M71.287,49.355c-1.659-4.632-6.08-7.954-11.289-7.954c-0.695,0-1.369,0.091-2.033,0.205C55.229,36.72,50.004,33.413,44,33.413c-8.824,0-15.977,7.134-15.996,15.942H71.287z" />'+
+                                                '<path fill="#FFFFFF" class="climacon_component climacon_component-fill climacon_component-fill_cloud" d="M66.897,49.376c-1.389-2.369-3.955-3.965-6.899-3.965c-1.602,0-3.082,0.48-4.334,1.291c-1.23-5.316-5.973-9.291-11.664-9.291c-6.615,0-11.977,5.354-11.996,11.965H66.897z" />'+
+                                            '</g>'+
+                                        '</g>'+
+                                    '</svg>'
+                    }else if(dayweatherToday == "雾霾" || dayweatherToday == "霾"){
+                        iconToday = '<svg version="1.1" class="climacon climacon_cloudFogAltFill" viewBox="15 15 70 70">'+
+                                        '<g class="climacon_iconWrap climacon_iconWrap-cloudFogAltFill">'+
+                                            '<g class="climacon_wrapperComponent climacon_wrapperComponent-Fog">'+
+                                                '<g class="climacon_componentWrap climacon_componentWrap_cloud">'+
+                                                    '<path class="climacon_component climacon_component-fill climacon_component-fill_cloud" fill="#FFFFFF" d="M43.945,65.639c-8.835,0-15.998-7.162-15.998-15.998c0-8.836,7.163-15.998,15.998-15.998c6.004,0,11.229,3.312,13.965,8.203c0.664-0.113,1.338-0.205,2.033-0.205c6.627,0,11.998,5.373,11.998,12c0,6.625-5.371,11.998-11.998,11.998C57.168,65.639,47.143,65.639,43.945,65.639z" />'+
+                                                '</g>'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_fogLine" d="M29.177,55.641c-0.262-0.646-0.473-1.314-0.648-2h43.47c0,0.685-0.069,1.349-0.181,2H29.177z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_fogLine" d="M36.263,35.643c2.294-1.271,4.93-1.999,7.738-1.999c2.806,0,5.436,0.73,7.728,1.999H36.263z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_fogLine" d="M28.142,47.642c0.085-0.682,0.218-1.347,0.387-1.999h40.396c0.552,0.613,1.039,1.281,1.455,1.999H28.142z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_fogLine" d="M29.177,43.643c0.281-0.693,0.613-1.359,0.984-2h27.682c0.04,0.068,0.084,0.135,0.123,0.205c0.664-0.114,1.339-0.205,2.033-0.205c2.451,0,4.729,0.738,6.627,2H29.177z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_fogLine" d="M31.524,39.643c0.58-0.723,1.225-1.388,1.92-2h21.123c0.689,0.61,1.326,1.28,1.902,2H31.524z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_fogLine" d="M71.816,51.641H28.142c-0.082-0.656-0.139-1.32-0.139-1.999h43.298C71.527,50.285,71.702,50.953,71.816,51.641z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_fogLine" d="M71.301,57.641c-0.246,0.699-0.555,1.367-0.921,2H31.524c-0.505-0.629-0.957-1.299-1.363-2H71.301z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_fogLine" d="M33.444,61.641h35.48c-0.68,0.758-1.447,1.435-2.299,2H36.263C35.247,63.078,34.309,62.4,33.444,61.641z" />'+
+                                            '</g>'+
+                                        '</g>'+
+                                    '</svg>'
+                    }else if(dayweatherToday.indexOf("沙")!=-1 || dayweatherToday.indexOf("尘")!=-1){
+                        iconToday = '<svg version="1.1" class="climacon climacon_tornado" viewBox="15 15 70 70">'+
+                                        '<g class="climacon_iconWrap climacon_iconWrap-tornado">'+
+                                            '<g class="climacon_componentWrap climacon_componentWrap-tornado">'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_tornadoLine" d="M68.997,36.459H31.002c-1.104,0-2-0.896-2-1.999c0-1.104,0.896-2,2-2h37.995c1.104,0,2,0.896,2,2C70.997,35.563,70.102,36.459,68.997,36.459z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_tornadoLine" d="M35.002,40.459h29.996c1.104,0,2,0.896,2,2s-0.896,1.999-2,1.999H35.002c-1.104,0-2-0.896-2-1.999C33.002,41.354,33.898,40.459,35.002,40.459z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_tornadoLine" d="M39.001,48.458h21.998c1.104,0,1.999,0.896,1.999,1.999c0,1.104-0.896,2-1.999,2H39.001c-1.104,0-1.999-0.896-1.999-2C37.002,49.354,37.897,48.458,39.001,48.458z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_tornadoLine" d="M47,64.456h5.999c1.104,0,2,0.896,2,1.999s-0.896,2-2,2H47c-1.104,0-2-0.896-2-2S45.896,64.456,47,64.456z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_tornadoLine" d="M40.869,58.456c0-1.104,0.896-1.999,2-1.999h13.998c1.104,0,2,0.896,2,1.999c0,1.104-0.896,2-2,2H42.869C41.765,60.456,40.869,59.561,40.869,58.456z" />'+
+                                            '</g>'+
+                                        '</g>'+
+                                    '</svg>'
+                    }else if(dayweatherToday.indexOf("雨")!=-1){
+                        iconToday = '<svg version="1.1" class="climacon climacon_cloudRainFill" viewBox="15 15 70 70">'+
+                                        '<g class="climacon_iconWrap climacon_iconWrap-cloudRainFill">'+
+                                            '<g class="climacon_wrapperComponent climacon_wrapperComponent-rain">'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_rain climacon_component-stroke_rain- left" d="M41.946,53.641c1.104,0,1.999,0.896,1.999,2v15.998c0,1.105-0.895,2-1.999,2s-2-0.895-2-2V55.641C39.946,54.537,40.842,53.641,41.946,53.641z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_rain climacon_component-stroke_rain- middle" d="M49.945,57.641c1.104,0,2,0.896,2,2v15.998c0,1.104-0.896,2-2,2s-2-0.896-2-2V59.641C47.945,58.535,48.841,57.641,49.945,57.641z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_rain climacon_component-stroke_rain- right" d="M57.943,53.641c1.104,0,2,0.896,2,2v15.998c0,1.105-0.896,2-2,2c-1.104,0-2-0.895-2-2V55.641C55.943,54.537,56.84,53.641,57.943,53.641z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_rain climacon_component-stroke_rain- left" d="M41.946,53.641c1.104,0,1.999,0.896,1.999,2v15.998c0,1.105-0.895,2-1.999,2s-2-0.895-2-2V55.641C39.946,54.537,40.842,53.641,41.946,53.641z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_rain climacon_component-stroke_rain- middle" d="M49.945,57.641c1.104,0,2,0.896,2,2v15.998c0,1.104-0.896,2-2,2s-2-0.896-2-2V59.641C47.945,58.535,48.841,57.641,49.945,57.641z" />'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_rain climacon_component-stroke_rain- right" d="M57.943,53.641c1.104,0,2,0.896,2,2v15.998c0,1.105-0.896,2-2,2c-1.104,0-2-0.895-2-2V55.641C55.943,54.537,56.84,53.641,57.943,53.641z" />'+
+                                            '</g>'+
+                                            '<g class="climacon_componentWrap climacon_componentWrap_cloud">'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_cloud" d="M43.945,65.639c-8.835,0-15.998-7.162-15.998-15.998c0-8.836,7.163-15.998,15.998-15.998c6.004,0,11.229,3.312,13.965,8.203c0.664-0.113,1.338-0.205,2.033-0.205c6.627,0,11.998,5.373,11.998,12c0,6.625-5.371,11.998-11.998,11.998C57.168,65.639,47.143,65.639,43.945,65.639z" />'+
+                                                '<path class="climacon_component climacon_component-fill climacon_component-fill_cloud" fill="#FFFFFF" d="M59.943,61.639c4.418,0,8-3.582,8-7.998c0-4.417-3.582-8-8-8c-1.601,0-3.082,0.481-4.334,1.291c-1.23-5.316-5.973-9.29-11.665-9.29c-6.626,0-11.998,5.372-11.998,11.999c0,6.626,5.372,11.998,11.998,11.998C47.562,61.639,56.924,61.639,59.943,61.639z" />'+
+                                            '</g>'+
+                                        '</g>'+
+                                    '</svg>'
+                    }else if(dayweatherToday.indexOf("雪")!=-1){
+                        iconToday = '<svg version="1.1" class="climacon climacon_cloudSnowAltFill" viewBox="15 15 70 70">'+
+                                        '<g class="climacon_iconWrap climacon_iconWrap-cloudSnowAltFill">'+
+                                            '<g class="climacon_wrapperComponent climacon_wrapperComponent-snowAlt">'+
+                                                '<g class="climacon_component climacon_component climacon_component-snowAlt">'+
+                                                    '<path class="climacon_component climacon_component-stroke climacon_component-stroke_snowAlt" d="M43.072,59.641c0.553-0.957,1.775-1.283,2.732-0.731L48,60.176v-2.535c0-1.104,0.896-2,2-2c1.104,0,2,0.896,2,2v2.535l2.195-1.268c0.957-0.551,2.18-0.225,2.73,0.732c0.553,0.957,0.225,2.18-0.73,2.731l-2.196,1.269l2.196,1.268c0.955,0.553,1.283,1.775,0.73,2.732c-0.552,0.954-1.773,1.282-2.73,0.729L52,67.104v2.535c0,1.105-0.896,2-2,2c-1.104,0-2-0.895-2-2v-2.535l-2.195,1.269c-0.957,0.553-2.18,0.226-2.732-0.729c-0.552-0.957-0.225-2.181,0.732-2.732L46,63.641l-2.195-1.268C42.848,61.82,42.521,60.598,43.072,59.641z" />'+
+                                                    '<circle class="climacon_component climacon_component-fill climacon_component-fill_snowAlt" fill="#FFFFFF" cx="50" cy="63.641" r="2" />'+
+                                                '</g>'+
+                                            '</g>'+
+                                            '<g class="climacon_componentWrap climacon_componentWrap_cloud">'+
+                                                '<path class="climacon_component climacon_component-stroke climacon_component-stroke_cloud" d="M43.945,65.639c-8.835,0-15.998-7.162-15.998-15.998c0-8.836,7.163-15.998,15.998-15.998c6.004,0,11.229,3.312,13.965,8.203c0.664-0.113,1.338-0.205,2.033-0.205c6.627,0,11.998,5.373,11.998,12c0,6.625-5.371,11.998-11.998,11.998C57.168,65.639,47.143,65.639,43.945,65.639z" />'+
+                                                '<path class="climacon_component climacon_component-fill climacon_component-fill_cloud" fill="#FFFFFF" d="M59.943,61.639c4.418,0,8-3.582,8-7.998c0-4.417-3.582-8-8-8c-1.601,0-3.082,0.481-4.334,1.291c-1.23-5.316-5.973-9.29-11.665-9.29c-6.626,0-11.998,5.372-11.998,11.999c0,6.626,5.372,11.998,11.998,11.998C47.562,61.639,56.924,61.639,59.943,61.639z" />'+
+                                            '</g>'+
+                                        '</g>'+
+                                    '</svg>'
+                    }else if(dayweatherToday.indexOf("冰雹")!=-1){
+                        iconToday = '<svg version="1.1" class="climacon climacon_cloudHailAltFill" viewBox="15 15 70 70">'+
+                                    '<g class="climacon_iconWrap climacon_iconWrap-cloudHailAltFill">'+
+                                        '<g class="climacon_wrapperComponent climacon_wrapperComponent-hailAlt">'+
+                                            '<g class="climacon_component climacon_component-stroke climacon_component-stroke_hailAlt climacon_component-stroke_hailAlt-left">'+
+                                                '<circle cx="42" cy="65.498" r="2" />'+
+                                            '</g>'+
+                                            '<g class="climacon_component climacon_component-stroke climacon_component-stroke_hailAlt climacon_component-stroke_hailAlt-middle">'+
+                                                '<circle cx="49.999" cy="65.498" r="2" />'+
+                                            '</g>'+
+                                            '<g class="climacon_component climacon_component-stroke climacon_component-stroke_hailAlt climacon_component-stroke_hailAlt-right">'+
+                                                '<circle cx="57.998" cy="65.498" r="2" />'+
+                                            '</g>'+
+                                            '<g class="climacon_component climacon_component-stroke climacon_component-stroke_hailAlt climacon_component-stroke_hailAlt-left">'+
+                                                '<circle cx="42" cy="65.498" r="2" />'+
+                                            '</g>'+
+                                            '<g class="climacon_component climacon_component-stroke climacon_component-stroke_hailAlt climacon_component-stroke_hailAlt-middle">'+
+                                                '<circle cx="49.999" cy="65.498" r="2" />'+
+                                            '</g>'+
+                                            '<g class="climacon_component climacon_component-stroke climacon_component-stroke_hailAlt climacon_component-stroke_hailAlt-right">'+
+                                                '<circle cx="57.998" cy="65.498" r="2" />'+
+                                            '</g>'+
+                                        '</g>'+
+                                        '<g class="climacon_componentWrap climacon_componentWrap_cloud">'+
+                                            '<path class="climacon_component climacon_component-stroke climacon_component-stroke_cloud" d="M43.945,65.639c-8.835,0-15.998-7.162-15.998-15.998c0-8.836,7.163-15.998,15.998-15.998c6.004,0,11.229,3.312,13.965,8.203c0.664-0.113,1.338-0.205,2.033-0.205c6.627,0,11.998,5.373,11.998,12c0,6.625-5.371,11.998-11.998,11.998C57.168,65.639,47.143,65.639,43.945,65.639z" />'+
+                                            '<path class="climacon_component climacon_component-fill climacon_component-fill_cloud" fill="#FFFFFF" d="M59.943,61.639c4.418,0,8-3.582,8-7.998c0-4.417-3.582-8-8-8c-1.601,0-3.082,0.481-4.334,1.291c-1.23-5.316-5.973-9.29-11.665-9.29c-6.626,0-11.998,5.372-11.998,11.999c0,6.626,5.372,11.998,11.998,11.998C47.562,61.639,56.924,61.639,59.943,61.639z" />'+
+                                        '</g>'+
+                                    '</g>'+
+                                '</svg>'
+                    }else{
+                        iconToday = '<svg version="1.1" class="climacon climacon_cloudFill" viewBox="15 15 70 70">'+
+                                    '<g class="climacon_iconWrap climacon_iconWrap-cloud">'+
+                                        '<g class="climacon_componentWrap climacon_componentWrap_cloud">'+
+                                            '<path class="climacon_component climacon_component-stroke climacon_component-stroke_cloud" d="M43.945,65.639c-8.835,0-15.998-7.162-15.998-15.998c0-8.836,7.163-15.998,15.998-15.998c6.004,0,11.229,3.312,13.965,8.203c0.664-0.113,1.338-0.205,2.033-0.205c6.627,0,11.998,5.373,11.998,12c0,6.625-5.371,11.998-11.998,11.998C57.168,65.639,47.143,65.639,43.945,65.639z" />'+
+                                            '<path class="climacon_component climacon_component-fill climacon_component-fill_cloud" fill="#FFFFFF" d="M59.943,61.639c4.418,0,8-3.582,8-7.998c0-4.417-3.582-8-8-8c-1.601,0-3.082,0.481-4.334,1.291c-1.23-5.316-5.973-9.29-11.665-9.29c-6.626,0-11.998,5.372-11.998,11.999c0,6.626,5.372,11.998,11.998,11.998C47.562,61.639,56.924,61.639,59.943,61.639z" />'+
+                                        '</g>'+
+                                    '</g>'+
+                                '</svg>'
+                    };
+                    $.ajax({
+                        type:"post",
+                        url:url,                
+                        async:true,
+                        data:postData1,
+                        success:function(data){
+                           // console.log(data);
+                            var jsonData = data.lives[0];
+                            //console.log(jsonData);
+                            var timeNow = jsonData.reporttime;
+                            timeNow = timeNow.substring(10,16);
+                            var tempNow = jsonData.temperature;                            
+                            $(".weather-today").html('<div class="weather-time">'+
+                                '<span>'+city+timeNow+'</span>实况'+
+                            '</div>'+
+                            '<div class="weather-date">'+
+                                '<h1>'+dateToday+'</h1>'+
+                                '<h2>'+weekToday+'</h2>'+
+                            '</div>'+
+                            '<div class="weather-main">'+
+                                '<div class="weather-glass">'+
+                                    iconToday+
+                                '</div>'+
+                                '<div class="weather-num">'+                       
+                                    '<span><em>'+tempNow+'</em>°C</span>'+
+                                '</div>'+
+                                '<div style="clear: both;"></div>'+                                                                                 
+                            '</div>'+
+                            '<div class="weather-details">'+
+                                '<ul>'+
+                                    '<li>'+
+                                        '<i class="fa fa-sun-o"></i>'+
+                                        '<em>天气：</em>'+
+                                        '<span>'+dayweatherToday+'</span>'+                          
+                                    '</li>'+
+                                    '<li>'+
+                                        '<i class="fa fa-thermometer-half"></i>'+
+                                        '<em>温度：</em>'+
+                                        '<span>'+nighttempToday+'</span>~<span>'+daytempToday+'</span>°C'+                       
+                                    '</li>'+                       
+                                    '<li>'+
+                                        '<i class="fa fa-flag-checkered"></i>'+
+                                        '<em>风向：</em>'+
+                                        '<span>'+daywindToday+'</span>风'+
+                                    '</li>'+
+                                    '<li>'+
+                                        '<i class="fa fa-feed"></i>'+
+                                        '<em>风力：</em>'+
+                                        '<span>'+daypowerToday+'</span>级'+
+                                    '</li>'+
+                                '</ul>'+
+                            '</div>');
+                        },
+                        error:function(){
+                            alert("网络繁忙，请稍后再试")
+                        }
+                    }); 
+                    //未来三天天气
+                    for(var i=1;i<3;i++){
+                        var date = jsonData[i].date;
+                        var week = jsonData[i].week;
+                        var dayweather = jsonData[i].dayweather;
+                        var daytemp = jsonData[i].daytemp;
+                        var nighttemp = jsonData[i].nighttemp;
+                        var daywind = jsonData[i].daywind;
+                        var daypower = jsonData[i].daypower;
+                        var icon;
+                        if(week == "1"){
+                            week = "星期一";
+                        }else if(week == "2"){
+                            week = "星期二";
+                        }else if(week == "3"){
+                            week = "星期三";
+                        }else if(week == "4"){
+                            week = "星期四";
+                        }else if(week == "5"){
+                            week = "星期五";
+                        }else if(week == "6"){
+                            week = "星期六";
+                        }else if(week == "7"){
+                            week = "星期日";
+                        };
+                        if(dayweather == "晴"){
+                            icon = '<i class="wi wi-day-sunny"></i>'
+                        }else if(dayweather == "多云" || dayweather == "多云转晴" || dayweather == "晴转多云"){
+                            icon = '<i class="wi wi-day-cloudy"></i>'
+                        }else if(dayweather == "阴"){
+                            icon = '<i class="wi wi-cloudy"></i>'
+                        }else if(dayweather == "阵雨"){
+                            icon = '<i class="wi wi-showers"></i>'
+                        }else if(dayweather == "雷阵雨"){
+                            icon = '<i class="wi wi-storm-showers"></i>'
+                        }else if(dayweather == "雾" || dayweather == "大雾" || dayweather == "小雾"){
+                            icon = '<i class="wi wi-fog"></i>'
+                        }else if(dayweather == "雾霾" || dayweather == "霾"){
+                            icon = '<i class="wi wi-dust"></i>'
+                        }else if(dayweather.indexOf("沙")!=-1 || dayweather.indexOf("尘")!=-1){
+                            icon = '<i class="wi wi-sandstorm"></i>'
+                        }else if(dayweather.indexOf("雨")!=-1){
+                            icon = '<i class="wi wi-rain"></i>'
+                        }else if(dayweather.indexOf("雪")!=-1){
+                            icon = '<i class="wi wi-snow"></i>'
+                        }else if(dayweather.indexOf("冰雹")!=-1){
+                            icon = '<i class="wi wi-hail"></i>'
+                        }else{
+                            icon = '<i class="wi wi-cloud"></i>'
+                        };
+                        $(".weather-future ul").append('<li>'+
+                            '<h1>'+date+'</h1>'+
+                            '<h2>'+week+'</h2>'+                        
+                            '<div class="wea-pic">'+
+                                icon+
+                            '</div>'+
+                            '<div class="wea-text">'+
+                                '<span>'+dayweather+'</span>'+
+                            '</div>'+                       
+                            '<div class="tem">'+
+                                '<span>'+nighttemp+'</span>~<span>'+daytemp+'</span><em>°C</em>'+                           
+                            '</div>'+
+                            '<div class="wind-direction">'+                           
+                                '<span>'+daywind+'</span><em>风</em>'+    
+                                '<span>'+daypower+'</span><em>级</em>'+
+                            '</div>'+                                                                    
+                        '</li>');
+                    };
+                },
+                error:function(){
+                    alert("网络繁忙，请稍后再试")
+                }
+            }); 
+        </script>
+    </body>
+</html>

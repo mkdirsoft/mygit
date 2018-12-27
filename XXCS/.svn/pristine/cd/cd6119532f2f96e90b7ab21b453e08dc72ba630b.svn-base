@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd"
+	default-lazy-init="true">
+	
+	<!-- 
+		此文件：		
+			application-context.xml
+		被文件：		
+			web.xml		
+		所引用。
+	-->
+	
+	<!-- 数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="autoCommitOnClose" value="true"/>
+		<property name="checkoutTimeout" value="${cpool.checkoutTimeout}"/>
+		<property name="initialPoolSize" value="${cpool.minPoolSize}"/>
+		<property name="minPoolSize" value="${cpool.minPoolSize}"/>
+		<property name="maxPoolSize" value="${cpool.maxPoolSize}"/>
+		<property name="maxIdleTime" value="${cpool.maxIdleTime}"/>
+		<property name="acquireIncrement" value="${cpool.acquireIncrement}"/>
+		<property name="maxIdleTimeExcessConnections" value="${cpool.maxIdleTimeExcessConnections}"/>
+	</bean>
+	
+	<!-- 数据源sqlserver -->
+	<bean id="dataSource_s" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc_s.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc_s.url}" />
+		<property name="user" value="${jdbc_s.username}" />
+		<property name="password" value="${jdbc_s.password}" />
+		<property name="autoCommitOnClose" value="true"/>
+		<property name="checkoutTimeout" value="${cpool.checkoutTimeout}"/>
+		<property name="initialPoolSize" value="${cpool.minPoolSize}"/>
+		<property name="minPoolSize" value="${cpool.minPoolSize}"/>
+		<property name="maxPoolSize" value="${cpool.maxPoolSize}"/>
+		<property name="maxIdleTime" value="${cpool.maxIdleTime}"/>
+		<property name="acquireIncrement" value="${cpool.acquireIncrement}"/>
+		<property name="maxIdleTimeExcessConnections" value="${cpool.maxIdleTimeExcessConnections}"/>
+	</bean>	
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingLocations" value="classpath:/com/flx/flxoa/info/*/entity/hbm/*.hbm.xml" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=${hibernate.dialect}
+				hibernate.show_sql=true
+				hibernate.format_sql=false
+				hibernate.query.substitutions=true 1, false 0
+				hibernate.jdbc.batch_size=20
+				hibernate.cache.use_second_level_cache=false
+				hibernate.cache.use_query_cache=false
+			</value>
+		</property>
+		<property name="entityInterceptor">
+			<ref local="DataEntityInterceptor"/>
+		</property>		
+	</bean>
+	<!-- 数据库实体增删改拦截器 -->
+	<bean id="DataEntityInterceptor" class="com.flx.flxoa.info.system.interceptor.DataEntityInterceptor"></bean>
+	<!-- 数据库配置文件 -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>/WEB-INF/config/jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 事务控制 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<!-- 
+		"<context:annotation-config/>"这个配置用来向Spring容器注册以下4个BeanPostProcessor：
+		
+		1. AutowiredAnnotationBeanPostProcessor
+		2. CommonAnnotationBeanPostProcessor
+		3. PersistenceAnnotationBeanPostProcessor
+		4. RequiredAnnotationBeanPostProcessor
+		
+		也就是要把这4个BeanPostProcessor对应的bean注册到容器中。
+		而注册这4个BeanPostProcessor的作用是什么呢？这是为了让系统能够识别相应的注解。
+		具体这4个BeanPostProcessor在识别注解上的作用如下：
+		
+		1.要使用：
+			
+			@Required
+		
+		这个注释，必须声明AutowiredAnnotationBeanPostProcessor的bean：	
+			
+			<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor "/>
+	
+		2.类似的，要使用：
+			
+			@Resource
+			@PostConstruct
+			@PreDestroy
+		
+		这些注释，必须声明CommonAnnotationBeanPostProcessor的bean。
+		
+		3. 要使用：
+			
+			@PersistenceContext
+		
+		这个注解，就必须声明PersistenceAnnotationBeanPostProcessor的Bean。
+		
+		4. 要使用：
+		
+			@Required
+		
+		这个注解，就必须声明RequiredAnnotationBeanPostProcessor的Bean。
+		
+		以上这些注解是很常用的，如果按照传统的方式进行配置将会非常繁琐，所以Spring给我们提供了一个简便的方式：
+		
+			<context:annotation-config/>
+		
+		使用该元素可以自动声明以上注解。
+		
+	 -->
+	<context:annotation-config/>
+  	
+	
+
+    	
+	<!--对静态资源文件的访问-->  
+	<mvc:default-servlet-handler/> 
+</beans>

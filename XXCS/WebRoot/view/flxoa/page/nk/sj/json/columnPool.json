@@ -1,0 +1,37 @@
+{
+	"clientInfo":[{
+    				"data": "",
+    				"render": "function (data, type, row, meta) {return '<em>'+(parseInt(meta.row)+1)+'</em>';}"
+    			}, {
+    				"data": "clientName",
+    				"render":"function(data,type,row,meta){return data;}"
+    			}, {
+    				"data": "clientRank",
+    				"render":"function(data, type, row, meta){return data;}"
+    			}, {
+    				"data": "clientTrade",
+    				"render":"function(data, type, row, meta){return data;}"
+    			}, {
+    				"data": "clientAddress",
+    				"render":"function(data,type,row,meta){return data;}"
+    			}, {
+    				"data": "clientFollower",
+    				"render":"function(data,type,row,meta){return data;}"
+    			}, {
+    				"data": "clientFollowerDept",
+    				"render":"function(data,type,row,meta){return data;}"
+    			},{
+    				"data": "clientSalesman",
+    				"render":"function(data,type,row,meta){return data;}"
+    			},{
+    				"data": "clientBusiness",
+    				"render":"function(data,type,row,meta){return data;}"
+    			},{
+    				"data": "clientMail",
+    				"render":"function(data,type,row,meta){return data;}"
+    			},{
+    				"data":"id",
+    				"render":"function(data,type,row,meta){var str='<em class=\"em-id\" style=\"display:none;\">'+data+'</em><a href=\"javascript:void(0);\" class=\"xmgl-check-btn\" onclick=\"checkClient('+data+')\"><i class=\"fa fa-eye\" title=\"查看\"></i></a><a href=\"javascript:void(0);\" class=\"xmgl-check-btn\" onclick=\"updateClient('+data+')\"><i class=\"fa fa-pencil\" title=\"修改\"></i></a><a href=\"javascript:void(0);\" class=\"xmgl-check-btn\" onclick=\"deleteClient('+data+')\"><i class=\"fa fa-trash\" title=\"删除\"></i></a>' return str;}"
+    			}],
+    "":
+}

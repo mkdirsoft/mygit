@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-9 19:09:53 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.Hx" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx">
+        <composite-id class="com.flx.flxoa.info.market.entity.HxId" mapped="false" name="id" unsaved-value="undefined">
+            <key-property name="cropOfferId" type="int">
+                <column name="CropOfferID"/>
+            </key-property>
+            <key-property name="regionCode" type="string">
+                <column length="6" name="RegionCode"/>
+            </key-property>
+            <key-property name="regionName" type="string">
+                <column length="30" name="RegionName"/>
+            </key-property>
+            <key-property name="cropCategoryCode" type="string">
+                <column length="6" name="CropCategoryCode"/>
+            </key-property>
+            <key-property name="cropCategoryName" type="string">
+                <column length="50" name="CropCategoryName"/>
+            </key-property>
+            <key-property name="cropOfferStr" type="string">
+                <column length="100" name="CropOfferStr"/>
+            </key-property>
+            <key-property name="offerDate" type="date">
+                <column length="10" name="OfferDate"/>
+            </key-property>
+            <key-property name="price" type="java.lang.Long">
+                <column name="Price" precision="10" scale="0"/>
+            </key-property>
+            <key-property name="unit" type="java.lang.Integer">
+                <column name="Unit"/>
+            </key-property>
+            <key-property name="unitName" type="string">
+                <column length="50" name="UnitName"/>
+            </key-property>
+            <key-property name="todayTrend" type="java.lang.Float">
+                <column name="TodayTrend" precision="12" scale="0"/>
+            </key-property>
+            <key-property name="fiveDayTrend" type="java.lang.Float">
+                <column name="FiveDayTrend" precision="12" scale="0"/>
+            </key-property>
+            <key-property name="weekAverage" type="java.lang.Long">
+                <column name="WeekAverage" precision="10" scale="0"/>
+            </key-property>
+            <key-property name="weekTrend" type="java.lang.Float">
+                <column name="WeekTrend" precision="12" scale="0"/>
+            </key-property>
+            <key-property name="reason" type="string">
+                <column length="100" name="Reason"/>
+            </key-property>
+            <key-property name="browseCount" type="java.lang.Integer">
+                <column name="BrowseCount"/>
+            </key-property>
+            <key-property name="approvalState" type="java.lang.Boolean">
+                <column name="ApprovalState"/>
+            </key-property>
+            <key-property name="releaseState" type="java.lang.Boolean">
+                <column name="ReleaseState"/>
+            </key-property>
+            <key-property name="userId" type="java.lang.Integer">
+                <column name="UserID"/>
+            </key-property>
+            <key-property name="userRealName" type="string">
+                <column length="50" name="UserRealName"/>
+            </key-property>
+            <key-property name="offerDateTime" type="timestamp">
+                <column length="19" name="OfferDateTime"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

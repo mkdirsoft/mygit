@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>角色授权 </title>
+
+        <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Gradient Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+        <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+        <meta name="author" content="codedthemes" />
+
+        <link rel="icon" type="image/x-icon" href="/FlxOA/WebRoot/view/flxoa/page/nk/public/img/favicon.ico">
+
+        <!--<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">-->
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/public/css/font.css" />
+
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/bootstrap/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/icon/themify-icons/themify-icons.css">
+
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/icon/icofont/css/icofont.css">
+
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/icon/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/pages/data-table/css/buttons.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
+                
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/css/jquery.mCustomScrollbar.css">
+        
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/public/daterangepicker/daterangepicker.css"/>
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/Datedropper3-master/datedropper.min.css" />
+                        
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/public/css/public.css" />
+        <link rel="stylesheet" type="text/css" href="/FlxOA/WebRoot/view/flxoa/page/nk/oyxq/css/oy.css" />
+    </head>
+
+    <body themebg-pattern="pattern1">
+
+        <!--<div class="theme-loader">
+            <div class="loader-track">
+                <div class="loader-bar"></div>
+            </div>
+        </div>-->
+
+        <div id="pcoded" class="pcoded" nav-type="st2" theme-layout="vertical" vertical-placement="left" vertical-layout="wide" pcoded-device-type="desktop" vertical-nav-type="expanded" vertical-effect="shrink" vnavigation-view="view1" fream-type="theme1" sidebar-img="true" sidebar-img-type="img1" layout-type="img">
+            <div class="pcoded-overlay-box"></div>
+            <div class="pcoded-container navbar-wrapper">
+                <nav class="navbar header-navbar pcoded-header" header-theme="theme1" pcoded-header-position="fixed">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-logo">
+                            <a class="mobile-menu" id="mobile-collapse" href="dt-api.html#!">
+                                <i class="ti-menu"></i>
+                            </a>
+                            <div class="mobile-search">
+                                <div class="header-search">
+                                    <div class="main-search morphsearch-search">
+                                        <div class="input-group">
+                                            <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                            <input type="text" class="form-control" placeholder="Enter Keyword">
+                                            <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="index.html">
+                                <img class="img-fluid" src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/logo.png" style="height: 32px;" alt="Theme-Logo" />
+                            </a>
+                            <a class="mobile-options">
+                                <i class="ti-more"></i>
+                            </a>
+                        </div>
+                        <div class="navbar-container container-fluid">
+                            <ul class="nav-left">
+                                <li>
+                                    <div class="sidebar_toggle">
+                                        <a href="javascript:void(0)"><i class="ti-menu"></i></a>
+                                    </div>
+                                </li>
+                                <li class="header-search">
+                                    <div class="main-search morphsearch-search">
+                                        <div class="input-group">
+                                            <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="dt-api.html#!" onclick="javascript:toggleFullScreen()">
+                                        <i class="ti-fullscreen"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav-right">
+                                <li class="header-notification">
+                                    <a href="dt-api.html#!">
+                                        <i class="ti-bell"></i>
+                                        <span class="badge bg-c-pink"></span>
+                                    </a>
+                                    <ul class="show-notification">
+                                        <li>
+                                            <h6>Notifications</h6>
+                                            <label class="label label-danger">New</label>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius" src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">John Doe</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius" src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Joseph William</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius" src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Sara Soudein</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="dt-api.html#!" class="displayChatbox">
+                                        <i class="ti-comments"></i>
+                                        <span class="badge bg-c-green"></span>
+                                    </a>
+                                </li>
+                                <li class="user-profile header-notification">
+                                    <a href="dt-api.html#!">
+                                        <img src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                        <span>John Doe</span>
+                                        <i class="ti-angle-down"></i>
+                                    </a>
+                                    <ul class="show-notification profile-notification">
+                                        <li>
+                                            <a href="dt-api.html#!">
+                                                <i class="ti-settings"></i> Settings
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="user-profile.html">
+                                                <i class="ti-user"></i> Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="email-inbox.html">
+                                                <i class="ti-email"></i> My Messages
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="auth-lock-screen.html">
+                                                <i class="ti-lock"></i> Lock Screen
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="auth-normal-sign-in.html">
+                                                <i class="ti-layout-sidebar-left"></i> Logout
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="sidebar" class="users p-chat-user showChat">
+                    <div class="had-container">
+                        <div class="card card_main p-fixed users-main">
+                            <div class="user-box">
+                                <div class="chat-search-box">
+                                    <a class="back_friendlist">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </a>
+                                    <div class="right-icon-control">
+                                        <input type="text" class="form-control  search-text" placeholder="Search Friend" id="search-friends">
+                                        <div class="form-icon">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-friend-list">
+                                    <div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius img-radius" src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image ">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Josephin Doe</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius" src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Lary Doe</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius" src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Alice</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius" src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Alia</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius" src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Suzen</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="showChat_inner">
+                    <div class="media chat-inner-header">
+                        <a class="back_chatBox">
+                            <i class="fa fa-chevron-left"></i> Josephin Doe
+                        </a>
+                    </div>
+                    <div class="media chat-messages">
+                        <a class="media-left photo-table" href="dt-api.html#!">
+                            <img class="media-object img-radius img-radius m-t-5" src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                        </a>
+                        <div class="media-body chat-menu-content">
+                            <div class="">
+                                <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+                                <p class="chat-time">8:20 a.m.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media chat-messages">
+                        <div class="media-body chat-menu-reply">
+                            <div class="">
+                                <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+                                <p class="chat-time">8:20 a.m.</p>
+                            </div>
+                        </div>
+                        <div class="media-right photo-table">
+                            <a href="dt-api.html#!">
+                                <img class="media-object img-radius img-radius m-t-5" src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="chat-reply-box p-b-20">
+                        <div class="right-icon-control">
+                            <input type="text" class="form-control search-text" placeholder="Share Your Thoughts">
+                            <div class="form-icon">
+                                <i class="fa fa-paper-plane"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcoded-main-container" style="margin-top: 56px;">
+                    <div class="pcoded-wrapper">
+                        <nav class="pcoded-navbar" navbar-theme="theme1" active-item-theme="theme5" sub-item-theme="theme2" active-item-style="style0" pcoded-navbar-position="fixed">
+                            <div class="sidebar_toggle">
+                                <a href="project-manage/dt-api.html"><i class="icon-close icons"></i></a>
+                            </div>
+                            <div class="pcoded-inner-navbar main-menu">
+                                <div class="pcoded-navigation-label" menu-title-theme="theme6">Navigation</div>
+                                <ul class="pcoded-item pcoded-left-item">
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)">
+                                            <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                            <span class="pcoded-mtext">欢迎页</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="active">
+                                                <a href="/FlxOA/WebRoot/view/flxoa/page/nk/pages/index.html">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Default</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a href="/FlxOA/WebRoot/view/flxoa/page/nk/pages/dashboard-ecommerce.html">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Ecommerce</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class=" ">
+                                                <a href="/FlxOA/WebRoot/view/flxoa/page/nk/pages/dashboard-analytics.html">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Analytics</span>
+                                                    <span class="pcoded-badge label label-info ">NEW</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)">
+                                            <span class="pcoded-micon"><i class="ti-layout"></i><b>P</b></span>
+                                            <span class="pcoded-mtext">签到</span>
+                                            <span class="pcoded-badge label label-warning">NEW</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class=" pcoded-hasmenu">
+                                                <a href="javascript:void(0)">
+                                                    <span class="pcoded-micon"><i class="icon-pie-chart"></i></span>
+                                                    <span class="pcoded-mtext">Vertical</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                                <ul class="pcoded-submenu">
+                                                    <li class=" ">
+                                                        <a href="menu-static.html">
+                                                            <span class="pcoded-micon"><i class="icon-chart"></i></span>
+                                                            <span class="pcoded-mtext">Static Layout</span>
+                                                            <span class="pcoded-mcaret"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class=" ">
+                                                        <a href="menu-header-fixed.html">
+                                                            <span class="pcoded-micon"><i class="icon-chart"></i></span>
+                                                            <span class="pcoded-mtext">Header Fixed</span>
+                                                            <span class="pcoded-mcaret"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class=" ">
+                                                        <a href="menu-compact.html">
+                                                            <span class="pcoded-micon"><i class="icon-chart"></i></span>
+                                                            <span class="pcoded-mtext">Compact</span>
+                                                            <span class="pcoded-mcaret"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class=" ">
+                                                        <a href="menu-sidebar.html">
+                                                            <span class="pcoded-micon"><i class="icon-chart"></i></span>
+                                                            <span class="pcoded-mtext">Sidebar Fixed</span>
+                                                            <span class="pcoded-mcaret"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class=" pcoded-hasmenu">
+                                                <a href="javascript:void(0)">
+                                                    <span class="pcoded-micon"><i class="icon-pie-chart"></i></span>
+                                                    <span class="pcoded-mtext">Horizontal</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                                <ul class="pcoded-submenu">
+                                                    <li class=" ">
+                                                        <a href="menu-horizontal-static.html" target="_blank">
+                                                            <span class="pcoded-micon"><i class="icon-chart"></i></span>
+                                                            <span class="pcoded-mtext">Static Layout</span>
+                                                            <span class="pcoded-mcaret"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class=" ">
+                                                        <a href="menu-horizontal-fixed.html" target="_blank">
+                                                            <span class="pcoded-micon"><i class="icon-chart"></i></span>
+                                                            <span class="pcoded-mtext">Fixed layout</span>
+                                                            <span class="pcoded-mcaret"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class=" ">
+                                                        <a href="menu-horizontal-icon.html" target="_blank">
+                                                            <span class="pcoded-micon"><i class="icon-chart"></i></span>
+                                                            <span class="pcoded-mtext">Static With Icon</span>
+                                                            <span class="pcoded-mcaret"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class=" ">
+                                                        <a href="menu-horizontal-icon-fixed.html" target="_blank">
+                                                            <span class="pcoded-micon"><i class="icon-chart"></i></span>
+                                                            <span class="pcoded-mtext">Fixed With Icon</span>
+                                                            <span class="pcoded-mcaret"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class=" ">
+                                                <a href="menu-bottom.html">
+                                                    <span class="pcoded-micon"><i class="icon-pie-chart"></i></span>
+                                                    <span class="pcoded-mtext">Bottom Menu</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class=" ">
+                                                <a href="box-layout.html" target="_blank">
+                                                    <span class="pcoded-micon"><i class="icon-pie-chart"></i></span>
+                                                    <span class="pcoded-mtext">Box Layout</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class=" ">
+                                                <a href="menu-rtl.html" target="_blank">
+                                                    <span class="pcoded-micon"><i class="icon-pie-chart"></i></span>
+                                                    <span class="pcoded-mtext">RTL</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="active pcoded-trigger">
+                                        <a href="dt-api.html">
+                                            <span class="pcoded-micon"><i class="ti-layout-cta-right"></i><b>N</b></span>
+                                            <span class="pcoded-mtext">项目管理</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)">
+                                            <span class="pcoded-micon"><i class="ti-view-grid"></i><b>W</b></span>
+                                            <span class="pcoded-mtext">回款管理</span>
+                                            <span class="pcoded-badge label label-danger">100+</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class="">
+                                                <a href="widget-statistic.html">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Statistic</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class=" ">
+                                                <a href="widget-data.html">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Data</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class=" ">
+                                                <a href="widget-chart.html">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Chart Widget</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="pcoded-hasmenu">
+                                        <a href="javascript:void(0)">
+                                            <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i><b>BC</b></span>
+                                            <span class="pcoded-mtext">审批</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                        <ul class="pcoded-submenu">
+                                            <li class=" ">
+                                                <a href="alert.html">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Alert</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class=" ">
+                                                <a href="breadcrumb.html">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Breadcrumbs</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                            <li class=" ">
+                                                <a href="button.html">
+                                                    <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                                    <span class="pcoded-mtext">Button</span>
+                                                    <span class="pcoded-mcaret"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="pcoded-content">
+                            <div class="pcoded-inner-content">
+                                <div class="main-body">
+                                    <div class="page-wrapper">
+                                        <div class="page-header card">
+                                            <div class="card-block">                                           
+                                                <ul class="breadcrumb-title">
+                                                    <li class="breadcrumb-item">
+                                                        <a href="index.html"> <i class="fa fa-home"></i> </a>
+                                                    </li>
+                                                    <li class="breadcrumb-item">
+                                                        <a href="dt-api.html#!">系统</a>
+                                                    </li>
+                                                    <li class="breadcrumb-item">
+                                                        <a href="dt-api.html#!">角色管理</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="page-body">
+                                            <div class="row">
+                                                <div class="col-sm-12">                                                                     
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="search-wrap-oy">
+                                                                <form>
+                                                                    <div class="form-group">
+                                                                        <div class="row search-input-oy">
+                                                                            <div class="col-sm-3">                                                                         
+                                                                                <input type="text" class="form-control" placeholder="按角色名称查询" />
+                                                                            </div> 
+                                                                        </div>
+                                                                        <div class="row search-btn-oy">
+                                                                            <div class="col-sm-12">
+                                                                                <button type="submit" class="btn btn-primary m-b-0">查询</button>
+                                                                                <button type="reset" class="btn btn-success m-b-0">重置</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block">                                                           
+                                                            <div class="dt-responsive table-responsive">
+                                                                <div class="action-buttons-oy">
+                                                                    <button type="button" class="btn btn-sm btn-primary m-b-0 jsgl-add-role-btn">添加角色</button>                                                                    
+                                                                </div>
+                                                                <table id="footer-search" class="table table-striped table-bordered table-styling nowrap table-wrap-public">
+                                                                    <thead>
+                                                                        <tr class="table-primary">
+                                                                            <th>序号</th>
+                                                                            <th>角色名称</th>                                                                            
+                                                                            <th>操作</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody id="jsglTbody">
+                                                                        <!--<tr>
+                                                                            <td>张三</td>
+                                                                            <td>前端</td>
+                                                                            <td>北京</td>
+                                                                            <td>25</td>
+                                                                            <td>25</td>
+                                                                            <td>25</td>
+                                                                            <td>2016/03/23</td>
+                                                                            <td></td>
+                                                                            <td>
+                                                                                <a href="javascript:void(0);"><i class="fa fa-eye" data-toggle="tooltip" data-placement="top" title="查看" data-original-title="查看"></i></a>                                                                                                                                                    
+                                                                            </td>
+                                                                        </tr>-->
+                                                                    </tbody>
+                                                                    <tfoot>
+                                                                        <tr>
+                                                                            <th>序号</th>
+                                                                            <th>角色名称</th>    
+                                                                            <td>操作</td>
+                                                                        </tr>
+                                                                    </tfoot>
+                                                                </table>
+                                                            </div>                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="styleSelector">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                        
+        
+        
+        <!--操作-查看-->
+        <div class="layui-layer-con-oy" id="jsglCheck" style="display: none;">
+            <form>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">角色名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control role_name" readonly="" value="111">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">角色描述</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control role_desc" readonly="" value="111">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">是否生效</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control role_is_valid" readonly="" value="111">
+                    </div>
+                </div> 
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">是否管理员</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control role_is_admin" readonly="" value="111">
+                    </div>
+                </div>                 
+            </form>
+        </div>
+        
+        
+        <!--操作-修改-->
+        <div class="layui-layer-con-oy" id="jsglEdit" style="display: none;">
+            <form>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">角色名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control role_name" value="111">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">角色描述</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control role_desc" value="111">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">是否生效</label>
+                    <div class="col-sm-9">
+                        <div class="form-radio role_is_valid">
+                            <div class="radio radio-inline">
+                                <label>
+                                    <input type="radio" name="radio-is-valid">
+                                    <i class="helper"></i>是
+                                </label>
+                            </div>
+                            <div class="radio radio-inline">
+                                <label>
+                                    <input type="radio" name="radio-is-valid">
+                                    <i class="helper"></i>否
+                                </label>
+                            </div>                                
+                        </div>
+                    </div>
+                </div> 
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">是否管理员</label>
+                    <div class="col-sm-9">
+                        <div class="form-radio role_is_admin">
+                            <div class="radio radio-inline">
+                                <label>
+                                    <input type="radio" name="radio-is-admin">
+                                    <i class="helper"></i>是
+                                </label>
+                            </div>
+                            <div class="radio radio-inline">
+                                <label>
+                                    <input type="radio" name="radio-is-admin">
+                                    <i class="helper"></i>否
+                                </label>
+                            </div>                                
+                        </div>
+                    </div>
+                </div>  
+                <div class="form-group row search-btn-oy">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-primary m-b-0">保存</button>                            
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        
+        <!--操作-添加功能-->
+        <div class="layui-layer-con-oy" id="jsglAddFunc" style="display: none;">
+            <form>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">角色</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control role_name" placeholder="请选择角色名称">
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-sm btn-primary m-b-0">选择</button>  
+                    </div>
+                </div>                             
+            </form>
+        </div>
+            
+            
+            
+
+        <!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/jquery/js/jquery.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/popper.js/js/popper.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/modernizr/js/modernizr.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/modernizr/js/css-scrollbars.js"></script>
+        
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/pages/data-table/js/jszip.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/pages/data-table/js/pdfmake.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/pages/data-table/js/vfs_fonts.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+                        
+        <script type="text/javascript" src="/FlxOA/WebRoot/view/flxoa/page/nk/public/daterangepicker/moment.js"></script>
+        <script type="text/javascript" src="/FlxOA/WebRoot/view/flxoa/page/nk/public/daterangepicker/daterangepicker.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/Datedropper3-master/datedropper.min.js"></script>
+                
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/bower_components/spectrum/js/spectrum.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/pages/advance-elements/custom-picker.js"></script>
+                
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/pages/data-table/js/data-table-custom.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/js/pcoded.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/js/navbar-image/vertical-layout.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/files/assets/js/script.js"></script>
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/public/layer/layer.js"></script>   
+                                       
+        <script src="/FlxOA/WebRoot/view/flxoa/page/nk/oyxq/js/oy.js"></script>
+        
+        <script>
+            //$.fn.dataTable.ext.errMode = 'throw';
+            
+            
+            //表格数据
+            $.ajax({
+                type:"get",
+                url:"/FlxOA/WebRoot/view/flxoa/page/nk/pages/test1.json",
+                data:{},
+                dataType:"json",
+                async: true,  //默认是true  ajax请求是异步的
+                success:function(data){
+                    dealData(data);
+                },
+                error:function(){
+                    alert("网络繁忙，请稍后再试");
+                }
+            });
+            function dealData(data){
+                //alert(JSON.stringify(data));
+                var jsonData = data[0].projectMessage;
+                var domCon = '<tr>'+                                
+                                '<td>{{projNumber}}</td>'+
+                                '<td>{{updateTime}}</td>'+                                                                
+                                '<td>'+                                        
+                                    '<a href="javascript:void(0);" class="jsgl-check-btn"><i class="fa fa-eye" data-toggle="tooltip" data-placement="top" title="查看" data-original-title="查看"></i></a>'+
+                                    '<a href="javascript:void(0);" class="jsgl-edit-btn"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="修改" data-original-title="修改"></i></a>'+
+                                    '<a href="javascript:void(0);" class="jsgl-delete-btn"><i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="删除" data-original-title="删除"></i></a>'+                                                                            
+                                    '<a href="javascript:void(0);" class="jsgl-add-func-btn"><i class="fa fa-plus" data-toggle="tooltip" data-placement="top" title="添加功能" data-original-title="添加功能"></i></a>'+                                                                           
+                                '</td>'+                                
+                            '</tr>';                
+                appSystem.setJsonDataToDom("jsglTbody",jsonData,domCon);
+                
+                
+                //添加角色
+                $(".jsgl-add-role-btn").on("click",function(){
+                    layer.msg("你点击了添加角色按钮");
+                });
+                
+                
+                //遍历每行数据
+                $("#jsglTbody tr").each(function(){
+                    //var idx = $(this).index();                                        
+                    
+                                                                              
+                    //操作-查看             
+                    $(this).find(".jsgl-check-btn").on('click', function(){  
+                        //alert(idx);
+                        layer.open({
+                            type: 1,
+                            area: ['40%', '40%'],
+                            shadeClose: true, //点击遮罩关闭
+                            title: '查看',
+                            content: $('#jsglCheck')
+                        });                    
+                        $.ajax({
+                            type:"get",
+                            url:"/FlxOA/WebRoot/view/flxoa/page/nk/pages/test1.json",
+                            data:{
+                                //传递每条信息的某个参数，要求后台只返回该条信息的字段
+                            },
+                            dataType:"json",
+                            async: true,
+                            success: function(data){                                
+                                var role_name = data[0].projectMessage[0].createTime;
+                                var role_desc = data[0].projectMessage[0].projNumber;
+                                var role_is_valid = data[0].projectMessage[0].updateTime;
+                                var role_is_admin = data[0].projectMessage[0].updateTime;
+                                $('#jsglCheck').find(".role_name").val(role_name);
+                                $('#jsglCheck').find(".role_desc").val(role_desc);
+                                $('#jsglCheck').find(".role_is_valid").val(role_is_valid);
+                                $('#jsglCheck').find(".role_is_admin").val(role_is_admin);
+                            },
+                            error: function(){
+                                alert("网络繁忙，请稍后再试");
+                            }
+                        });                        
+                    });
+                    
+                    
+                    //操作-修改             
+                    $(this).find(".jsgl-edit-btn").on('click', function(){  
+                        //alert(idx);
+                        layer.open({
+                            type: 1,
+                            area: ['40%', '40%'],
+                            shadeClose: true, //点击遮罩关闭
+                            title: '修改',
+                            content: $('#jsglEdit')
+                        });                    
+                        $.ajax({
+                            type:"get",
+                            url:"/FlxOA/WebRoot/view/flxoa/page/nk/pages/test1.json",
+                            data:{
+                                //传递每条信息的某个参数，要求后台只返回该条信息的字段
+                            },
+                            dataType:"json",
+                            async: true,
+                            success: function(data){                                
+                                var role_name = data[0].projectMessage[0].createTime;
+                                var role_desc = data[0].projectMessage[0].projNumber;
+                                var role_is_valid = data[0].projectMessage[0].updateTime;
+                                var role_is_admin = data[0].projectMessage[0].updateTime;
+                                $('#jsglEdit').find(".role_name").val(role_name);
+                                $('#jsglEdit').find(".role_desc").val(role_desc);
+                                //判断是否生效————假如0代表生效  1代表不生效
+                                if(role_is_valid == 0){
+                                    //判断是否生效，如果是
+                                    $('#jsglEdit .role_is_valid .radio').eq(0).find("input").attr("checked",true);
+                                    $('#jsglEdit .role_is_valid .radio').eq(1).find("input").attr("checked",false);
+                                }else{
+                                    //判断是否生效，如果否
+                                    $('#jsglEdit .role_is_valid .radio').eq(1).find("input").attr("checked",true);
+                                    $('#jsglEdit .role_is_valid .radio').eq(0).find("input").attr("checked",false);
+                                };
+                                //判断是否为管理员————假如0代表是管理员  1代表不是管理员
+                                if(role_is_admin == 0){
+                                    //判断是否为管理员，如果是
+                                    $('#jsglEdit .role_is_admin .radio').eq(0).find("input").attr("checked",true);
+                                    $('#jsglEdit .role_is_admin .radio').eq(1).find("input").attr("checked",false);
+                                }else{
+                                    //判断是否为管理员，如果不是
+                                    $('#jsglEdit .role_is_admin .radio').eq(1).find("input").attr("checked",true);
+                                    $('#jsglEdit .role_is_admin .radio').eq(0).find("input").attr("checked",false);
+                                };
+                                
+                                
+                                //单选按钮checked状态切换【公共方法】
+                                $(".form-radio").each(function(){
+                                    $(this).find(".radio label input").on("click",function(){
+                                        $(this).attr("checked",true);
+                                        $(this).parents(".radio-inline").siblings().find("label input").attr("checked",false);
+                                    });
+                                });                                
+                            },
+                            error: function(){
+                                alert("网络繁忙，请稍后再试");
+                            }
+                        });                        
+                    });
+                    
+                    
+                    //操作-删除             
+                    $(this).find(".jsgl-delete-btn").on('click', function(){
+                        //alert(idx);
+                        var obj = $(this).parent().parent();
+                        layer.confirm('您确定要删除这条数据吗？', {
+                            btn: ['确定', '取消'] //按钮
+                        }, function() {
+                            obj.remove();
+                            layer.msg('删除成功', {
+                                icon: 1
+                            });
+                        }, function() {
+                            
+                        });
+                    }); 
+                    
+                    
+                    //操作-添加功能             
+                    $(this).find(".jsgl-add-func-btn").on('click', function(){  
+                        //alert(idx);
+                        layer.open({
+                            type: 1,
+                            area: ['40%', '40%'],
+                            shadeClose: true, //点击遮罩关闭
+                            title: '添加功能',
+                            content: $('#jsglAddFunc')
+                        });                                                                  
+                    });
+                });                
+            };
+            
+            
+            
+            
+            //日期范围选择器
+            $('#daterange-btn').daterangepicker({
+                    ranges: {
+                        '全部': [moment(), moment().subtract(-1, 'days')],
+                        '今天': [moment(), moment()],
+                        '昨天': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        '过去7天': [moment().subtract(6, 'days'),moment()],
+                        '过去30天': [moment().subtract(29, 'days'),moment()],
+                        '过去60天': [moment().subtract(59, 'days'),moment()]
+                    },
+                    startDate: moment(),
+                    endDate: moment()
+                },
+                function(start, end,label) {
+                    //label:通过它来知道用户选择的是什么，传给后台进行相应的展示
+            //      console.log(label)
+                    if(label=='全部'){
+                        $('#daterange-btn span').html('全部');
+                    }else if(label=='今天'){
+                        $('#daterange-btn span').html(end.format('YYYY/MM/DD'));
+                    }else if(label=='昨天'){
+                        $('#daterange-btn span').html(start.format('YYYY/MM/DD'));
+                    }else if(label=='过去7天'){
+                        $('#daterange-btn span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+                    }else if(label=='过去30天'){
+                        $('#daterange-btn span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+                    }else if(label=='过去60天'){
+                        $('#daterange-btn span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+                    }
+                    
+                }
+            );            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+	default-lazy-init="true">
+
+	<!-- 
+		此文件：		
+			flxoa-servlet-admin.xml	
+		被文件：		
+			web.xml		
+		所引用。
+	-->
+
+	<!-- Spring3.1之前版本，开启注解式处理器@Controller或@RequestMapping的支持 -->
+    <bean    class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" >  
+            <property name="messageConverters">     
+         <list>     
+             <bean class = "org.springframework.http.converter.StringHttpMessageConverter">     
+                <property name = "supportedMediaTypes">  
+                      <list>  
+                          <value>text/html;charset=UTF-8</value>     
+                     </list>     
+                </property>     
+             </bean>     
+         </list>     
+   </property>    
+    </bean> 
+
+	<!-- Spring3.1之前版本，开启注解式处理器@Controller或@RequestMapping的支持 -->
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+	</bean>
+	 
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/view/flxoa/page/" />
+		<property name="suffix" value=".html" />
+	</bean>
+
+ <!-- 	<bean class="com.suntao.ExceptionClass"></bean>
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="resourceViewResolver">
+	   <property name="prefix" value="/view/flxoa/page/" />
+		<property name="suffix" value=".html" />
+	</bean>  -->
+
+
+
+	<!-- 启用spring mvc 注解，如类字段上的@Autowired自动装配 -->
+	<context:annotation-config/>
+	<!--引入包含的action-->
+	<import resource="configbean/flxoa-servlet-admin-action.xml" />
+	<!-- 文件上传的配置 -->
+    <bean id="multipartResolver"
+        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 文件上传大小上限 -->
+        <property name="maxUploadSize">
+            <value>8000000</value>
+        </property>
+        <!-- 编码格式 -->
+        <property name="defaultEncoding">
+            <value>UTF-8</value>
+        </property>
+    </bean>
+</beans>

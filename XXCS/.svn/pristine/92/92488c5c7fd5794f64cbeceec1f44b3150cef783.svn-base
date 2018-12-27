@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-9 19:09:53 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.HxSource" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx_source">
+        <id name="sourceCode" type="string">
+            <column length="6" name="SourceCode"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="cropCategoryCode" optimistic-lock="true" type="string" unique="false">
+            <column length="6" name="CropCategoryCode"/>
+        </property>
+        <property generated="never" lazy="false" name="sourceName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="SourceName"/>
+        </property>
+        <property generated="never" lazy="false" name="sourceType" optimistic-lock="true" type="java.lang.Byte" unique="false">
+            <column name="SourceType">
+                <comment>????Ʒ????Դ????Ѷ??Դ?????Ӵ˱??????</comment>
+            </column>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="hxCropsources" optimistic-lock="true" sort="unsorted" table="hx_cropsource">
+            <key on-delete="noaction">
+                <column length="6" name="SourceCode"/>
+            </key>
+            <one-to-many class="com.flx.flxoa.info.market.entity.HxCropsource" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="hxNewses" optimistic-lock="true" sort="unsorted" table="hx_news">
+            <key on-delete="noaction">
+                <column length="6" name="SourceCode"/>
+            </key>
+            <one-to-many class="com.flx.flxoa.info.market.entity.HxNews" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="hxFollows" optimistic-lock="true" sort="unsorted" table="hx_follow">
+            <key on-delete="noaction">
+                <column length="6" name="SourceCode"/>
+            </key>
+            <one-to-many class="com.flx.flxoa.info.market.entity.HxFollow" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

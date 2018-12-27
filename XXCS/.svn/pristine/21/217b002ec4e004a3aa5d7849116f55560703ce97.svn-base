@@ -1,0 +1,179 @@
+/**客户分配页面样式   开始*/
+/* 头部“跟单人”选择入例框样式处理  开始 */
+.follower-select{
+	width: 84%;
+    padding: 0 15px 0 15px;
+    margin-top:20px;
+}
+.pf{
+	width: 40%;
+}
+.af{
+	width: 40%;
+    margin-left: 20%;
+}
+/* 头部“跟单人”选择入例框样式处理  结束*/
+.dtbBox{
+	display: inline-block;
+	position:relative;
+	width:84%;
+	height:500px;
+    margin-right: auto;
+    border: 1px solid #ccc;
+}
+#preDistribute,#afterDistribute{
+	width: 43%;
+    float: left;
+}
+/* 分配按钮垂直居中处理  开始 */
+#dtbBtn{
+	width: 14%;
+	height:100%;
+    float: left;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    text-align: center;
+}
+#dtbBtn:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+.center_btn{
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+}
+.center_btn a{
+	display:block;
+}
+.icon-list-demo i {
+	color: rgba(133, 141, 150, 0.7);
+}
+/* 分配按钮垂直居中处理  结束 */
+.myBg{
+	background:#252525;
+}
+/**客户分配页面样式   结束*/
+/**项目费用查看页面样式   开始*/
+.fytj-tab {
+	/* padding-left: 2%; */
+}
+.fytj-tab li{
+	float:left;
+	width:15%;
+	height:120px;
+	margin-left:1%;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+.mod-one{
+	padding: 10px;
+	text-align: center;
+    font-size: 15px;
+    color: #868686;
+    font-weight:bold;
+}
+.mod-one span{
+	display: inline-block;
+    margin-left: 10px;
+}
+.mod-two{
+	padding: 5px 10px 20px 10px;
+    font-size: 12px;
+    color: #949494;
+    text-align:center;
+}
+.mod-three{
+	padding: 6px;
+	text-align:center;
+}
+.mod-three span{
+	color:#fff;
+}
+.mod-two-vs{
+	display:inline-block;
+	margin-right:10px;
+}
+.fytj-tab li:nth-child(1){
+	-moz-box-shadow: 1px 1px 2px #58a6ff; /* 老的 Firefox */
+	box-shadow: 1px 1px 2px #58a6ff;
+}
+.fytj-tab li:nth-child(1) .mod-two-vs{
+	color:#58a6ff;
+}
+.fytj-tab li:nth-child(1) .mod-three{
+    background-color: #58a6ff;
+    -moz-box-shadow: 1px 0 4px #58a6ff; /* 老的 Firefox */
+	box-shadow: 1px 0 4px #58a6ff;
+}
+.fytj-tab li:nth-child(2){
+	-moz-box-shadow: 1px 1px 2px #45dcbe; /* 老的 Firefox */
+	box-shadow: 1px 1px 2px #45dcbe;
+}
+.fytj-tab li:nth-child(2) .mod-two-vs{
+	color:#45dcbe;
+}
+.fytj-tab li:nth-child(2) .mod-three{
+	background-color: #45dcbe;
+	-moz-box-shadow: 1px 0 4px #45dcbe; /* 老的 Firefox */
+	box-shadow: 1px 0 4px #45dcbe;
+}
+.fytj-tab li:nth-child(3){
+	-moz-box-shadow: 1px 1px 2px #ffc36c; /* 老的 Firefox */
+	box-shadow: 1px 1px 2px #ffc36c;
+}
+.fytj-tab li:nth-child(3) .mod-two-vs{
+	color:#ffc36c;
+}
+.fytj-tab li:nth-child(3) .mod-three{
+	background-color:#ffc36c;
+	-moz-box-shadow: 1px 0 4px #ffc36c; /* 老的 Firefox */
+	box-shadow: 1px 0 4px #ffc36c;
+}
+.fytj-tab li:nth-child(4){
+	-moz-box-shadow: 1px 1px 2px #ff7289; /* 老的 Firefox */
+	box-shadow: 1px 1px 2px #ff7289;
+}
+.fytj-tab li:nth-child(4) .mod-two-vs{
+	color:#ff7289;
+}
+.fytj-tab li:nth-child(4) .mod-three{
+	background-color:#ff7289;
+	-moz-box-shadow: 1px 0 4px #ff7289; /* 老的 Firefox */
+	box-shadow: 1px 0 4px #ff7289;
+}
+.fytj-tab li:nth-child(5){
+	-moz-box-shadow: 1px 1px 2px #cc66ff; /* 老的 Firefox */
+	box-shadow: 1px 1px 2px #cc66ff;
+}
+.fytj-tab li:nth-child(5) .mod-two-vs{
+	color:#cc66ff;
+}
+.fytj-tab li:nth-child(5) .mod-three{
+	background-color:#cc66ff;
+	-moz-box-shadow: 1px 0 4px #cc66ff; /* 老的 Firefox */
+	box-shadow: 1px 0 4px #cc66ff;
+}
+.fytj-tab li:nth-child(6){
+	-moz-box-shadow: 1px 1px 2px #fe9e93; /* 老的 Firefox */
+	box-shadow: 1px 1px 2px #fe9e93;
+}
+.fytj-tab li:nth-child(6) .mod-two-vs{
+	color:#fe9e93;
+}
+.fytj-tab li:nth-child(6) .mod-three{
+	background-color:#fe9e93;
+	-moz-box-shadow: 1px 0 4px #fe9e93; /* 老的 Firefox */
+	box-shadow: 1px 0 4px #fe9e93;
+}
+.notice{
+	display:inline-block;
+	font-size: 8px;
+    color: #ff7289;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+/**项目费用查看页面样式   开始*/

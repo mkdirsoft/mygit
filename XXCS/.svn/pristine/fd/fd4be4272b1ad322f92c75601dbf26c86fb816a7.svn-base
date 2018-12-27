@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>部门列表</title>
+
+	<!--[if lt IE 10]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="coder" />
+
+	<link rel="icon" type="image/x-icon" href="/view/flxoa/page/nk/public/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/themify-icons/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/icofont/css/icofont.css" />
+	<link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/view/flxoa/page/nk/public/css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/css/jquery.mCustomScrollbar.css">
+	<!-- <link rel="stylesheet" href="/view/flxoa/page/nk/files/assets/pages/chart/radial/css/radial.css" type="text/css" media="all"> -->
+
+	<link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/oyxq/css/oy.css" />
+	<link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/css/public.css" />
+</head>
+
+<body themebg-pattern="pattern1">
+<div id="pcoded" class="pcoded" nav-type="st2" theme-layout="vertical" vertical-placement="left" vertical-layout="wide" pcoded-device-type="desktop" vertical-nav-type="expanded" vertical-effect="shrink" vnavigation-view="view1" fream-type="theme1" sidebar-img="true" sidebar-img-type="img1" layout-type="img">
+	<div class="pcoded-overlay-box"></div>
+	<div class="pcoded-container navbar-wrapper">
+		<nav class="navbar header-navbar pcoded-header" header-theme="theme1" pcoded-header-position="fixed">
+			<div class="navbar-wrapper">
+				<div class="navbar-logo">
+					<a class="mobile-menu" id="mobile-collapse" href="index.html#!">
+						<i class="ti-menu"></i>
+					</a>
+					<div class="mobile-search">
+						<div class="header-search">
+							<div class="main-search morphsearch-search">
+								<div class="input-group">
+									<span class="input-group-addon search-close"><i class="ti-close"></i></span>
+									<input type="text" class="form-control" placeholder="Enter Keyword">
+									<span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="index.html">
+						<img class="img-fluid" src="/view/flxoa/page/nk/files/assets/images/logo.png" alt="Theme-Logo" style="height: 32px;" />
+					</a>
+					<a class="mobile-options">
+						<i class="ti-more"></i>
+					</a>
+				</div>
+				<div class="navbar-container container-fluid">
+					<ul class="nav-left">
+						<li>
+							<div class="sidebar_toggle">
+								<a href="javascript:void(0)"><i class="ti-menu"></i></a>
+							</div>
+						</li>
+						<li class="header-search">
+							<div class="main-search morphsearch-search">
+								<div class="input-group">
+									<span class="input-group-addon search-close"><i class="ti-close"></i></span>
+									<input type="text" class="form-control">
+									<span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="index.html#!" onclick="javascript:toggleFullScreen()">
+								<i class="ti-fullscreen"></i>
+							</a>
+						</li>
+					</ul>
+					<ul class="nav-right">
+						<li class="header-notification">
+							<a href="index.html#!">
+								<i class="ti-bell"></i>
+								<span class="badge bg-c-pink"></span>
+							</a>
+							<ul class="show-notification">
+								<li>
+									<h6>Notifications</h6>
+									<label class="label label-danger">New</label>
+								</li>
+								<li>
+									<div class="media">
+										<img class="d-flex align-self-center img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+										<div class="media-body">
+											<h5 class="notification-user">John Doe</h5>
+											<p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+											<span class="notification-time">30 minutes ago</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="media">
+										<img class="d-flex align-self-center img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+										<div class="media-body">
+											<h5 class="notification-user">Joseph William</h5>
+											<p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+											<span class="notification-time">30 minutes ago</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="media">
+										<img class="d-flex align-self-center img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+										<div class="media-body">
+											<h5 class="notification-user">Sara Soudein</h5>
+											<p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+											<span class="notification-time">30 minutes ago</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="">
+							<a href="index.html#!" class="displayChatbox">
+								<i class="ti-comments"></i>
+								<span class="badge bg-c-green"></span>
+							</a>
+						</li>
+						<li class="user-profile header-notification">
+							<a href="index.html#!">
+								<img src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+								<span>John Doe</span>
+								<i class="ti-angle-down"></i>
+							</a>
+							<ul class="show-notification profile-notification">
+								<li>
+									<a href="index.html#!">
+										<i class="ti-settings"></i> Settings
+									</a>
+								</li>
+								<li>
+									<a href="user-profile.html">
+										<i class="ti-user"></i> Profile
+									</a>
+								</li>
+								<li>
+									<a href="email-inbox.html">
+										<i class="ti-email"></i> My Messages
+									</a>
+								</li>
+								<li>
+									<a href="auth-lock-screen.html">
+										<i class="ti-lock"></i> Lock Screen
+									</a>
+								</li>
+								<li>
+									<a href="auth-normal-sign-in.html">
+										<i class="ti-layout-sidebar-left"></i> Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div id="sidebar" class="users p-chat-user showChat">
+			<div class="had-container">
+				<div class="card card_main p-fixed users-main">
+					<div class="user-box">
+						<div class="chat-search-box">
+							<a class="back_friendlist">
+								<i class="fa fa-chevron-left"></i>
+							</a>
+							<div class="right-icon-control">
+								<input type="text" class="form-control  search-text" placeholder="Search Friend" id="search-friends">
+								<div class="form-icon">
+									<i class="fa fa-search"></i>
+								</div>
+							</div>
+						</div>
+						<div class="main-friend-list">
+							<div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
+								<a class="media-left" href="index.html#!">
+									<img class="media-object img-radius img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image ">
+									<div class="live-status bg-success"></div>
+								</a>
+								<div class="media-body">
+									<div class="f-13 chat-header">Josephin Doe</div>
+								</div>
+							</div>
+							<div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
+								<a class="media-left" href="index.html#!">
+									<img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+									<div class="live-status bg-success"></div>
+								</a>
+								<div class="media-body">
+									<div class="f-13 chat-header">Lary Doe</div>
+								</div>
+							</div>
+							<div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
+								<a class="media-left" href="index.html#!">
+									<img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+									<div class="live-status bg-success"></div>
+								</a>
+								<div class="media-body">
+									<div class="f-13 chat-header">Alice</div>
+								</div>
+							</div>
+							<div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
+								<a class="media-left" href="index.html#!">
+									<img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+									<div class="live-status bg-success"></div>
+								</a>
+								<div class="media-body">
+									<div class="f-13 chat-header">Alia</div>
+								</div>
+							</div>
+							<div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
+								<a class="media-left" href="index.html#!">
+									<img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+									<div class="live-status bg-success"></div>
+								</a>
+								<div class="media-body">
+									<div class="f-13 chat-header">Suzen</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="showChat_inner">
+			<div class="media chat-inner-header">
+				<a class="back_chatBox">
+					<i class="fa fa-chevron-left"></i> Josephin Doe
+				</a>
+			</div>
+			<div class="media chat-messages">
+				<a class="media-left photo-table" href="index.html#!">
+					<img class="media-object img-radius img-radius m-t-5" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+				</a>
+				<div class="media-body chat-menu-content">
+					<div class="">
+						<p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+						<p class="chat-time">8:20 a.m.</p>
+					</div>
+				</div>
+			</div>
+			<div class="media chat-messages">
+				<div class="media-body chat-menu-reply">
+					<div class="">
+						<p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+						<p class="chat-time">8:20 a.m.</p>
+					</div>
+				</div>
+				<div class="media-right photo-table">
+					<a href="index.html#!">
+						<img class="media-object img-radius img-radius m-t-5" src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+					</a>
+				</div>
+			</div>
+			<div class="chat-reply-box p-b-20">
+				<div class="right-icon-control">
+					<input type="text" class="form-control search-text" placeholder="Share Your Thoughts">
+					<div class="form-icon">
+						<i class="fa fa-paper-plane"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pcoded-main-container" style="margin-top: 56px;">
+			<div class="pcoded-wrapper">
+				<nav class="pcoded-navbar" navbar-theme="theme1" active-item-theme="theme5" sub-item-theme="theme2" active-item-style="style0" pcoded-navbar-position="fixed">
+					<div class="sidebar_toggle">
+						<a href="index.html#"><i class="icon-close icons"></i></a>
+					</div>
+					<div class="pcoded-inner-navbar main-menu">
+						<!--<div class="pcoded-navigation-label" menu-title-theme="theme6">Navigation</div>-->
+						<ul class="pcoded-item pcoded-left-item" id="navi">
+
+						</ul>
+					</div>
+				</nav>
+				<div class="pcoded-content">
+					<div class="pcoded-inner-content">
+
+						<div class="main-body">
+							<div class="page-wrapper">
+
+								<div class="page-body">
+									<div class="row">
+										<table border=0 height=600px align=left>
+											<tr>
+												<td width=260px align=left valign=top style="border-right: #999999 1px dashed">
+													<ul id="tree" class="ztree" style="width:260px; overflow:auto;"></ul>
+												</td>
+												<td width=770px valign=top class="show-chunk-wrap " style="padding-left: 8%;">
+													<form>
+														<div class="form-group row">
+															<label for="name" class="col-form-label">部&nbsp;门&nbsp;名&nbsp;称：</label>
+															<div class="col-sm-10">
+																<input type="text" id="name" name="name" class="form-control"/>
+															</div>
+														</div>
+
+														<div class="form-group mrg-tp20 row">
+															<label class="">组织机构类型：</label>
+															<input type="radio" name="organizationType" value="0" class=" " style="margin:4px 3px 0px 7px">公司
+															<input type="radio" name="organizationType" checked="true" value="1" class=" " style="margin:4px 3px 0px 25px">部门
+															<input type="radio" name="organizationType" value="2" class=" " style="margin:4px 3px 0px 25px">中心
+														</div>
+													</form>
+													<input type="hidden" id="id" name="id">
+													<input type="hidden" id="pId" name="pId">
+													<input type="button" class="btnSave1" id="btnSave" name="btnSave" value="保存" onclick="update()" style="background-color: #4099ff; color: #ffffff;"/>
+													<input type="button" onclick="add()" id="btnNext" name="btnNext" value="增加下级" style="background-color: #4099ff; color: #ffffff;"/>
+													<input type="button" onclick="del()" id="btnDel" name="btnDel" value="删除" style="background-color: #4099ff; color: #ffffff;"/>
+													<input type="button" onclick="ref()" id="btnref" name="btnref" value="刷新" style="background-color: #4099ff; color: #ffffff;"/>
+												</td>
+											</tr>
+										</table>
+
+
+									</div>
+								</div>
+
+							</div>
+							<div id="styleSelector"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/view/flxoa/page/nk/files/bower_components/jquery/js/jquery.min.js"></script>
+<script src="/view/flxoa/page/nk/files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+<script src="/view/flxoa/page/nk/files/bower_components/popper.js/js/popper.min.js"></script>
+<script src="/view/flxoa/page/nk/files/bower_components/bootstrap/js/bootstrap.min.js"></script>
+<script src="/view/flxoa/page/nk/files/assets/pages/widget/excanvas.js"></script>
+
+<script src="/view/flxoa/page/nk/files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+
+<script src="/view/flxoa/page/nk/files/bower_components/modernizr/js/modernizr.js"></script>
+
+<script src="/view/flxoa/page/nk/files/assets/js/SmoothScroll.js"></script>
+<script src="/view/flxoa/page/nk/files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script src="/view/flxoa/page/nk/files/bower_components/chart.js/js/Chart.js"></script>
+<script src="/view/flxoa/page/nk/files/assets/pages/widget/amchart/pie.js"></script>
+<script src="/view/flxoa/page/nk/files/assets/pages/widget/amchart/amcharts.js"></script>
+<script src="/view/flxoa/page/nk/files/assets/pages/widget/amchart/pie.js"></script>
+<script src="/view/flxoa/page/nk/files/assets/pages/widget/amchart/serial.js"></script>
+<script src="/view/flxoa/page/nk/files/assets/pages/widget/amchart/light.js"></script>
+
+<script src="/view/flxoa/page/nk/files/assets/js/pcoded.min.js"></script>
+<script src="/view/flxoa/page/nk/files/assets/js/navbar-image/vertical-layout.min.js"></script>
+<script type="text/javascript" src="/view/flxoa/page/nk/public/js/jquery.ztree.all.min.js"></script>
+<script src="/view/flxoa/page/nk/files/assets/pages/dashboard/custom-dashboard.js"></script>
+<script src="/view/flxoa/page/nk/files/assets/js/script.js"></script>
+
+<script type="text/javascript" >
+	var zTree;
+	var demoIframe;
+
+	var setting = {
+		edit:{
+			enable: true,
+			drag:{
+				isMove:true,
+				prev:true,
+				inner:true,
+				next:true
+			},
+			showRenameBtn:false,
+			showRemoveBtn:false
+		},
+		view: {
+			dblClickExpand: false,
+			showLine: true,
+			selectedMulti: false
+		},
+		data: {
+			simpleData: {
+				enable:true,
+				idKey: "id",
+				pIdKey: "parentId",
+				rootpId: ""
+			}
+		},
+		callback: {
+			beforeClick: function(treeId, treeNode) {
+				$("#name").val(treeNode.name);
+				$("#pId").val(treeNode.parentId);
+				$("#id").val(treeNode.id);
+				$("input:radio[name='organizationType']").removeAttr('checked')
+				$("input:radio[name='organizationType'][value='" + treeNode.organizationType + "']").attr('checked','true');
+				return true;
+			},
+			onDrop: function(event, treeId, treeNodes, targetNode, moveType, isCopy){
+				//false 移动节点
+				if(!isCopy){
+					var pid = treeNodes[0].parentId;
+					var sortId = treeNodes[0].sortId;
+					var id = treeNodes[0].id;
+					//成为同级前一个节点
+					if("prev" == moveType){
+						if(null != targetNode){
+							sortId = targetNode.sortId - 1;
+							pid = targetNode.parentId;						
+						}
+					//成为同级后一个节点
+					}else if("next" == moveType){
+						if(null != targetNode){
+							sortId = targetNode.sortId + 1;
+							pid = targetNode.parentId;
+						}							
+					//成为子节点
+					}else{
+						if(null != targetNode){
+							sortId = targetNode.children[targetNode.children.length - 2].sortId + 1;
+							pid = targetNode.id;
+						}			
+					}
+					updateSort(id,pid,sortId);
+				}
+			}
+		}
+	};
+
+	function ref()
+	{
+		$.ajax({
+			url:"/flxoa/department/getlist",
+			type : "post",
+			data : {
+			},
+			success:function(data)
+			{
+				var json = eval('(' + data + ')');
+				var t = $("#tree");
+				t = $.fn.zTree.init(t, setting, json);
+				//展开根节点第一级
+				var nodes = t.getNodes();
+				t.expandNode(nodes[0], true, false, true);
+			}
+		});
+	}
+
+
+
+	function add()
+	{
+		var name = $("#name").val();
+		var pId = $("#id").val();
+		var organizationType = $("input[name='organizationType']:checked").val();
+		$.ajax({
+			url:"/flxoa/department/add",
+			type : "post",
+			data : {
+				"name":name,
+				"parentId":pId,
+				"organizationType":organizationType
+			},
+			success:function(data)
+			{
+				if(data)
+				{
+					alert("添加成功");
+				}
+				else
+				{
+					alert("添加失败");
+				}
+			}
+		});
+	}
+
+	function update()
+	{
+		var name = $("#name").val();
+		var pId = $("#pId").val();
+		var id = $("#id").val();
+		var organizationType = $("input[name='organizationType']:checked").val();
+		$.ajax({
+			url:"/flxoa/department/update",
+			type : "post",
+			data : {
+				"id":id,
+				"name":name,
+				"parentId":pId,
+				"organizationType":organizationType
+			},
+			success:function(data)
+			{
+				if(data)
+				{
+					alert("修改成功");
+					/*根据 treeId 获取 zTree 对象*/
+					var zTree = $.fn.zTree.getZTreeObj("tree");
+					/*获取 zTree 当前被选中的节点数据集合*/
+					nodes = zTree.getSelectedNodes();
+					nodes[0].name = name;
+					nodes[0].urlBack = url;
+					nodes[0].buttonId = buttonId;
+					nodes[0].parentId = pId;
+					nodes[0].isMenu = isMenu;
+					zTree.updateNode(nodes[0]);
+				}
+				else
+				{
+					alert("修改失败");
+				}
+			}
+		});
+	}
+	
+	//排序修改
+	function updateSort(id,pId,sortId)
+	{
+		$.ajax({
+			url:"/flxoa/department/updatesort",
+			type : "post",
+			data : {
+				"id":id,
+				"parentId":pId,
+				"sortId":sortId
+			},
+			success:function(data)
+			{
+				
+			}
+		});
+	}
+
+	function del()
+	{
+		var id = $("#id").val();
+		$.ajax({
+			url:"/flxoa/department/delete",
+			type : "post",
+			data : {
+				"id":id
+			},
+			success:function(data)
+			{
+				if(data)
+				{
+					alert("删除成功");
+					var treeObj = $.fn.zTree.getZTreeObj("tree");
+					var nodes = treeObj.getSelectedNodes();
+					for (var i=0, l=nodes.length; i < l; i++) {
+						treeObj.removeNode(nodes[i]);
+					}
+				}
+				else
+				{
+					alert("删除失败");
+				}
+			}
+		});
+	}
+	ref();
+</script>
+
+
+
+
+
+<script src="/view/flxoa/page/nk/files/assets/js/app.js"></script>
+</body>
+</html>

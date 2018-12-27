@@ -1,0 +1,37 @@
+#
+#	this file:
+#		jdbc.properties
+#   was quoted by file:
+#		application-context.xml
+#
+
+#mysql config start
+jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://192.168.112.39:3306/flxoa?characterEncoding=UTF-8
+#jdbc.url=jdbc:mysql://127.0.0.1:3306/flxoa?characterEncoding=UTF-8
+jdbc.username=root
+jdbc.password=root
+
+hibernate.db=mysql
+hibernate.dialect=org.hibernate.dialect.MySQLInnoDBDialect
+#mysql config end
+
+#sqlserver config start
+jdbc_s.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+jdbc_s.url=jdbc:sqlserver://192.168.0.165:1433;DatabaseName=AIO20171122105030
+#jdbc.url=jdbc:mysql://127.0.0.1:3306/flxoa?characterEncoding=UTF-8
+jdbc_s.username=sa
+jdbc_s.password=Das123$%^
+
+hibernate_s.db=sqlserver
+hibernate_s.dialect=org.hibernate.dialect.SQLServerDialect
+#sqlserver config end
+
+
+cpool.checkoutTimeout=5000
+cpool.minPoolSize=20
+cpool.maxPoolSize=50
+
+cpool.maxIdleTime=7200
+cpool.acquireIncrement=10
+cpool.maxIdleTimeExcessConnections=1800

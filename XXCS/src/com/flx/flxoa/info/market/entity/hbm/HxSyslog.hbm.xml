@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-9 19:09:53 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.HxSyslog" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx_syslog">
+        <id name="sysLogId" type="java.lang.Integer">
+            <column name="SysLogID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="userId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="UserID"/>
+        </property>
+        <property generated="never" lazy="false" name="userName" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="UserName"/>
+        </property>
+        <property generated="never" lazy="false" name="optTableName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="OptTableName"/>
+        </property>
+        <property generated="never" lazy="false" name="optTableId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="OptTableID"/>
+        </property>
+        <property generated="never" lazy="false" name="optType" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="OptType"/>
+        </property>
+        <property generated="never" lazy="false" name="optDescription" optimistic-lock="true" type="string" unique="false">
+            <column length="500" name="OptDescription"/>
+        </property>
+    </class>
+</hibernate-mapping>

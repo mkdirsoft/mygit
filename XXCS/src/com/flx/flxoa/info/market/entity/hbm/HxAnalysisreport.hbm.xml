@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-9 19:09:53 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.HxAnalysisreport" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx_analysisreport">
+        <id name="analysisReportId" type="java.lang.Integer">
+            <column name="AnalysisReportID"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="com.flx.flxoa.info.market.entity.HxCropcategory" embed-xml="true" fetch="select" insert="true" name="hxCropcategory" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="6" name="CropCategoryCode"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="cropCategoryName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="CropCategoryName"/>
+        </property>
+        <property generated="never" lazy="false" name="analysisReportDate" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="AnalysisReportDate"/>
+        </property>
+        <property generated="never" lazy="false" name="analysisReportName" optimistic-lock="true" type="string" unique="false">
+            <column length="500" name="AnalysisReportName"/>
+        </property>
+        <property generated="never" lazy="false" name="analysisReportContent" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="AnalysisReportContent"/>
+        </property>
+        <property generated="never" lazy="false" name="attachmentUrl" optimistic-lock="true" type="string" unique="false">
+            <column length="500" name="AttachmentUrl"/>
+        </property>
+    </class>
+</hibernate-mapping>

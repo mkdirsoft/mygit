@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-9 19:09:53 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.HxCropcategory" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx_cropcategory">
+        <id name="cropCategoryCode" type="string">
+            <column length="6" name="CropCategoryCode"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="cropCategoryName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="CropCategoryName"/>
+        </property>
+        <property generated="never" lazy="false" name="parentId" optimistic-lock="true" type="string" unique="false">
+            <column length="6" name="ParentID"/>
+        </property>
+        <!-- <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="hxCropoffers" optimistic-lock="true" sort="unsorted" table="hx_cropoffer">
+            <key on-delete="noaction">
+                <column length="6" name="CropCategoryCode"/>
+            </key>
+            <one-to-many class="com.flx.flxoa.info.market.entity.HxCropoffer" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="hxSubscribes" optimistic-lock="true" sort="unsorted" table="hx_subscribe">
+            <key on-delete="noaction">
+                <column length="6" name="CropCategoryCode"/>
+            </key>
+            <one-to-many class="com.flx.flxoa.info.market.entity.HxSubscribe" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="hxCropsources" optimistic-lock="true" sort="unsorted" table="hx_cropsource">
+            <key on-delete="noaction">
+                <column length="6" name="CropCategoryCode"/>
+            </key>
+            <one-to-many class="com.flx.flxoa.info.market.entity.HxCropsource" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="hxAnalysisreports" optimistic-lock="true" sort="unsorted" table="hx_analysisreport">
+            <key on-delete="noaction">
+                <column length="6" name="CropCategoryCode"/>
+            </key>
+            <one-to-many class="com.flx.flxoa.info.market.entity.HxAnalysisreport" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="hxStatisticsdatas" optimistic-lock="true" sort="unsorted" table="hx_statisticsdata">
+            <key on-delete="noaction">
+                <column length="6" name="CropCategoryCode"/>
+            </key>
+            <one-to-many class="com.flx.flxoa.info.market.entity.HxStatisticsdata" embed-xml="true" not-found="exception"/>
+        </set> -->
+    </class>
+</hibernate-mapping>

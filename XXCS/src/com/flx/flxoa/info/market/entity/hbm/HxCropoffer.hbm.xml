@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-9 19:09:53 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.HxCropoffer" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx_cropoffer">
+        <id name="cropOfferId" type="java.lang.Integer">
+            <column name="CropOfferID"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="com.flx.flxoa.info.market.entity.HxCropcategory" embed-xml="true" fetch="select" insert="true" name="hxCropcategory" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="6" name="CropCategoryCode"/>
+        </many-to-one>
+        <many-to-one class="com.flx.flxoa.info.market.entity.HxGrade" embed-xml="true" fetch="select" insert="true" name="hxGrade" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="GradeID"/>
+        </many-to-one>
+        <many-to-one class="com.flx.flxoa.info.market.entity.HxRegion" embed-xml="true" fetch="select" insert="true" name="hxRegion" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="6" name="RegionCode"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="regionName" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="RegionName"/>
+        </property>
+        <property generated="never" lazy="false" name="cropCategoryName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="CropCategoryName"/>
+        </property>
+        <property generated="never" lazy="false" name="cropOfferStr" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="CropOfferStr"/>
+        </property>
+        <property generated="never" lazy="false" name="offerDate" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="OfferDate"/>
+        </property>
+        <property generated="never" lazy="false" name="price" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="Price" precision="10" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="unit" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="Unit">
+                <comment>??ö?ٱ???ȡ????Ӧö??????Ϊ PriceUnit</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="unitName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="UnitName"/>
+        </property>
+        <property generated="never" lazy="false" name="todayTrend" optimistic-lock="true" type="java.lang.Float" unique="false">
+            <column name="TodayTrend" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="fiveDayTrend" optimistic-lock="true" type="java.lang.Float" unique="false">
+            <column name="FiveDayTrend" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="weekAverage" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="WeekAverage" precision="10" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="weekTrend" optimistic-lock="true" type="java.lang.Float" unique="false">
+            <column name="WeekTrend" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="reason" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="Reason"/>
+        </property>
+        <property generated="never" lazy="false" name="browseCount" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="BrowseCount"/>
+        </property>
+        <property generated="never" lazy="false" name="approvalState" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="ApprovalState"/>
+        </property>
+        <property generated="never" lazy="false" name="releaseState" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="ReleaseState"/>
+        </property>
+        <property generated="never" lazy="false" name="userId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="UserID"/>
+        </property>
+        <property generated="never" lazy="false" name="userRealName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="UserRealName"/>
+        </property>
+        <property generated="never" lazy="false" name="offerDateTime" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="OfferDateTime"/>
+        </property>
+        <property generated="never" lazy="false" name="isImported" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="IsImported"/>
+        </property>
+        <property generated="never" lazy="false" name="gradeName" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="GradeName"/>
+        </property>
+        <property generated="never" lazy="false" name="crushingRate" optimistic-lock="true" type="java.lang.Float" unique="false">
+            <column name="CrushingRate" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="sourceRegion" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="SourceRegion">
+                <comment>来源地</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="sourceId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="SourceID"/>
+        </property>
+        <property generated="never" lazy="false" name="priceType" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="PriceType"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	   http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd"
+	default-lazy-init="true">
+
+	<!-- 
+		此文件：		
+			shiro-context.xml
+		被文件：		
+			web.xml
+		所引用。
+	-->
+
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager" />
+		<property name="loginUrl" value="/flxoa/error" />
+		<property name="successUrl" value="/flxoa/index" />
+		<property name="filters">
+			<util:map>
+				<entry key="authc" value-ref="authcFilter" />
+				<entry key="user" value-ref="authcFilter" />
+				<entry key="logout" value-ref="logoutFilter" />
+			</util:map>
+		</property>
+		<!--anon匿名 authc登录认证  user用户已登录 logout退出filter-->
+		<property name="filterChainDefinitions">
+			<value>
+			</value>
+		</property>
+	</bean>
+
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="authorizingRealm" />
+		<property name="cacheManager" ref="shiroEhcacheManager" />
+	</bean>
+
+	<bean id="authorizingRealm" class="com.flx.flxoa.info.system.security.FlxoaAuthorizingRealm">
+		<property name="FlxoaSystemUserService" ref="FlxoaSystemUserService" />
+	</bean>
+	<bean id="shiroEhcacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager" />
+
+	<!-- Shiro Filter -->
+	<bean id="adminUrlBean" class="com.flx.flxoa.info.system.security.FlxoaAdminUrl">
+		<property name="adminLogin" value="/flxoa/login.do" />
+		<property name="adminPrefix" value="/flxoa/" />
+	</bean>
+	<!-- 简单的防sql注入 -->
+ 	<bean id="Filter" class="com.flx.flxoa.common.util.AntiSqlInjectionfilter">  
+		<property name="doFilter" value="/flxoa"/>  
+ 	</bean>
+	<!--自定义LogoutFilter,退出-->  
+ 	<bean id="logoutFilter" class="com.flx.flxoa.info.system.security.FlxoaSystemLogoutFilter">  
+		<property name="redirectUrl" value="/flxoa/login"/>  
+ 	</bean> 
+	<bean id="authcFilter"
+		class="com.flx.flxoa.info.system.security.FlxoaAuthenticationFilter"
+		parent="adminUrlBean">
+		<property name="adminIndex" value="/flxoa/index" />
+		<!-- captchaEnable标记是否开启验证码 -->
+		<property name="captchaEnable" value="false" />
+		<property name="loginWhiteListEnable" value="false" />
+	</bean>
+
+</beans>

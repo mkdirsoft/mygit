@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-9 19:09:53 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.HxFavorite" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx_favorite">
+        <id name="favoriteId" type="java.lang.Integer">
+            <column name="FavoriteID"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="com.flx.flxoa.info.market.entity.HxNews" embed-xml="true" fetch="select" insert="true" name="hxNews" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="NewsID"/>
+        </many-to-one>
+        <many-to-one class="com.flx.flxoa.info.market.entity.HxUser" embed-xml="true" fetch="select" insert="true" name="hxUser" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="UserID"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="title" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="Title"/>
+        </property>
+    </class>
+</hibernate-mapping>

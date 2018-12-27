@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+	default-lazy-init="true">
+	
+	<!-- 
+		此文件：		
+			flxoa-servlet-core-service.xml	
+		被文件：		
+			web.xml		
+		所引用。
+		
+		说明：此文件记录所有manager和dao信息的bean。
+	-->
+	<!-- 审批 -->
+	<bean id="FlxoaApproveFormdataService" class="com.flx.flxoa.info.approve.manager.impl.FlxoaApproveFormdataServiceImpl" />
+	<bean id="FlxoaApproveFormdataDao" class="com.flx.flxoa.info.approve.dao.impl.FlxoaApproveFormdataDaoImpl" />
+	<bean id="FlxoaApproveFormtemplateService" class="com.flx.flxoa.info.approve.manager.impl.FlxoaApproveFormtemplateServiceImpl" />
+	<bean id="FlxoaApproveFormtemplateDao" class="com.flx.flxoa.info.approve.dao.impl.FlxoaApproveFormtemplateDaoImpl" />
+	<bean id="FlxoaApproveFormService" class="com.flx.flxoa.info.approve.manager.impl.FlxoaApproveFormServiceImpl" />
+	<bean id="FlxoaApproveFormDao" class="com.flx.flxoa.info.approve.dao.impl.FlxoaApproveFormDaoImpl" />	
+	<bean id="FlxoaApproveFormlogService" class="com.flx.flxoa.info.approve.manager.impl.FlxoaApproveFormlogServiceImpl" />
+	<bean id="FlxoaApproveFormlogDao" class="com.flx.flxoa.info.approve.dao.impl.FlxoaApproveFormlogDaoImpl" />			
+	<bean id="FlxoaApproveConditionWorkflowService" class="com.flx.flxoa.info.approve.manager.impl.FlxoaApproveConditionWorkflowServiceImpl" />
+	<bean id="FlxoaApproveConditionWorkflowDao" class="com.flx.flxoa.info.approve.dao.impl.FlxoaApproveConditionWorkflowDaoImpl" />			
+	<!-- 系统 -->
+	<bean id="FlxoaSystemFuncationService" class="com.flx.flxoa.info.system.manager.impl.FlxoaSystemFuncationServiceImpl" />
+	<bean id="FlxoaSystemFuncationDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaSystemFuncationDaoImpl" />
+	<bean id="FlxoaApproveWorkflowService" class="com.flx.flxoa.info.system.manager.impl.FlxoaApproveWorkflowServiceImpl" />
+	<bean id="FlxoaApproveWorkflowDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaApproveWorkflowDaoImpl" />	
+	<bean id="FlxoaSystemUserService" class="com.flx.flxoa.info.system.manager.impl.FlxoaSystemUserServiceImpl" />
+	<bean id="FlxoaSystemUserDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaSystemUserDaoImpl" />
+	<bean id="FlxoaSystemDepartmentService" class="com.flx.flxoa.info.system.manager.impl.FlxoaSystemDepartmentServiceImpl"/>
+	<bean id="FlxoaSystemDepartmentDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaSystemDepartmentDaoImpl"/>
+	<bean id="FlxoaSystemRoleDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaSystemRoleDaoImpl" />
+	<bean id="FlxoaSystemRoleService" class="com.flx.flxoa.info.system.manager.impl.FlxoaSystemRoleServiceImpl" />
+	<bean id="FlxoaSystemRoleFuncationDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaSystemRoleFuncationDaoImpl" />
+	<bean id="FlxoaSystemRoleFuncationService" class="com.flx.flxoa.info.system.manager.impl.FlxoaSystemRoleFuncationServiceImpl" />
+	<bean id="FlxoaSystemUserRoleDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaSystemUserRoleDaoImpl" />
+	<bean id="FlxoaSystemUserRoleService" class="com.flx.flxoa.info.system.manager.impl.FlxoaSystemUserRoleServiceImpl" />
+	<bean id="FlxoaSystemEnumerationDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaSystemEnumerationDaoImpl" />
+	<bean id="FlxoaSystemEnumerationService" class="com.flx.flxoa.info.system.manager.impl.FlxoaSystemEnumerationServiceImpl" />
+	<bean id="FlxoaSystemSsoDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaSystemSsoDaoImpl" />
+	<bean id="FlxoaSystemSsoService" class="com.flx.flxoa.info.system.manager.impl.FlxoaSystemSsoServiceImpl" />		
+	<!-- 签到 -->
+	<bean id="FlxoaAttendanceSpecialtimesetService" class="com.flx.flxoa.info.signin.manager.impl.FlxoaAttendanceSpecialtimesetServiceImpl"/>
+	<bean id="FlxoaAttendanceSigndetailsService" class="com.flx.flxoa.info.signin.manager.impl.FlxoaAttendanceSigndetailsServiceImpl"/>
+	<bean id="FlxoaAttendanceSummaryService" class="com.flx.flxoa.info.signin.manager.impl.FlxoaAttendanceSummaryServiceImpl"/>
+	<bean id="FlxoaAttendanceSpecialtimesetDao" class="com.flx.flxoa.info.signin.dao.impl.FlxoaAttendanceSpecialtimesetDaoImpl"/>
+	<bean id="FlxoaAttendanceSigndetailsDao" class="com.flx.flxoa.info.signin.dao.impl.FlxoaAttendanceSigndetailsDaoImpl" />
+	<bean id="FlxoaAttendanceSummaryDao" class="com.flx.flxoa.info.signin.dao.impl.FlxoaAttendanceSummaryDaoImpl" />
+	<!-- 签到-考勤详情数据库导入 -->
+	<bean id="FlxoaAttendanceSigndetailsImportService" class="com.flx.flxoa.info.signin.manager.impl.FlxoaAttendanceSigndetailsImportServiceImpl"/>
+	<bean id="FlxoaAttendanceSigndetailsImportDao" class="com.flx.flxoa.info.signin.dao.impl.FlxoaAttendanceSigndetailsImportDaoImpl" />
+	<!-- 签到-考勤汇总数据库导入 -->
+	<bean id="FlxoaAttendanceSummaryImportService" class="com.flx.flxoa.info.signin.manager.impl.FlxoaAttendanceSummaryImportServiceImpl"/>
+	<bean id="FlxoaAttendanceSummaryImportDao" class="com.flx.flxoa.info.signin.dao.impl.FlxoaAttendanceSummaryImportDaoImpl" />
+	<!-- 节假日设定 -->
+	<bean id="FlxoaAttendanceHolidaysetService" class="com.flx.flxoa.info.signin.manager.impl.FlxoaAttendanceHolidaysetServiceImpl"/>
+	<bean id="FlxoaAttendanceHolidaysetDao" class="com.flx.flxoa.info.signin.dao.impl.FlxoaAttendanceHolidaysetDaoImpl" />
+	<!-- 项目管理 -->
+	<bean id="FlxoaProjectInformationService" class="com.flx.flxoa.info.projectmanagement.manager.impl.FlxoaProjectInformationServiceImpl" />
+	<bean id="FlxoaProjectInformationDao" class="com.flx.flxoa.info.projectmanagement.dao.impl.FlxoaProjectInformationDaoImpl" />
+	<bean id="FlxoaProjectTeamService" class="com.flx.flxoa.info.projectmanagement.manager.impl.FlxoaProjectTeamServiceImpl" />
+	<bean id="FlxoaProjectTeamDao" class="com.flx.flxoa.info.projectmanagement.dao.impl.FlxoaProjectTeamDaoImpl" />
+	<bean id="FlxoaProjectBidInformationService" class="com.flx.flxoa.info.projectmanagement.manager.impl.FlxoaProjectBidInformationServiceImpl" />
+	<bean id="FlxoaProjectBidInformationDao" class="com.flx.flxoa.info.projectmanagement.dao.impl.FlxoaProjectBidInformationDaoImpl" />
+	<bean id="FlxoaProjectBidRecordService" class="com.flx.flxoa.info.projectmanagement.manager.impl.FlxoaProjectBidRecordServiceImpl" />
+	<bean id="FlxoaProjectBidRecordDao" class="com.flx.flxoa.info.projectmanagement.dao.impl.FlxoaProjectBidRecordDaoImpl" />
+	<bean id="FlxoaProjectFocusDao" class="com.flx.flxoa.info.projectmanagement.dao.impl.FlxoaProjectFocusDaoImpl" />
+	<bean id="FlxoaProjectFocusService" class="com.flx.flxoa.info.projectmanagement.manager.impl.FlxoaProjectFocusServiceImpl" />
+	<!-- 会议室 -->
+	<bean id="FlxoaConferenceHistoryService" class="com.flx.flxoa.info.conference.manager.impl.FlxoaConferenceHistoryServiceImpl" />
+	<bean id="FlxoaConferenceHistoryDao" class="com.flx.flxoa.info.conference.dao.impl.FlxoaConferenceHistoryDaoImpl" />
+	
+	<bean id="FlxoaConferenceService" class="com.flx.flxoa.info.conference.manager.impl.FlxoaConferenceInformationServiceImpl" />
+	<bean id="FlxoaConferenceDao" class="com.flx.flxoa.info.conference.dao.impl.FlxoaConferenceInformationDaoImpl" />
+	<!-- 回款-->
+	<bean id="FlxoaCashcollectionRecordService" class="com.flx.flxoa.info.cashcollection.manager.impl.FlxoaCashcollectionRecordServiceImpl" />
+	<bean id="FlxoaCashcollectionRecordDao" class="com.flx.flxoa.info.cashcollection.dao.impl.FlxoaCashcollectionRecordDaoImpl" />
+	<bean id="FlxoaCashcollectionClaimAffirmService" class="com.flx.flxoa.info.cashcollection.manager.impl.FlxoaCashcollectionClaimAffirmServiceImpl" />
+	<bean id="FlxoaCashcollectionClaimAffirmDao" class="com.flx.flxoa.info.cashcollection.dao.impl.FlxoaCashcollectionClaimAffirmDaoImpl" />
+	<!-- 发票-->
+	<bean id="FlxoaProjectInvoiceService" class="com.flx.flxoa.info.cashcollection.manager.impl.FlxoaProjectInvoiceServiceImpl" />
+	<bean id="FlxoaProjectInvoiceDao" class="com.flx.flxoa.info.cashcollection.dao.impl.FlxoaProjectInvoiceDaoImpl" />
+	<bean id="FlxoaProjectInvoiceCheckService" class="com.flx.flxoa.info.cashcollection.manager.impl.FlxoaProjectInvoiceCheckServiceImpl" />
+	<bean id="FlxoaProjectInvoiceCheckDao" class="com.flx.flxoa.info.cashcollection.dao.impl.FlxoaProjectInvoiceCheckDaoImpl" />
+	<!-- 客户管理 -->
+	<bean id="FlxoaClientInformationService" class="com.flx.flxoa.info.clientsManagement.manager.impl.FlxoaClientInformationServiceImpl"></bean>
+	<bean id="FlxoaClientInformationDao" class="com.flx.flxoa.info.clientsManagement.dao.impl.FlxoaClientInformationDaoImpl"></bean>
+	<bean id="FlxoaClientContactService" class="com.flx.flxoa.info.clientsManagement.manager.impl.FlxoaClientContactServiceImpl"></bean>
+	<bean id="FlxoaClientContactDao" class="com.flx.flxoa.info.clientsManagement.dao.impl.FlxoaClientContactDaoImpl"></bean>
+	<bean id="FlxoaClientCommunicationService" class="com.flx.flxoa.info.clientsManagement.manager.impl.FlxoaClientCommunicationServiceImpl"></bean>
+	<bean id="FlxoaClientCommunicationDao" class="com.flx.flxoa.info.clientsManagement.dao.impl.FlxoaClientCommunicationDaoImpl"></bean>
+	<bean id="FlxoaClientFollowerChangeService" class="com.flx.flxoa.info.clientsManagement.manager.impl.FlxoaClientFollowerChangeServiceImpl"></bean>
+	<bean id="FlxoaClientFollowerChangeDao" class="com.flx.flxoa.info.clientsManagement.dao.impl.FlxoaClientFollowerChangeDaoImpl"></bean>
+	<!-- 附件 -->
+	<bean id="FlxoaAccessoryService" class="com.flx.flxoa.info.system.manager.impl.FlxoaAccessoryServiceImpl" />
+	<bean id="FlxoaAccessoryDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaAccessoryDaoImpl" />
+	<!-- 用户组-->
+	<bean id="FlxoaSystemUserGroupService" class="com.flx.flxoa.info.system.manager.impl.FlxoaSystemUserGroupServiceImpl" />
+	<bean id="FlxoaSystemUserGroupDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaSystemUserGroupDaoImpl" />
+	<bean id="FlxoaSystemUserGroupRoleService" class="com.flx.flxoa.info.system.manager.impl.FlxoaSystemUserGroupRoleServiceImpl" />
+	<bean id="FlxoaSystemUserGroupRoleDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaSystemUserGroupRoleDaoImpl" />
+	<bean id="FlxoaSystemUserGroupUserService" class="com.flx.flxoa.info.system.manager.impl.FlxoaSystemUserGroupUserServiceImpl" />
+	<bean id="FlxoaSystemUserGroupUserDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaSystemUserGroupUserDaoImpl" />
+	<bean id="FlxoaSystemUserGroupDepartmentService" class="com.flx.flxoa.info.system.manager.impl.FlxoaSystemUserGroupDepartmentServiceImpl" />
+	<bean id="FlxoaSystemUserGroupDepartmentDao" class="com.flx.flxoa.info.system.dao.impl.FlxoaSystemUserGroupDepartmentDaoImpl" />
+	<!-- 首页 -->
+	<bean id="FlxoaStatisticalService" class="com.flx.flxoa.info.statistical.manager.impl.FlxoaStatisticalServiceImpl" />
+	<bean id="FlxoaStatisticalDao" class="com.flx.flxoa.info.statistical.dao.impl.FlxoaStatisticalDaoImpl" />
+	<!-- 合同 -->
+	<bean id="FlxoaContractInformationService" class="com.flx.flxoa.info.contractmanagement.manager.impl.FlxoaContractInformationServiceImpl" />
+	<bean id="FlxoaContractInformationDao" class="com.flx.flxoa.info.contractmanagement.dao.impl.FlxoaContractInformationDaoImpl" />
+	<bean id="FlxoaContractLoanreturnService" class="com.flx.flxoa.info.contractmanagement.manager.impl.FlxoaContractLoanreturnServiceImpl" />
+	<bean id="FlxoaContractLoanreturnDao" class="com.flx.flxoa.info.contractmanagement.dao.impl.FlxoaContractLoanreturnDaoImpl" />
+	<!-- 信息超市-集市 -->
+	<bean id="HxCropofferService" class="com.flx.flxoa.info.market.manager.impl.HxCropofferServiceImpl" />
+	<bean id="HxCropofferDao" class="com.flx.flxoa.info.market.dao.impl.HxCropofferDaoImpl" />
+	
+	<bean id="HxAnalysisreportService" class="com.flx.flxoa.info.market.manager.impl.HxAnalysisreportServiceImpl" />
+	<bean id="HxAnalysisreportDao" class="com.flx.flxoa.info.market.dao.impl.HxAnalysisreportDaoImpl" />
+	
+	<bean id="HxCropcategoryService" class="com.flx.flxoa.info.market.manager.impl.HxCropcategoryServiceImpl" />
+	<bean id="HxCropcategoryDao" class="com.flx.flxoa.info.market.dao.impl.HxCropcategoryDaoImpl" />
+	
+	<bean id="HxCropsourceService" class="com.flx.flxoa.info.market.manager.impl.HxCropsourceServiceImpl" />
+	<bean id="HxCropsourceDao" class="com.flx.flxoa.info.market.dao.impl.HxCropsourceDaoImpl" />
+	
+	<bean id="HxEnumService" class="com.flx.flxoa.info.market.manager.impl.HxEnumServiceImpl" />
+	<bean id="HxEnumDao" class="com.flx.flxoa.info.market.dao.impl.HxEnumDaoImpl" />
+	
+	<bean id="HxIdService" class="com.flx.flxoa.info.market.manager.impl.HxIdServiceImpl" />
+	<bean id="HxIdDao" class="com.flx.flxoa.info.market.dao.impl.HxIdDaoImpl" />
+	
+	<bean id="HxRegionService" class="com.flx.flxoa.info.market.manager.impl.HxRegionServiceImpl" />
+	<bean id="HxRegionDao" class="com.flx.flxoa.info.market.dao.impl.HxRegionDaoImpl" />
+	
+	<bean id="HxService" class="com.flx.flxoa.info.market.manager.impl.HxServiceImpl" />
+	<bean id="HxDao" class="com.flx.flxoa.info.market.dao.impl.HxDaoImpl" />
+	
+	<bean id="HxSourceService" class="com.flx.flxoa.info.market.manager.impl.HxSourceServiceImpl" />
+	<bean id="HxSourceDao" class="com.flx.flxoa.info.market.dao.impl.HxSourceDaoImpl" />
+	
+	<bean id="HxStatisticsdataService" class="com.flx.flxoa.info.market.manager.impl.HxStatisticsdataServiceImpl" />
+	<bean id="HxStatisticsdataDao" class="com.flx.flxoa.info.market.dao.impl.HxStatisticsdataDaoImpl" />
+	
+	<bean id="HxSyslogService" class="com.flx.flxoa.info.market.manager.impl.HxSyslogServiceImpl" />
+	<bean id="HxSyslogDao" class="com.flx.flxoa.info.market.dao.impl.HxSyslogDaoImpl" />
+	
+	<bean id="HxFavoriteService" class="com.flx.flxoa.info.market.manager.impl.HxFavoriteServiceImpl" />
+	<bean id="HxFavoriteDao" class="com.flx.flxoa.info.market.dao.impl.HxFavoriteDaoImpl" />
+	
+	<bean id="HxFollowService" class="com.flx.flxoa.info.market.manager.impl.HxFollowServiceImpl" />
+	<bean id="HxFollowDao" class="com.flx.flxoa.info.market.dao.impl.HxFollowDaoImpl" />
+	
+	<bean id="HxGradeService" class="com.flx.flxoa.info.market.manager.impl.HxGradeServiceImpl" />
+	<bean id="HxGradeDao" class="com.flx.flxoa.info.market.dao.impl.HxGradeDaoImpl" />
+		
+	<bean id="HxNewscategoryService" class="com.flx.flxoa.info.market.manager.impl.HxNewscategoryServiceImpl" />
+	<bean id="HxNewscategoryDao" class="com.flx.flxoa.info.market.dao.impl.HxNewscategoryDaoImpl" />
+	
+	<bean id="HxNewsService" class="com.flx.flxoa.info.market.manager.impl.HxNewsServiceImpl" />
+	<bean id="HxNewsDao" class="com.flx.flxoa.info.market.dao.impl.HxNewsDaoImpl" />
+	
+	<bean id="HxSubscribeService" class="com.flx.flxoa.info.market.manager.impl.HxSubscribeServiceImpl" />
+	<bean id="HxSubscribeDao" class="com.flx.flxoa.info.market.dao.impl.HxSubscribeDaoImpl" />
+	
+	<bean id="HxUserService" class="com.flx.flxoa.info.market.manager.impl.HxUserServiceImpl" />
+	<bean id="HxUserDao" class="com.flx.flxoa.info.market.dao.impl.HxUserDaoImpl" />
+	
+	<bean id="HxPersonalsubscriptionsdelService" class="com.flx.flxoa.info.market.manager.impl.HxPersonalsubscriptionsdelServiceImpl" />
+	<bean id="HxPersonalsubscriptionsdelDao" class="com.flx.flxoa.info.market.dao.impl.HxPersonalsubscriptionsdelDaoImpl" />
+</beans>

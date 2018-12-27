@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>飞利信内部管理系统 </title>
+        <!--[if lt IE 10]>
+              <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+              <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+              <![endif]-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        <meta name="author" content="codedthemes" /> 
+        <!-- <link rel="icon" href="http://html.codedthemes.com/gradient-able/files/assets/images/favicon.ico" type="image/x-icon"> -->
+        <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet"> -->
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/themify-icons/themify-icons.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/icofont/css/icofont.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/oyxq/css/oy.css" />
+        <script type="text/javascript" src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>     
+    </head>
+    <body class="fix-menu" >
+        <div class="theme-loader">
+            <div class="loader-track">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+        <section class="login p-fixed d-flex text-center bg-primary common-img-bg" style="background:url(/view/flxoa/page/nk/public/img/login_back.png);">
+            <div class="container">
+                <div class="row">               
+                    <div class="col-sm-12" >
+                        <div class="login-card card-block auth-body mr-auto ml-auto" style="background:url(/view/flxoa/page/nk/public/img/login_left.png) #ffffff no-repeat;width:980px;height:500px;border-radius: 5px;">
+                            <form id="jvForm" name="jvForm" action="login.do" method="post">
+                                <div class="dl-wrapper">
+                                    <!--<div class="dl-qrcode-btn">
+                                        <img src="/view/flxoa/page/nk/oyxq/img/qrcode-half.png" />
+                                    </div>-->
+                                    <ul class="dl-tab-tit">
+                                        <li class="selected"><a>账户登录</a></li>
+                                        <li><a>扫码登录</a></li>
+                                    </ul>
+                                    <div class="dl-tab-con">
+                                        <div class="dl-tab-cont" style="padding-top: 100px;">
+                                            <div class="row m-b-20">
+                                                <div class="col-md-12">
+                                                    <h3 class="text-left txt-primary"></h3>
+                                                </div>
+                                            </div>
+                                            <div class="row m-t-25 text-right">
+                                                <div class="col-12">
+                                                    <div class="dl-row col-4 f-right">
+                                                        <div class="checkbox-fade fade-in-primary d-">
+                                                            <img src="/view/flxoa/page/nk/public/img/login_username.png" />
+                                                        </div>
+                                                        <div class="checkbox-fade fade-in-primary dl-input d-">
+                                                            <input name="username" type="input" id="username" maxlength="32" class="input" placeholder="请输入用户名" />
+                                                        </div>
+                                                    </div>                                          
+                                                </div>
+                                            </div>
+                                            <div class="row m-t-25 text-right">
+                                                <div class="col-12">
+                                                    <div class="dl-row col-4 f-right">
+                                                        <div class="checkbox-fade fade-in-primary d-">
+                                                            <img src="/view/flxoa/page/nk/public/img/login_password.png" />
+                                                        </div>                                      
+                                                        <div class="checkbox-fade fade-in-primary dl-input d-">
+                                                            <input name="password" type="password" id="password" maxlength="32" class="input" placeholder="请输入密码" />
+                                                        </div>
+                                                    </div>                                          
+                                                </div>
+                                            </div>                                  
+                                            <!-- <div class="row m-t-25 text-right">
+                                                <div class="col-12">
+                                                    <div class="dl-row col-4 f-right">
+                                                        <div class="checkbox-fade fade-in-primary d-">
+                                                            <img src="/view/flxoa/page/nk/public/img/login_code.png" />
+                                                        </div>                                          
+                                                        <div class="checkbox-fade fade-in-primary dl-input d-">
+                                                            <label>
+                                                            <input id="captcha" name="captcha" type="text" maxlength="32" class="input" placeholder="请输入验证码" style="width: 92px;margin-right: 10px;"/>
+                                                            <img id="imgObj"  alt="" src="" onclick="return authImage()" style="height: 33px;"/>
+                                                        </div>
+                                                    </div>                                          
+                                                </div> -->
+                                                <hr />
+                                                <div class="col-12">
+                                                    <div class="dl-row-btn col-4 f-right">
+                                                        <div class="checkbox-fade fade-in-primary d-">
+                                                            <a id="submit" type="image" name="submit"  class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20" onclick="loginSubmitCheck()">点击登录</a>
+                                                        </div>
+                                                        <div class="row m-t-30 text-right">
+                                                            <div class="col-md-12">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>                                          
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="dl-tab-cont" style="display: none;">                                            
+                                            <div class="dl-qrcode">
+                                                <div class="mtb20 h250 boc" id="ma"></div>
+                                            </div>                                     
+                                        </div>  
+                                    </div>                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery/js/jquery.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/popper.js/js/popper.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/modernizr/js/modernizr.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/modernizr/js/css-scrollbars.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/i18next/js/i18next.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/i18next-xhr-backend/js/i18nextXHRBackend.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
+        <script src="/view/flxoa/page/nk/public/layer/layer.js"></script> 
+        <script src="/view/flxoa/page/nk/files/assets/js/common-pages.js"></script>
+        <script src="/view/flxoa/page/nk/public/js/md5.js"></script>
+        <script type="text/javascript">
+             var weixinlogin = false;
+             function loginSubmitCheck() {
+                if(!$("#username").val()) {
+                    layer.msg("请输入用户名");
+                    return;
+                }
+                if(!$("#password").val()) {
+                    layer.msg("请输入密码");
+                    return;
+                }
+                if(!weixinlogin){
+                  	//加密成md5
+                    var passwd = $.md5($("#password").val());
+                    $("#password").val(passwd);
+                }
+                $("#jvForm").submit();
+                //return isRightCode();
+            } 
+            
+            //获取验证码
+          /*   function authImage(){
+                $.ajax({
+                    url:"/flxoa/authImage",
+                    type:"post",
+                    success:function(data){
+                        console.info(data);
+                        $("#imgObj").attr('src',data);
+                    }
+                });
+            } */
+            function getCookie(name){
+                var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+                if(arr=document.cookie.match(reg))return unescape(arr[2]);
+                else{
+                    return null;
+                }
+            }
+			//alert(getCookie("codeToken"));
+            /* function changeImg(){
+                var imgSrc = $("#imgObj"); 
+                var src = imgSrc.attr("src");     
+                imgSrc.attr("src",chgUrl(src));
+            }    */  
+            //时间戳     
+            //为了使每次生成图片不一致，即不让浏览器读缓存，所以需要加上时间戳     
+            function chgUrl(url){     
+                var timestamp = (new Date()).valueOf();     
+                urlurl = url.substring(0,17);     
+                if((url.indexOf("&")>=0)){     
+                    urlurl = url + "×tamp=" + timestamp;     
+                }else{     
+                    urlurl = url + "?timestamp=" + timestamp;     
+                }
+                return urlurl;
+            } 
+            
+            /* function isRightCode(){     
+                var code = "c=" + $("#veryCode").val();     
+                $.ajax({     
+                    type: "POST",     
+                    url: "resultServlet/validateCode",     
+                    data: code,     
+                    success: callBackSuccess,
+                    error: callBackError
+                });
+            } */
+            function callBackSuccess(data){
+                $("#info").html(data);     
+            }
+        
+            function callBackError() {
+                layer.msg("error");
+            }
+            
+            //authImage();
+            
+            
+            
+            //点击选项卡 切换登录方式
+            $(".dl-tab-tit li").on("click",function(){
+                $(this).addClass("selected").siblings().removeClass("selected");
+                var idx = $(this).index();
+                $(".dl-tab-con .dl-tab-cont").eq(idx).show().siblings().hide();
+            });
+            
+            
+            
+            //点击右上角二维码 弹出扫描二维码登录模态框
+            /*$(".dl-qrcode-btn").on("click",function(){
+                layer.open({
+                    type: 1,
+                    area: ['600px', '600px'],
+                    shadeClose: true, //点击遮罩关闭
+                    scrollbar: false,
+                    title: '扫描二维码登录',
+                    content: $('.dl-qrcode-content')
+                });  
+            });*/
+
+
+            //生成二维码
+            //UrlEncode
+             var url = encodeURIComponent("http://flxoa.philisense.com/flxoa/weixingetuserinfo");
+             var obj = new WxLogin({
+                 self_redirect:false,
+                 id:"ma", 
+                 appid: "wx05948991416758bf", 
+                 scope: "snsapi_login", 
+                 redirect_uri:url,
+                 state: "123",
+                 style: "",
+                 href: ""
+                 });
+                        
+            //二维码登录直接提交form
+            function weixinLogin(){
+                $.ajax({
+                    url:"/flxoa/getuserinfo",
+                    type:"post",
+                    success:function(data){
+                        var json = eval('(' + data + ')');
+                        if(json.length > 0){
+							if(null != json[0].userName){
+								$("#username").val(json[0].userName);
+								$("#password").val(json[0].password);
+								weixinlogin = true;
+								$("#submit").click();							
+							}
+                        }
+                    }
+                });
+            }
+            //根据url获取参数对应的值
+            function GetQueryString(name)
+            {
+                 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                 var r = window.location.search.substr(1).match(reg);
+                 if(r!=null)return  unescape(r[2]); return null;
+            }
+            
+			//子系统信息保存
+			var client_id = GetQueryString("client_id");
+//			var client_secret = GetQueryString("client_secret");
+			var redirect_uri = GetQueryString("redirect_uri");
+			var response_type =  GetQueryString("response_type");
+			var state =  GetQueryString("state");
+            if(null != client_id
+//				&&null != client_secret
+				&&null != redirect_uri
+				&&null != response_type
+				&&null != state){
+                $.ajax({
+                    url:"/flxoa/user/savessoinfo",
+                    type:"post",
+					data:{
+						"client_id":client_id,
+//						"client_secret":client_secret,
+						"redirect_uri":redirect_uri,
+						"response_type":response_type,
+						"state":state
+					},
+                    success:function(data){
+                        weixinLogin();
+                    }
+                });            	
+            }else{
+				weixinLogin();
+			}
+			document.onkeydown = function(e){
+				var ev = document.all ? window.event : e;
+				if(ev.keyCode==13) {
+					loginSubmitCheck();
+				}
+			}           
+        </script>
+    </body>
+</html>

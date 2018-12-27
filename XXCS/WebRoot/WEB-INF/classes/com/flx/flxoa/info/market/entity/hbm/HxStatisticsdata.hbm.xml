@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-9 19:09:53 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.HxStatisticsdata" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx_statisticsdata">
+        <id name="statisticsDataId" type="java.lang.Integer">
+            <column name="StatisticsDataID"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="com.flx.flxoa.info.market.entity.HxCropcategory" embed-xml="true" fetch="select" insert="true" name="hxCropcategory" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="6" name="CropCategoryCode"/>
+        </many-to-one>
+        <many-to-one class="com.flx.flxoa.info.market.entity.HxRegion" embed-xml="true" fetch="select" insert="true" name="hxRegion" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="6" name="RegionCode"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="regionName" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="RegionName"/>
+        </property>
+        <property generated="never" lazy="false" name="cropCategoryName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="CropCategoryName"/>
+        </property>
+        <property generated="never" lazy="false" name="cropOfferStr" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="CropOfferStr"/>
+        </property>
+        <property generated="never" lazy="false" name="offerDate" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="OfferDate"/>
+        </property>
+        <property generated="never" lazy="false" name="offerWeek" optimistic-lock="true" type="java.lang.Byte" unique="false">
+            <column name="OfferWeek">
+                <comment>һ???·?Ϊ????5??
+            ֵ?ֱ?Ϊ12345
+            ????????ʹ?</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="price" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="Price" precision="10" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="unit" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="Unit">
+                <comment>??ö?ٱ???ȡ????Ӧö??????Ϊ WeekPriceUnit</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="unitName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="UnitName"/>
+        </property>
+        <property generated="never" lazy="false" name="offerType" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="OfferType">
+                <comment>0??????
+            1??ȫ??Ԥ?</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-12-20 17:01:15 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.HxUser" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx_user">
+        <id name="userId" type="java.lang.Integer">
+            <column name="UserID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="userName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="UserName">
+                <comment>用户名</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="userRealName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="UserRealName">
+                <comment>用户真名</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="passWord" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="PassWord">
+                <comment>密码</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="tel" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="Tel">
+                <comment>手机号</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="Email">
+                <comment>邮箱</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="userType" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="UserType" not-null="true">
+                <comment>用户类型 1：企业用户 2：游客 3：普通，4管理员</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="tokenId" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="TokenID"/>
+        </property>
+        <property generated="never" lazy="false" name="tokenStart" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="TokenStart"/>
+        </property>
+        <property generated="never" lazy="false" name="tokenTime" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="TokenTime"/>
+        </property>
+        <property generated="never" lazy="false" name="approvalState" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="ApprovalState"/>
+        </property>
+        <property generated="never" lazy="false" name="releaseState" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="ReleaseState"/>
+        </property>
+    </class>
+</hibernate-mapping>

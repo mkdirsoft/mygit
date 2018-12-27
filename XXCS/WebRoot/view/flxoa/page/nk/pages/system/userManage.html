@@ -1,0 +1,3226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>用户管理</title>
+
+        <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Gradient Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+        <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+        <meta name="author" content="codedthemes" />
+
+        <link rel="icon" type="image/x-icon" href="/view/flxoa/page/nk/public/img/favicon.ico">
+
+        <!--<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">-->
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/css/font.css" />
+
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/bootstrap/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/themify-icons/themify-icons.css">
+
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/icofont/css/icofont.css">
+
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/pages/data-table/css/buttons.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
+                
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/css/jquery.mCustomScrollbar.css">
+        
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/daterangepicker/daterangepicker.css"/>
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/Datedropper3-master/datedropper.min.css" />
+         
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/zTree_v3/css/demo.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/zTree_v3/css/zTreeStyle/zTreeStyle.css">
+        <!--<link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/zTree_v3/css/metroStyle/metroStyle.css">-->
+                 
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/css/public.css" />
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/oyxq/css/oy.css" />
+    </head>
+
+    <body themebg-pattern="pattern1">
+
+        <!--<div class="theme-loader">
+            <div class="loader-track">
+                <div class="loader-bar"></div>
+            </div>
+        </div>-->
+
+        <div id="pcoded" class="pcoded" nav-type="st2" theme-layout="vertical" vertical-placement="left" vertical-layout="wide" pcoded-device-type="desktop" vertical-nav-type="expanded" vertical-effect="shrink" vnavigation-view="view1" fream-type="theme1" sidebar-img="true" sidebar-img-type="img1" layout-type="img">
+            <div class="pcoded-overlay-box"></div>
+            <div class="pcoded-container navbar-wrapper">
+                <nav class="navbar header-navbar pcoded-header" header-theme="theme1" pcoded-header-position="fixed">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-logo">
+                            <a class="mobile-menu" id="mobile-collapse" href="dt-api.html#!">
+                                <i class="ti-menu"></i>
+                            </a>
+                            <div class="mobile-search">
+                                <div class="header-search">
+                                    <div class="main-search morphsearch-search">
+                                        <div class="input-group">
+                                            <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                            <input type="text" class="form-control" placeholder="Enter Keyword">
+                                            <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="index.html">
+                                <img class="img-fluid" src="/view/flxoa/page/nk/files/assets/images/logo.png" style="height: 32px;" alt="Theme-Logo" />
+                            </a>
+                            <a class="mobile-options">
+                                <i class="ti-more"></i>
+                            </a>
+                        </div>
+                        <div class="navbar-container container-fluid">
+                            <ul class="nav-left">
+                                <li>
+                                    <div class="sidebar_toggle">
+                                        <a href="javascript:void(0)"><i class="ti-menu"></i></a>
+                                    </div>
+                                </li>
+                                <li class="header-search">
+                                    <div class="main-search morphsearch-search">
+                                        <div class="input-group">
+                                            <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="dt-api.html#!" onclick="javascript:toggleFullScreen()">
+                                        <i class="ti-fullscreen"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav-right">
+                                <li class="header-notification">
+                                    <a href="dt-api.html#!">
+                                        <i class="ti-bell"></i>
+                                        <span class="badge bg-c-pink"></span>
+                                    </a>
+                                    <ul class="show-notification">
+                                        <li>
+                                            <h6>Notifications</h6>
+                                            <label class="label label-danger">New</label>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">John Doe</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Joseph William</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Sara Soudein</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="dt-api.html#!" class="displayChatbox">
+                                        <i class="ti-comments"></i>
+                                        <span class="badge bg-c-green"></span>
+                                    </a>
+                                </li>
+                                <li class="user-profile header-notification">
+                                    <a href="dt-api.html#!">
+                                        <img src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                        <span>John Doe</span>
+                                        <i class="ti-angle-down"></i>
+                                    </a>
+                                    <ul class="show-notification profile-notification">
+                                        <li>
+                                            <a href="dt-api.html#!">
+                                                <i class="ti-settings"></i> Settings
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="user-profile.html">
+                                                <i class="ti-user"></i> Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="email-inbox.html">
+                                                <i class="ti-email"></i> My Messages
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="auth-lock-screen.html">
+                                                <i class="ti-lock"></i> Lock Screen
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="auth-normal-sign-in.html">
+                                                <i class="ti-layout-sidebar-left"></i> Logout
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="sidebar" class="users p-chat-user showChat">
+                    <div class="had-container">
+                        <div class="card card_main p-fixed users-main">
+                            <div class="user-box">
+                                <div class="chat-search-box">
+                                    <a class="back_friendlist">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </a>
+                                    <div class="right-icon-control">
+                                        <input type="text" class="form-control  search-text" placeholder="Search Friend" id="search-friends">
+                                        <div class="form-icon">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-friend-list">
+                                    <div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image ">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Josephin Doe</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Lary Doe</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Alice</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Alia</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Suzen</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="showChat_inner">
+                    <div class="media chat-inner-header">
+                        <a class="back_chatBox">
+                            <i class="fa fa-chevron-left"></i> Josephin Doe
+                        </a>
+                    </div>
+                    <div class="media chat-messages">
+                        <a class="media-left photo-table" href="dt-api.html#!">
+                            <img class="media-object img-radius img-radius m-t-5" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                        </a>
+                        <div class="media-body chat-menu-content">
+                            <div class="">
+                                <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+                                <p class="chat-time">8:20 a.m.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media chat-messages">
+                        <div class="media-body chat-menu-reply">
+                            <div class="">
+                                <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+                                <p class="chat-time">8:20 a.m.</p>
+                            </div>
+                        </div>
+                        <div class="media-right photo-table">
+                            <a href="dt-api.html#!">
+                                <img class="media-object img-radius img-radius m-t-5" src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="chat-reply-box p-b-20">
+                        <div class="right-icon-control">
+                            <input type="text" class="form-control search-text" placeholder="Share Your Thoughts">
+                            <div class="form-icon">
+                                <i class="fa fa-paper-plane"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcoded-main-container" style="margin-top: 56px;">
+                    <div class="pcoded-wrapper">
+                        <nav class="pcoded-navbar" navbar-theme="theme1" active-item-theme="theme5" sub-item-theme="theme2" active-item-style="style0" pcoded-navbar-position="fixed">
+                            <div class="sidebar_toggle">
+                                <a href="index.html#"><i class="icon-close icons"></i></a>
+                            </div>
+                            <div class="pcoded-inner-navbar main-menu">
+                                <!--<div class="pcoded-navigation-label" menu-title-theme="theme6">Navigation</div>-->
+                                <ul class="pcoded-item pcoded-left-item" id="navi">
+                                    
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="pcoded-content">
+                            <div class="pcoded-inner-content">
+                                <div class="main-body">
+                                    <div class="page-wrapper">
+                                        <div class="page-header card">
+                                            <div class="card-block">                                           
+                                                <ul class="breadcrumb-title">
+                                                    <li class="breadcrumb-item">
+                                                        <a href="index.html"> <i class="fa fa-home"></i> </a>
+                                                    </li>
+                                                    <li class="breadcrumb-item">
+                                                        <a href="javascript:void(0);">系统</a>
+                                                    </li>
+                                                    <li class="breadcrumb-item">
+                                                        <a href="javascript:void(0);">用户管理</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="page-body">
+                                            <div class="row">
+                                                <div class="col-sm-12">                                                                     
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="search-wrap-oy search-wrap-fst">
+                                                                <form>
+                                                                    <div class="form-group">
+                                                                        <div class="row search-input-oy">
+                                                                            <div class="col-sm-3">                                                                         
+                                                                                <input type="text" class="form-control user_name" placeholder="按用户名查询" />
+                                                                            </div>
+                                                                            <div class="col-sm-3">                                                                         
+                                                                                <input type="text" class="form-control user_true_name" placeholder="按姓名查询" />
+                                                                            </div> 
+                                                                            <div class="col-sm-3">  
+                                                                                <!--<input type="text" class="form-control" placeholder="按部门查询" />-->
+                                                                                <input id="citySel1" type="text" class="form-control department_name" placeholder="按部门查询" readonly value="" onclick="showMenu1(); return false;" />                                                                              
+                                                                            </div> 
+                                                                            <div class=" col-sm-3  " >
+		                                                                        <select id="userState" class="form-control selectpicker" placeholder="按状态查询">
+		                                                                            <option value="" >按状态查询</option>
+		                                                                            <option value="5">全部</option>
+		                                                                            <option value="0">在职</option>
+		                                                                            <option value="2">离职</option>
+		                                                                        </select>
+		                                                                    </div>   
+                                                                        </div>   
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                         <div class="row search-btn-oy">
+                                                              <div class="col-sm-12">
+                                                                  <button type="button" class="btn btn-primary m-b-0 btn-inquiry">查询</button>
+                                                                  <button type="button" class="btn btn-success m-b-0 btn-reset">重置</button>
+                                                              </div>
+                                                          </div> 
+                                                        <div class="card-block">                                                           
+                                                            <div class="dt-responsive table-responsive">
+                                                                <div class="action-buttons-oy">
+                                                                    <button type="button" class="btn btn-sm btn-primary m-b-0 yhgl-add-user-btn">添加用户</button>                                                                    
+                                                                    <button type="button" id="btnAll" class="btn btn-sm btn-primary m-b-0 ">批量授权</button>                                                                    
+                                                                </div>
+                                                                <table id="yhglTable" class="table table-striped table-bordered table-styling nowrap table-wrap-public">
+                                                                    <thead>
+                                                                        <tr class="table-primary">
+                                                                            <th width="2%">
+                                                                               <input type="checkbox" class="icheckbox_minimal" id="all_checked" />
+                                                                            </th>
+                                                                            <th width="10%">用户名</th>                  
+                                                                            <th width="10%">姓名</th>      
+                                                                            <th width="15%">所属部门</th>      
+                                                                            <th width="5%">状态</th>       
+                                                                            <th width="12%">操作</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody id="yhglTbody">
+                                                                        <!--<tr>
+                                                                            <td>张三</td>
+                                                                            <td>前端</td>
+                                                                            <td>北京</td>
+                                                                            <td>25</td>
+                                                                            <td>25</td>
+                                                                            <td>25</td>
+                                                                            <td>2016/03/23</td>
+                                                                            <td></td>
+                                                                            <td>
+                                                                                <a href="javascript:void(0);"><i class="fa fa-eye" data-toggle="tooltip" data-placement="top" title="查看" data-original-title="查看"></i></a>                                                                                                                                                    
+                                                                            </td>
+                                                                        </tr>-->
+                                                                    </tbody>
+                                                                    <!--<tfoot>
+                                                                        <tr>
+                                                                            <th></th>
+                                                                            <th>序号</th>
+                                                                            <th>用户名</th>                                                                            
+                                                                            <th>姓名</th>                                                                            
+                                                                            <th>公司名称</th>                                                                            
+                                                                            <th>部门名称</th>                                                                            
+                                                                            <td>操作</td>
+                                                                        </tr>
+                                                                    </tfoot>-->
+                                                                </table>
+                                                            </div>                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="styleSelector">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                        
+        
+        
+        <!--表格右上角-添加用户按钮-->
+        <div class="layui-layer-con-oy" id="yhglAdd" style="display: none;">
+            <form id="yhglAdd_form">                
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>用户名</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control user_name" placeholder="请输入4-20个以字母开头，可带数字的字符" onblur="onblurs()">
+                    </div>
+                </div>              
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>姓名</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control user_true_name" placeholder="请输入2-4个中文字符">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>性别</label>
+                    <div class="col-sm-9 form-radio sex">                      
+                        <div class="radio radio-inline">
+                            <label>
+                                <input class="sex1" type="radio" name="sex" checked="checked">
+                                <i class="helper"></i>男
+                            </label>
+                        </div>
+                        <div class="radio radio-inline">
+                            <label>
+                                <input class="sex2" type="radio" name="sex">
+                                <i class="helper"></i>女
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">出生日期</label>
+                    <div class="col-sm-9">
+                        <!--<input type="text" class="form-control birth_date">-->
+                        <input type="text" id="birth_date_add" class="form-control birth_date" placeholder="请输入日期" lang="zh" data-large-mode="true" data-max-year="2030" data-format="Y-m-d" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>学历</label>
+                    <div class="col-sm-9">                        
+                        <select name="select" class="form-control highest_education">
+                            <option value="opt1">博士以上</option>
+                            <option value="opt2">博士</option>
+                            <option value="opt3">硕士</option>                                                                                   
+                            <option value="opt4">学士</option>                                                                                   
+                            <option value="opt5">专科</option>                                                                                   
+                            <option value="opt6">专科以下</option>                                                                                   
+                        </select>
+                    </div>
+                </div>
+                <!--<div class="form-group row">
+                    <label class="col-sm-3 col-form-label">有效证件类别</label>
+                    <div class="col-sm-9">
+                        <select name="select" class="form-control valid_document_category">
+                            <option value="opt1">居民身份证</option>
+                            <option value="opt2">军官证</option>                                                                                                             
+                            <option value="opt3">士兵证</option>                                                                                                             
+                            <option value="opt4">香港特区护照/身份证明</option>                                                                                                             
+                            <option value="opt5">其</option>                                                                                                                                                                                                                                                                                                                                                    
+                        </select>
+                    </div>
+                </div>-->
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>居民身份证号码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control id_number" placeholder="请输入正确格式的居民身份证号码，字母X必须大写">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>进入单位时间</label>
+                    <div class="col-sm-9">
+                        <!--<input type="text" class="form-control enter_unit_time">-->
+                        <input type="text" id="enter_unit_time_add" class="form-control enter_unit_time" placeholder="请输入日期" lang="zh" data-large-mode="true" data-max-year="2030" data-format="Y-m-d" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>公司名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control company_name">
+                    </div>
+                </div>                                           
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>部门名称</label>
+                    <div class="col-sm-9">
+                        <!--<input type="text" class="form-control department_name">-->
+                        <input id="citySel2" type="text" class="form-control department_name" placeholder="部门名称" readonly value="" onclick="showMenu2(); return false;" />
+                    </div>
+                </div>    
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">职位</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control position">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">工作地点</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control work_place">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>状态</label>
+                    <div class="col-sm-9">
+                        <select name="select" class="form-control status">
+                            <option value="opt1">在职</option>
+                            <option value="opt2">调出</option>
+                            <option value="opt3">离职</option>                                                                                                             
+                        </select>
+                    </div>
+                </div>                
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>手机号码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control phone_number" placeholder="请输入11位手机号码，如13899998888">
+                    </div>
+                </div>                
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>邮箱</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control email" placeholder="请输入正确格式的邮箱">
+                    </div>
+                </div>                             
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>是否能用手机签到</label>                    
+                    <div class="col-sm-9 form-radio is_phone_sign">                                              
+                        <div class="radio radio-inline">
+                            <label>
+                                <input class="is_phone_sign1" type="radio" name="is_phone_sign" checked="checked">
+                                <i class="helper"></i>是
+                            </label>
+                        </div>
+                        <div class="radio radio-inline">
+                            <label>
+                                <input class="is_phone_sign2" type="radio" name="is_phone_sign">
+                                <i class="helper"></i>否
+                            </label>
+                        </div>
+                    </div>
+                </div>    
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">考勤卡ID</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control timecard_id">
+                    </div>
+                </div>                                       
+                <div class="form-group row search-btn-oy">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary m-b-0 btn-user-save">保存</button>                            
+                    </div>
+                </div>
+            </form>
+        </div>
+         
+         
+        <!--表格右上角-批量授权按钮-->
+        <div class="layui-layer-con-oy" id="yhglMultiAutho" style="display: none;">
+            <form>                
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>姓名</label>
+                    <div class="col-sm-9">
+                        <!--<input type="text" class="form-control user_true_name" placeholder="用户名称(ztree)" />-->
+                        <input id="citySel3" type="text" class="form-control" placeholder="姓名" readonly value="" return false;" />
+                    </div>                    
+                </div> 
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>角色名称</label>
+                    <div class="col-sm-9">
+                        <!--<input type="text" class="form-control" placeholder="角色名称(角色树ztree)" />-->
+                        <input id="citySel4" type="text" class="form-control" placeholder="角色名称" readonly value="" onclick="showMenu4(); return false;" />
+                    </div>                    
+                </div> 
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>管理对象单位</label>
+                    <div class="col-sm-9">
+                        <!--<input type="text" class="form-control" placeholder="管理对象单位(部门树ztree)" />-->
+                        <input id="citySel5" type="text" class="form-control" placeholder="管理对象单位" readonly value="" onclick="showMenu5(); return false;" />
+                    </div>                    
+                </div> 
+                <div class="form-group row search-btn-oy">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-sm btn-primary m-b-0 bt11n-save">保存</button>
+                        <!--<button type="button" class="btn btn-sm btn-success m-b-0">取消</button>-->
+                    </div>                    
+                </div>
+            </form>    
+        </div>
+        
+        
+        <!--操作-查看-->
+        <div class="layui-layer-con-oy" id="yhglCheck" style="display: none;">            
+            <form>                
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">用户名</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control user_name" readonly="" value="">
+                    </div>
+                </div>              
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">姓名</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control user_true_name" readonly="" value="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">性别</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control sex" readonly="" value="">
+                    </div>                    
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">出生日期</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control birth_date" readonly="" value="">                       
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">学历</label>
+                    <div class="col-sm-9">                                                
+                        <input type="text" class="form-control highest_education" readonly="" value=""> 
+                    </div>
+                </div>
+                <!--<div class="form-group row">
+                    <label class="col-sm-3 col-form-label">有效证件类别</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control valid_document_category" readonly="" value="">                         
+                    </div>
+                </div>-->
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">证件号码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control id_number" readonly="" value="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">进入单位时间</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control enter_unit_time" readonly="" value="">                        
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">公司名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control company_name" readonly="" value="">
+                    </div>
+                </div>                                           
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">部门名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control department_name" readonly="" value="">                        
+                    </div>
+                </div>    
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">职位</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control position" readonly="" value="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">工作地点</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control work_place" readonly="" value="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">状态</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control status" readonly="" value="">                        
+                    </div>
+                </div>                
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">手机号码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control phone_number" readonly="" value="">
+                    </div>
+                </div>                
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">邮箱</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control email" readonly="" value="">
+                    </div>
+                </div>                             
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">是否能用手机签到</label>                    
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control is_phone_sign" readonly="" value="">                        
+                    </div>
+                </div>    
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">考勤卡ID</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control timecard_id" readonly="" value="">
+                    </div>
+                </div>                                                       
+            </form>
+        </div>
+        
+        
+        <!--操作-修改-->
+        <div class="layui-layer-con-oy" id="yhglEdit" style="display: none;">
+            <form>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>用户名</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control user_name" placeholder="请输入4-20个以字母开头，可带数字的字符" readonly="readonly">
+                    </div>
+                </div>              
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>姓名</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control user_true_name" placeholder="请输入2-4个中文字符">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>性别</label>
+                    <div class="col-sm-9 form-radio sex">                      
+                        <div class="radio radio-inline">
+                            <label>
+                                <input class="sex1" type="radio" name="sex" checked="checked">
+                                <i class="helper"></i>男
+                            </label>
+                        </div>
+                        <div class="radio radio-inline">
+                            <label>
+                                <input class="sex2" type="radio" name="sex">
+                                <i class="helper"></i>女
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">出生日期</label>
+                    <div class="col-sm-9">
+                        <!--<input type="text" class="form-control birth_date">-->
+                        <input type="text" id="birth_date_edit" class="form-control birth_date" placeholder="请输入日期" lang="zh" data-large-mode="true" data-max-year="2030" data-format="Y-m-d" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>学历</label>
+                    <div class="col-sm-9">                        
+                        <select name="select" class="form-control highest_education" id="hhhhh">
+                            <option value="opt1">博士以上</option>
+                            <option value="opt2">博士</option>
+                            <option value="opt3">硕士</option>                                                                                   
+                            <option value="opt4">学士</option>                                                                                   
+                            <option value="opt5">专科</option>                                                                                   
+                            <option value="opt6">专科以下</option>                                                                                   
+                        </select>
+                    </div>
+                </div>
+                <!--<div class="form-group row">
+                    <label class="col-sm-3 col-form-label">有效证件类别</label>
+                    <div class="col-sm-9">
+                        <select name="select" class="form-control valid_document_category">
+                            <option value="opt1">居民身份证</option>
+                            <option value="opt2">军官证</option>                                                                                                             
+                            <option value="opt3">士兵证</option>                                                                                                             
+                            <option value="opt4">香港特区护照/身份证明</option>                                                                                                             
+                            <option value="opt5">其他</option>                                                                                                                                                                                                                                                                                                                                                    
+                        </select>
+                    </div>
+                </div>-->
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>居民身份证号码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control id_number" placeholder="请输入正确格式的居民身份证号码，字母X必须大写">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>进入单位时间</label>
+                    <div class="col-sm-9">
+                        <!--<input type="text" class="form-control enter_unit_time">-->
+                        <input type="text" id="enter_unit_time_edit" class="form-control enter_unit_time" placeholder="请输入日期" lang="zh" data-large-mode="true" data-max-year="2030" data-format="Y-m-d" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>公司名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control company_name">
+                    </div>
+                </div>                                           
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>部门名称</label>
+                    <div class="col-sm-9">
+                        <!--<input type="text" class="form-control department_name">-->
+                        <input id="citySel6" type="text" class="form-control department_name" placeholder="部门名称" readonly value="" onclick="showMenu6(); return false;" />
+                    </div>
+                </div>    
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">职位</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control position">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">工作地点</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control work_place">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>状态</label>
+                    <div class="col-sm-9">
+                        <select name="select" class="form-control status">
+                            <option value="opt1">在职</option>
+                            <option value="opt2">调出</option>
+                            <option value="opt3">离职</option>                                                                                                             
+                        </select>
+                    </div>
+                </div>                
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>手机号码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control phone_number" placeholder="请输入11位手机号码，如13899998888">
+                    </div>
+                </div>                
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>邮箱</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control email" placeholder="请输入正确格式的邮箱">
+                    </div>
+                </div>                             
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>是否能用手机签到</label>                    
+                    <div class="col-sm-9 form-radio is_phone_sign">                                              
+                        <div class="radio radio-inline">
+                            <label>
+                                <input class="is_phone_sign1" type="radio" name="is_phone_sign" checked="checked">
+                                <i class="helper"></i>是
+                            </label>
+                        </div>
+                        <div class="radio radio-inline">
+                            <label>
+                                <input class="is_phone_sign2" type="radio" name="is_phone_sign">
+                                <i class="helper"></i>否
+                            </label>
+                        </div>
+                    </div>
+                </div>    
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">考勤卡ID</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control timecard_id">
+                    </div>
+                </div>                                       
+                <div class="form-group row search-btn-oy">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary m-b-0 btn-save">保存</button>                            
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        
+        <!--操作-授权-->
+        <div class="layui-layer-con-oy" id="yhglAutho" style="display: none;">
+            <div class="search-wrap-oy">
+                <form>
+                    <div class="form-group">
+                        <div class="row search-input-oy">
+                            <div class="col-sm-6" style="display: none;">                                                                         
+                                <input type="text" class="form-control user_id" placeholder="id" readonly="" />
+                            </div>
+                            <div class="col-sm-6">                                                                         
+                                <input type="text" class="form-control user_true_name" placeholder="按姓名查询" readonly="" />
+                            </div>
+                            <div class="col-sm-6">                                                                         
+                                <input type="text" class="form-control role_name" placeholder="按角色名称查询" />
+                            </div>                            
+                        </div>                                                                     
+                        <div class="row search-btn-oy">
+                            <div class="col-sm-12">
+                                <button type="button" class="btn btn-primary m-b-0 btn-userinquiry">查询</button>
+                                <button type="button" class="btn btn-success m-b-0 btn-reset">重置</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="dt-responsive table-responsive">
+                <div class="action-buttons-oy">
+                    <button type="button" class="btn btn-sm btn-primary m-b-0 yhgl-authorize-add-btn">添加</button>                                                                    
+                    <button type="button" class="btn btn-sm btn-primary m-b-0 yhgl-authorize-delete-btn">删除</button>                                                                    
+                </div>
+                <table id="yhglAuthoTable" class="table table-striped table-bordered table-styling nowrap table-wrap-public">
+                    <thead>
+                        <tr class="table-primary">
+                            <th>角色名称</th>
+                            <th>管理对象单位</th>  
+                            <th>操作</th>                          
+                        </tr>
+                    </thead>
+                    <tbody id="yhglAuthoTbody">
+                        <!--<tr>
+                            <td>张三</td>
+                            <td>前端</td>
+                            <td>20180126</td>
+                            <td>20180228</td>
+                            <td>30</td>
+                            <td>30</td>                            
+                        </tr>-->                        
+                    </tbody>
+                    <!--<tfoot>
+                        <tr>
+                            <th><input type="checkbox" value=""></th>
+                            <th>序号</th>
+                            <th>角色</th>
+                            <th>管理对象单位</th>    
+                        </tr>
+                    </tfoot>-->
+                </table>
+            </div>   
+        </div>
+        
+        
+        <!--操作-授权-添加用户角色-->
+        <div class="layui-layer-con-oy" id="yhglAuthoAdd" style="display: none;">
+            <form>
+                <div class="form-group row" style="display: none;">
+                    <label class="col-sm-3 col-form-label">id</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control user_id" placeholder="id" readonly="" />
+                    </div>                    
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>姓名</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control user_true_name" placeholder="姓名" readonly="" />
+                    </div>                    
+                </div> 
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>角色名称</label>
+                    <div class="col-sm-9">
+                        <!--<input type="text" class="form-control" placeholder="角色名称(角色树ztree)" />-->
+                        <input id="citySel7" type="text" class="form-control" placeholder="角色名称" readonly value="" onclick="showMenu7(); return false;" />
+                    </div>                    
+                </div> 
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>管理对象单位</label>
+                    <div class="col-sm-9">
+                        <!--<input type="text" class="form-control" placeholder="管理对象单位(部门树ztree)" />-->
+                        <input id="citySel8" type="text" class="form-control" placeholder="管理对象单位" readonly value="" onclick="showMenu8(); return false;" />
+                    </div>                    
+                </div> 
+                <div class="form-group row search-btn-oy">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-sm btn-primary m-b-0 btn-save">保存</button>
+                        <!--<button type="button" class="btn btn-sm btn-success m-b-0">取消</button>-->
+                    </div>                    
+                </div>
+            </form>    
+        </div>
+        
+        
+        <!--ztree菜单容器-->
+        <div id="menuContent1" class="menuContent" style="display:none; position: absolute; z-index: 999999999999;">
+            <ul id="treeDemo1" class="ztree" style="margin-top:0; width:220px;"></ul>
+        </div>
+        <div id="menuContent2" class="menuContent" style="display:none; position: absolute; z-index: 999999999999;">
+            <ul id="treeDemo2" class="ztree" style="margin-top:0; width:220px;"></ul>
+        </div>        
+        <div id="menuContent3" class="menuContent" style="display:none; position: absolute; z-index: 999999999999;">
+            <ul id="treeDemo3" class="ztree" style="margin-top:0; width:220px;"></ul>
+        </div>
+        <div id="menuContent4" class="menuContent" style="display:none; position: absolute; z-index: 999999999999;">
+            <ul id="treeDemo4" class="ztree" style="margin-top:0; width:270px;"></ul>
+        </div>
+        <div id="menuContent5" class="menuContent" style="display:none; position: absolute; z-index: 999999999999;">
+            <ul id="treeDemo5" class="ztree" style="margin-top:0; width:270px;"></ul>
+        </div>
+        <div id="menuContent6" class="menuContent" style="display:none; position: absolute; z-index: 999999999999;">
+            <ul id="treeDemo6" class="ztree" style="margin-top:0; width:220px;"></ul>
+        </div>
+        <div id="menuContent7" class="menuContent" style="display:none; position: absolute; z-index: 999999999999;">
+            <ul id="treeDemo7" class="ztree" style="margin-top:0; width:270px;"></ul>
+        </div>
+        <div id="menuContent8" class="menuContent" style="display:none; position: absolute; z-index: 999999999999;">
+            <ul id="treeDemo8" class="ztree" style="margin-top:0; width:270px;"></ul>
+        </div>
+                                       
+            
+            
+            
+        <!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="/view/flxoa/page/nk/files/assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="/view/flxoa/page/nk/files/assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="/view/flxoa/page/nk/files/assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="/view/flxoa/page/nk/files/assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="/view/flxoa/page/nk/files/assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery/js/jquery.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/popper.js/js/popper.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+
+        <script src="/view/flxoa/page/nk/files/bower_components/modernizr/js/modernizr.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/modernizr/js/css-scrollbars.js"></script>
+        
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/data-table/js/jszip.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/data-table/js/pdfmake.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/data-table/js/vfs_fonts.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+                        
+        <script type="text/javascript" src="/view/flxoa/page/nk/public/daterangepicker/moment.js"></script>
+        <script type="text/javascript" src="/view/flxoa/page/nk/public/daterangepicker/daterangepicker.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/Datedropper3-master/datedropper.min.js"></script>
+                
+        <script src="/view/flxoa/page/nk/files/bower_components/spectrum/js/spectrum.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/advance-elements/custom-picker.js"></script>
+                
+        <script src="/view/flxoa/page/nk/files/assets/pages/data-table/js/data-table-custom.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/pcoded.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/navbar-image/vertical-layout.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/script.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/app.js"></script>
+        <script src="/view/flxoa/page/nk/public/layer/layer.js"></script>   
+        
+        <script type="text/javascript" src="/view/flxoa/page/nk/public/zTree_v3/js/jquery.ztree.core.js"></script>
+        <script type="text/javascript" src="/view/flxoa/page/nk/public/zTree_v3/js/jquery.ztree.excheck.js"></script>
+        <!--<script type="text/javascript" src="/view/flxoa/page/nk/public/zTree_v3/js/jquery.ztree.exedit.js"></script>-->
+            
+        <script src="/view/flxoa/page/nk/public/js/public.js"></script>    
+        <script src="/view/flxoa/page/nk/oyxq/js/oy.js"></script>
+        
+        <script>
+            //$.fn.dataTable.ext.errMode = 'throw';            
+            var tableLayer;
+            var zNodes1;
+            var layerIndex;
+            var id;
+            var order_number;
+            var user_name;            
+            var user_true_name;            
+            var sex;            
+            var birth_date;
+            var highest_education;
+            var valid_document_category;
+            var id_number;
+            var enter_unit_time;
+            var company_name;
+            var department_name;
+            var position;
+            var work_place;
+            var status;
+            var phone_number;
+            var email;
+            var is_phone_sign;
+            var timecard_id;
+            var user_name_in;
+            var user_role_name;
+            var user_true_name_in;
+            var department_name_in;
+            var selectpicker_name_in;
+            var yhglAddHtml = $("#yhglAdd").html();
+            var yhglEditHtml = $("#yhglEdit").html();
+            var yhglAuthoHtml = $("#yhglAutho").html();            
+            $('#birth_date_add').dateDropper();
+            $('#enter_unit_time_add').dateDropper();            
+            $('#birth_date_edit').dateDropper();
+            $('#enter_unit_time_edit').dateDropper();
+            var userIds = "";
+			var userNames = ""; 
+            
+            
+			//当前页索引
+			var nowPageIndex = 0;   
+			var nowPageIndex1 = 0;   
+			
+             //初始化表格
+           var table=$('#yhglTable').dataTable({
+                "language": {
+                    "url": "/view/flxoa/page/nk/public/resource/zh_CN.json"
+                },
+            //提示信息  
+            bSort: true,
+    			autoWidth: false,
+    			//禁用自动调整列宽
+    			stripeClasses: ["odd", "even"],
+    			//为奇偶行加上样式，兼容不支持CSS伪类的场合
+    			processing: true,
+    			//隐藏加载提示,自行处理
+    			serverSide: true,
+    			//操作后-停留当前页
+    			bStateSave:true,
+    			//启用服务器端分页
+    			//aoColumnDefs: [
+    			// { "bSortable": false, "aTargets": [0] }
+    			//],
+    			searching: true,
+    			//是否禁用原生搜索(false为禁用,true为使用)
+    			orderMulti: false,
+    			//启用多列排序
+    			order: [],
+    			//取消默认排序查询,否则复选框一列会出现小箭头
+    			renderer: "bootstrap",
+    			//渲染样式：Bootstrap和jquery-ui
+    			pagingType: "full_numbers",
+    			//分页样式：simple,simple_numbers,full,full_numbers
+    			bScrollInfinite: true,
+    			columnDefs: [{
+    				"targets": 'nosort',
+    				//列的样式名
+    				"orderable": false //包含上样式名‘nosort’的禁止排序
+    			}],
+    			ajax: function(data, callback, settings) {
+    				//封装请求参数
+    				var param = {};
+    				param.pageSize = data.length; //页面显示记录条数，在页面显示每页显示多少项的时候
+    				param.pageNo = data.start; //开始的记录序号
+    				param.page = (data.start / data.length) + 1; //当前页码
+    				param.search = data.search.value; //搜索条件
+    				if (data.order.length > 0) {
+    					param.order = data.columns[data.order[0].column].data;
+    					param.dir = data.order[0].dir;
+    				}
+    				param.realname=user_true_name_in;
+    				param.username=user_name_in;
+    				param.departmentname=department_name_in;
+    				param.userState = selectpicker_name_in;
+    				console.log("lalalal:====="+param);
+    				//ajax请求数据
+    				$.ajax({
+    					type: "post",
+    					url: "/flxoa/flxoaSystemUserInif",
+    					cache: false,
+    					//禁用缓存
+    					data: param,
+    					//传入组装的参数
+    					dataType: "json",
+    					success: function(result) {
+    						//console.log(result);
+    						//setTimeout仅为测试延迟效果
+    						setTimeout(function() {
+    							//封装返回数据
+    							var returnData = {};
+    							returnData.draw = data.draw; //这里直接自行返回了draw计数器,应该由后台返回
+    							returnData.recordsTotal = result[0].totalCount; //返回数据全部记录
+    							returnData.recordsFiltered = result[0].totalCount; //后台不实现过滤功能，每次查询均视作全部结果
+    							returnData.data = result[0].data; //返回的数据列表
+    							console.log(returnData);
+    							//调用DataTables提供的callback方法，代表数据已封装完成并传回DataTables进行渲染
+    							//此时的数据需确保正确无误，异常判断应在执行此回调前自行处理完毕
+    							callback(returnData);
+    						}, 200);
+    					}
+    				});
+    			},
+    			
+    			//列表表头字段
+    			columns: [{
+    				"data": "",
+    				"orderable": false,
+    				"render":function(data,type,row,meta){
+					var str = '<input type ="checkbox"  id="checkAll"  name="user_id_Ids" class="icheckbox_minimal" value ='+row.id+','+row.realName+'>';
+   					return str;
+                    
+			  }
+    			},{
+    				"data": "userName",
+    				"render":function(data,type,row,meta){
+    					return data;
+    				}
+    			}, {
+    				"data": "realName",
+    				"render":function(data,type,row,meta){
+    					//var str = '<em type ="checkbox"   name="realName_ids" class="em-realName">'+data+'</em>';
+    					return data;
+    				}
+    			}, {
+    				"data": "departmentName",
+    				"render":function(data,type,row,meta){
+    					return data;
+    				}
+    			}, {
+    				"data": "status",
+    				"render":function(data,type,row,meta){
+                    	//状态判断
+                    	if(data == "0"){
+                    		data ="在职";
+                    	}
+                    	if(data == "1"){
+                    		data ="调出";
+                    	}
+                    	if(data == "2"){
+                    		data ="离职";
+                    	}
+    					return data;
+    				}
+    			},{
+    				"data": "id",
+    				"render":function(data,type,row,meta){
+    					var data='<a href="javascript:void(0);" onclick="yhglcheckbtn('+data+')" class="yhgl-check-btn"><i class="fa fa-eye" title="查看"></i></a>'+
+                        '<a href="javascript:void(0);" onclick="yhgleditbtn('+data+')"  class="yhgl-edit-btn"><i class="fa fa-pencil" title="修改"></i></a>'+
+                        "<a href='javascript:void(0);' onclick='yhglauthorizebtn("+data+",&quot;"+ row.realName + "&quot;)' class='yhgl-authorize-btn'><i class='fa fa-check-circle' title='授权'></i></a>"+                                                                                                                    
+                        '<a href="javascript:void(0);" onclick="yhgdeletebtn('+data+')" class="yhgl-delete-btn"><i class="fa fa-trash" title="删除"></i></a>';
+                        return data; 
+                        //style="display:none;
+    				}
+    			} ],
+    		}).api();
+         //跳转到上次点击的页索引
+		table.page(nowPageIndex).draw(false);	
+		//表格CheckBox操作
+        tableCheckbox("#yhglTable");  
+		//保存翻页后的当前页索引
+		$('#yhglTable').on( 'page.dt', function () {
+			var info = $('#yhglTable').DataTable().page.info();
+			nowPageIndex = info.page;
+		});	      
+        
+		        /**
+		       	 * 复选框全选按钮被点击事件
+		       	 */
+		       	$("#all_checked").click(function(){
+		            if (this.checked) {
+		                $(this).attr('checked','checked')
+		                $("input[name='user_id_Ids']").each(function () {
+		                    this.checked = true;
+		                });
+		            } else {
+		                $(this).removeAttr('checked')
+		                $("input[name='user_id_Ids']").each(function () {
+		                    this.checked = false;
+		                });
+		            }
+		            
+		        });
+
+		        
+		        //批量授权
+		        $("#btnAll").click(function(){
+		        		var selectAtleaseOne = false;
+		        		//存储userID
+		            var userIdsarr = [];
+		        		//存储用户名
+		            var userNamesarr = [];
+		            var re1 = /(\d{1,3})+(?:\.\d+)?/g
+		            	var re2 = /[\u4e00-\u9fa5]{2,}/g
+          			   $('input[name="user_id_Ids"]:checked').each(function(){ 
+          				 	userIdsarr.push($(this).val());
+ 		           		 }); 
+		            	//数组转字符串
+          			 var arr = userIdsarr.join(",");
+          			//从字符串中取出数字
+          			var userIdss = arr.match(re1);
+          			//从字符串中取出汉子
+          			var userNames = arr.match(re2);
+          			var userIds =userIdss.join(",");
+          			//点击批量授权后给姓名带值
+		             $("#citySel3").val(userNames);
+		             layer.open({
+	                        type: 1,
+	                        area: ['40%', '55%'],
+	                        shadeClose: true, //点击遮罩关闭
+	                        scrollbar: false,
+	                        maxmin: true,
+	                        title: '批量授权',
+	                        content: $('#yhglMultiAutho')
+	                    });
+		             $.fn.zTree.init($("#treeDemo4"), setting4, zNodes4);
+	                    $.fn.zTree.init($("#treeDemo5"), setting5, zNodes5);
+	                    $("#yhglMultiAutho .bt11n-save").unbind("click").on("click",function(){
+	                        var treeObj4 = $.fn.zTree.getZTreeObj("treeDemo4");
+	                        var nodes4 = treeObj4.getCheckedNodes(true);                        
+	                        var arr4 = "";
+	                        for(var i=0;i<nodes4.length;i++){
+	                            arr4 += nodes4[i].id+",";
+	                        };
+							if("" != arr4){
+								arr4 = arr4.substring(0,arr4.length-1);
+							}						
+	                        var treeObj5 = $.fn.zTree.getZTreeObj("treeDemo5");
+	                        var nodes5 = treeObj5.getCheckedNodes(true);                        
+	                        var arr5 = "";
+	                        for(var i=0;i<nodes5.length;i++){
+								arr5 += nodes5[i].id+",";
+	                        };
+							if("" != arr5){
+								arr5 = arr5.substring(0,arr5.length-1);
+							}
+							console.info(userIds);
+							console.info(userNames);
+							console.info(arr4);
+							console.info(arr5);
+							//表单验证                                               
+	                        if(arr4 == null || arr4 == ""){
+	                            layer.msg("请选择角色名称！");
+	                            return;
+	                        };
+	                        if(arr5 == null || arr5 == ""){
+	                            layer.msg("请选择管理对象单位！");
+	                            return;
+	                        };
+	                        console.log(userIds);
+	                        $.ajax({
+	                            type:"post",
+	                            url:"/flxoa/system/flxoasystemuserrolebatchadd",
+	                            data:{
+									"id":userIds,
+	                                "role_name":arr4,
+	                                "manage_object_department":arr5
+	                            },
+	                            success:function(data){
+	                                if(data == "1"){
+	                                    layer.msg("批量授权成功！");
+	                                    layer.closeAll("page");
+	                                    //右上角-批量授权成功之后  刷新表格数据                                    
+	                                    inquiryData();
+	                                }else{
+	                                    layer.msg("批量授权失败！");
+	                                    layer.closeAll("page");
+	                                };
+	                            },
+	                            error:function(XMLHttpRequest, textStatus, errorThrown){
+	                            	layer.msg("网络繁忙，请稍后再试");
+	                            }
+	                        });					
+
+	                    });  
+		        });
+		        
+
+			
+            
+            //初始化表格--操作-授权-表格数据
+            var table1=$('#yhglAuthoTable').dataTable({
+                "language": {
+                    "url": "/view/flxoa/page/nk/public/resource/zh_CN.json"
+                },
+            //提示信息  
+            bSort: true,
+    			autoWidth: false,
+    			//禁用自动调整列宽
+    			stripeClasses: ["odd", "even"],
+    			//为奇偶行加上样式，兼容不支持CSS伪类的场合
+    			processing: true,
+    			//操作后-停留当前页
+    			bStateSave:true,
+    			//隐藏加载提示,自行处理
+    			serverSide: true,
+    			//启用服务器端分页
+    			//aoColumnDefs: [
+    			// { "bSortable": false, "aTargets": [0] }
+    			//],
+    			searching: true,
+    			//是否禁用原生搜索(false为禁用,true为使用)
+    			orderMulti: false,
+    			//启用多列排序
+    			order: [],
+    			//取消默认排序查询,否则复选框一列会出现小箭头
+    			renderer: "bootstrap",
+    			//渲染样式：Bootstrap和jquery-ui
+    			pagingType: "full_numbers",
+    			//分页样式：simple,simple_numbers,full,full_numbers
+    			bScrollInfinite: true,
+    			columnDefs: [{
+    				"targets": 'nosort',
+    				//列的样式名
+    				"orderable": false //包含上样式名‘nosort’的禁止排序
+    			}],
+    			ajax: function(data, callback, settings) {
+    				//封装请求参数
+    				var param = {};
+    				param.pageSize = data.length; //页面显示记录条数，在页面显示每页显示多少项的时候
+    				param.pageNo = data.start; //开始的记录序号
+    				param.page = (data.start / data.length) + 1; //当前页码
+    				param.search = data.search.value; //搜索条件
+    				if (data.order.length > 0) {
+    					param.order = data.columns[data.order[0].column].data;
+    					param.dir = data.order[0].dir;
+    				}
+    				param.id=id;
+    				param.user_true_name=user_true_name;
+    				param.user_true_name_autho=user_role_name;
+    				console.log("lalalal:====="+param);
+    				//ajax请求数据
+    				$.ajax({
+    					type: "post",
+    					url: "/flxoa/flxoaSystemUserAuthorization",
+    					cache: false,
+    					//禁用缓存
+    					data: param,
+    					//传入组装的参数
+    					dataType: "json",
+    					success: function(result) {
+    						//console.log(result);
+    						//setTimeout仅为测试延迟效果
+    						setTimeout(function() {
+    							//封装返回数据
+    							var returnData = {};
+    							returnData.draw = data.draw; //这里直接自行返回了draw计数器,应该由后台返回
+    							returnData.recordsTotal = result[0].totalCount; //返回数据全部记录
+    							returnData.recordsFiltered = result[0].totalCount; //后台不实现过滤功能，每次查询均视作全部结果
+    							returnData.data = result[0].data; //返回的数据列表
+    							console.log(returnData);
+    							//调用DataTables提供的callback方法，代表数据已封装完成并传回DataTables进行渲染
+    							//此时的数据需确保正确无误，异常判断应在执行此回调前自行处理完毕
+    							callback(returnData);
+    						}, 200);
+    					}
+    				});
+    			},
+    			//列表表头字段
+    			columns: [{
+    				"data": "roleName",
+    				"render":function(data,type,row,meta){
+    					return data;
+    				}
+    			}, {
+    				"data": "funcationName",
+    				"render":function(data,type,row,meta){
+    					return data;
+    				}
+    			},{
+    				"data": "id",
+    				"render":function(data,type,row,meta){
+    					return '<a href="javascript:void(0);" class="tbgl-delete-btn" onclick="deleteInfo('+data+')"><i class="fa fa-trash" title="删除"></i></a>';
+    				}
+    			}],
+    		}).api();
+            
+            
+                        
+            //保存翻页后的当前页索引
+            $('#yhglAuthoTable').on( 'page.dt', function () {
+                var info = $('#yhglAuthoTable').DataTable().page.info();
+                nowPageIndex1 = info.page;
+            });  
+
+                
+                //操作按钮hover提示效果
+                selfTips("#yhglTable tr td .yhgl-check-btn","查看");
+                selfTips("#yhglTable tr td .yhgl-edit-btn","修改");
+                selfTips("#yhglTable tr td .yhgl-authorize-btn","授权");
+                selfTips("#yhglTable tr td .yhgl-delete-btn","删除");
+                
+                
+                //搜索-查询
+                $(".search-btn-oy .btn-inquiry").unbind("click").on("click",function(){                    
+                    inquiryData();
+                });
+                
+                
+                //搜索-重置
+                $(".search-btn-oy .btn-reset").unbind("click").on("click",function(){
+                    $(".search-wrap-fst .user_name").val("");
+                    $(".search-wrap-fst .user_true_name").val("");
+                    $(".search-wrap-fst .department_name").attr("value","");
+                    //重置 - 按状态查询
+                    document.getElementById("userState").options.selectedIndex = 0;
+                    $.fn.zTree.init($("#treeDemo1"), setting1, zNodes1);
+                  	user_true_name_in = "";
+   					user_name_in = "";
+   					department_name_in = "";
+   					selectpicker_name_in = "";
+                    //表格数据
+   					table.ajax.reload();
+                });
+                
+                                               
+                //添加用户
+                $(".yhgl-add-user-btn").unbind("click").on("click",function(){                    
+                    var yhglAddLayer = layer.open({
+                        type: 1,
+                        area: ['50%', '80%'],
+                        shadeClose: true, //点击遮罩关闭
+                        scrollbar: false,
+                        maxmin: true,                      
+                        title: '添加用户',
+                        content: $("#yhglAdd")                        
+                    }); 
+                    //重新加载这段html 【即清空layer表单数据 】
+                    $("#yhglAdd").html(yhglAddHtml);
+                    $("#birth_date_add").dateDropper();
+                    $("#enter_unit_time_add").dateDropper();
+                    $.fn.zTree.init($("#treeDemo2"), setting2, zNodes2); 
+                    
+                    //性别
+                    sex = 0;
+                    $("#yhglAdd .sex .radio").unbind("click").on("click",function(){                      
+                        sex = $(this).index();                        
+                    }); 
+                    //是否能用手机签到
+                    is_phone_sign = 0;
+                    $("#yhglAdd .is_phone_sign .radio").unbind("click").on("click",function(){                      
+                        is_phone_sign = $(this).index();                        
+                    }); 
+                    //操作-添加用户保存
+                    $("#yhglAdd .btn-user-save").unbind("click").on("click",function(){
+                        console.log("---------------------------------");                        
+                        user_name = $("#yhglAdd .user_name").val();                        
+                        user_true_name = $("#yhglAdd .user_true_name").val();                                                                        
+                        birth_date = $("#yhglAdd .birth_date").val();                        
+                        if($("#yhglAdd .highest_education").val() == "opt1"){
+                            highest_education = "0";
+                        }else if($("#yhglAdd .highest_education").val() == "opt2"){
+                            highest_education = "1";
+                        }else if($("#yhglAdd .highest_education").val() == "opt3"){
+                            highest_education = "2";
+                        }else if($("#yhglAdd .highest_education").val() == "opt4"){
+                            highest_education = "3";
+                        }else if($("#yhglAdd .highest_education").val() == "opt5"){
+                            highest_education = "4";
+                        }else if($("#yhglAdd .highest_education").val() == "opt6"){
+                            highest_education = "5";
+                        };                        
+                        if($("#yhglAdd .valid_document_category").val() == "opt1"){
+                            valid_document_category = "0";
+                        }else if($("#yhglAdd .valid_document_category").val() == "opt2"){
+                            valid_document_category = "1";
+                        }else if($("#yhglAdd .valid_document_category").val() == "opt3"){
+                            valid_document_category = "2";
+                        }else if($("#yhglAdd .valid_document_category").val() == "opt4"){
+                            valid_document_category = "3";
+                        }else if($("#yhglAdd .valid_document_category").val() == "opt5"){
+                            valid_document_category = "4";
+                        };
+                        id_number = $("#yhglAdd .id_number").val();
+                        enter_unit_time = $("#yhglAdd .enter_unit_time").val();
+                        company_name = $("#yhglAdd .company_name").val();
+                        department_name = $("#yhglAdd .department_name").val();
+                        position = $("#yhglAdd .position").val();
+                        work_place = $("#yhglAdd .work_place").val();                       
+                        if($("#yhglAdd .status").val() == "opt1"){
+                            status = "0";
+                        }else if($("#yhglAdd .status").val() == "opt2"){
+                            status = "1";
+                        }else if($("#yhglAdd .status").val() == "opt3"){
+                            status = "2";
+                        };
+                        phone_number = $("#yhglAdd .phone_number").val();
+                        email = $("#yhglAdd .email").val();                                                        
+                        timecard_id = $("#yhglAdd .timecard_id").val();
+                        console.log(user_name);                        
+                        console.log(user_true_name);
+                        console.log(sex);
+                        console.log(birth_date);
+                        console.log(highest_education);
+                        console.log(valid_document_category);
+                        console.log(id_number);
+                        console.log(enter_unit_time);
+                        console.log(company_name);
+                        console.log(department_name);
+                        console.log(position);
+                        console.log(work_place);
+                        console.log(status);
+                        console.log(phone_number);
+                        console.log(email);
+                        console.log(is_phone_sign);
+                        console.log(timecard_id);
+                        //表单验证
+                        if(user_name == null || user_name == ""){
+                            layer.msg("请输入用户名！");
+                            return;
+                        };
+                        var reg2 = /^[a-zA-Z]{1}([a-zA-Z0-9]){3,19}$/; 
+                        if(!reg2.exec(user_name)){
+                            layer.msg("用户名只能是4-20个以字母开头，可带数字的字符！"); 
+                            return;
+                        };
+                        if(user_true_name == null || user_true_name == ""){
+                            layer.msg("请输入姓名！");
+                            return;
+                        };     
+                        var reg1 = /^([\u4e00-\u9fa5]){2,4}$/; 
+                        if(!reg1.test(user_true_name)){
+                            layer.msg("姓名只能是2-4个中文字符！"); 
+                            return;
+                        };
+                        if(typeof(sex) == "undefined"){
+                            layer.msg("请选择性别！");
+                            return;
+                        };
+                        /*if(birth_date == null || birth_date == ""){
+                            layer.msg("请选择出生日期！");
+                            return;
+                        };*/
+                        if(highest_education == null || highest_education == ""){
+                            layer.msg("请选择学历！");
+                            return;
+                        };
+                        if(id_number == null || id_number == ""){
+                            layer.msg("请输入居民身份证号码！");
+                            return;
+                        };
+                        var reg3 = /^(\d{6})(\d{4})(\d{2})(\d{2})(\d{3})([0-9]|X)$/; 
+                        if(!reg3.test(id_number)){
+                            layer.msg("请输入正确格式的居民身份证号码，字母X必须大写！"); 
+                            return;
+                        };
+                        if(enter_unit_time == null || enter_unit_time == ""){
+                            layer.msg("请选择进入单位时间！");
+                            return;
+                        };
+                        if(company_name == null || company_name == ""){
+                            layer.msg("请输入公司名称！");
+                            return;
+                        };
+                        if(department_name == null || department_name == ""){
+                            layer.msg("请选择部门名称！");
+                            return;
+                        };
+                        /*if(position == null || position == ""){
+                            layer.msg("请输入职位！");
+                            return;
+                        };
+                        if(work_place == null || work_place == ""){
+                            layer.msg("请输入工作地点！");
+                            return;
+                        };*/
+                        if(status == null || status == ""){
+                            layer.msg("请选择状态！");
+                            return;
+                        };
+                        if(phone_number == null || phone_number == ""){
+                            layer.msg("请输入手机号码！");
+                            return;
+                        };
+                        var reg4 = /^1\d{10}$/; 
+                        if(!reg4.test(phone_number)){
+                            layer.msg("请输入11位手机号码，如13899998888！"); 
+                            return;
+                        };
+                        if(email == null || email == ""){
+                            layer.msg("请输入邮箱！");
+                            return;
+                        };
+                        var reg5 = /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/; 
+                        if(!reg5.test(email)){
+                            layer.msg("请输入正确格式的邮箱！"); 
+                            return;
+                        };
+                        if(typeof(is_phone_sign) == "undefined"){
+                            layer.msg("请选择是否能用手机签到！");
+                            return;
+                        };                        
+                        /*if(timecard_id == null || timecard_id == ""){
+                            layer.msg("请输入考勤卡ID！");
+                            return;
+                        };*/
+                        $.ajax({
+                            type:"post",
+                            url:"flxoaSystemUserAdd",
+                            async:true,
+                            dataType:"json",
+                            data:{
+                                "user_name":user_name,                                
+                                "user_true_name":user_true_name,
+                                "sex":sex,
+                                "birth_date":birth_date,
+                                "highest_education":highest_education,
+                                "valid_document_category":0,
+                                "id_number":id_number,
+                                "enter_unit_time":enter_unit_time,
+                                "company_name":company_name,
+                                "department_name":department_name,
+                                "position":position,
+                                "work_place":work_place,
+                                "status":status,
+                                "phone_number":phone_number,
+                                "email":email,
+                                "is_phone_sign":is_phone_sign,
+                                "timecard_id":timecard_id
+                            },
+                            success:function(data){
+                                if(data == "1"){
+                                    layer.msg("添加成功！");
+                                    layer.close(yhglAddLayer);
+                                    //添加成功之后  刷新表格数据                                    
+                                    table1.draw(false);
+                                }else{
+                                    layer.msg("添加失败！");
+                                    layer.close(yhglAddLayer);
+                                  	//重置表单数据
+                                    //$(':input','#yhglAdd_form').not(':button, :submit, :reset').val('')
+                                };
+                            }
+                        });
+                    });
+                });               
+                
+                var userIds = "";
+				var userNames = "";                
+                //批量授权
+                $(".yhgl-multi-authorize-btn").unbind("click").on("click",function(){
+					//清空上次填写的数据
+					userIds = "";
+					userNames = "";
+					$("#citySel3").val("");
+					var treeDemo4 = $.fn.zTree.getZTreeObj("treeDemo4");
+					treeDemo4.checkAllNodes(false);
+					$("#citySel4").val("");
+					var treeDemo5 = $.fn.zTree.getZTreeObj("treeDemo5");
+					treeDemo5.checkAllNodes(false);	
+					$("#citySel5").val("");
+					//表格对象
+					var yhglTable = $("#yhglTable").DataTable();
+					var rows = yhglTable.rows().data();//获取所有行
+					var checkFlag = false;
+					for(var i = 0; i < rows.length; i++){  
+						var checkHtml = yhglTable.cell(i,0).data();
+						//获取选中的id
+						if(-1 != checkHtml.indexOf("selected")){
+							var cellNo = yhglTable.cell(i,6).node(); //把id放在哪一列就是哪一列
+							userIds += $(cellNo).find(".em-id").eq(0).html()+",";
+							var cellUserName = yhglTable.cell(i,3).node()
+							userNames += $(cellUserName).find(".em-realName").eq(0).html()+",";
+							checkFlag = true;
+						}
+					}
+					if(!checkFlag){
+						layer.msg("请选择用户");
+						return;
+					}
+					if("" != userIds){
+						userIds = userIds.substring(0,userIds.length-1);
+						userNames = userNames.substring(0,userNames.length-1);
+					}
+					if("" != userNames){
+						userIds = userIds.substring(0,userIds.length-1);
+						userNames = userNames.substring(0,userNames.length-1);
+					}
+					$("#citySel3").val(userNames);
+                    layer.open({
+                        type: 1,
+                        area: ['40%', '55%'],
+                        shadeClose: true, //点击遮罩关闭
+                        scrollbar: false,
+                        maxmin: true,
+                        title: '批量授权',
+                        content: $('#yhglMultiAutho')
+                    });
+                    //清空数据
+                    $.fn.zTree.init($("#treeDemo4"), setting4, zNodes4);
+                    $.fn.zTree.init($("#treeDemo5"), setting5, zNodes5);
+                    $("#yhglMultiAutho .bt11n-save").unbind("click").on("click",function(){
+                        var treeObj4 = $.fn.zTree.getZTreeObj("treeDemo4");
+                        var nodes4 = treeObj4.getCheckedNodes(true);                        
+                        var arr4 = "";
+                        for(var i=0;i<nodes4.length;i++){
+                            arr4 += nodes4[i].id+",";
+                        };
+						if("" != arr4){
+							arr4 = arr4.substring(0,arr4.length-1);
+						}						
+                        var treeObj5 = $.fn.zTree.getZTreeObj("treeDemo5");
+                        var nodes5 = treeObj5.getCheckedNodes(true);                        
+                        var arr5 = "";
+                        for(var i=0;i<nodes5.length;i++){
+							arr5 += nodes5[i].id+",";
+                        };
+						if("" != arr5){
+							arr5 = arr5.substring(0,arr5.length-1);
+						}
+						console.info(userIds);
+						console.info(arr4);
+						console.info(arr5);
+						//表单验证                                               
+                        if(arr4 == null || arr4 == ""){
+                            layer.msg("请选择角色名称！");
+                            return;
+                        };
+                        if(arr5 == null || arr5 == ""){
+                            layer.msg("请选择管理对象单位！");
+                            return;
+                        };
+                        $.ajax({
+                            type:"post",
+                            url:"/flxoa/system/flxoasystemuserrolebatchadd",
+                            data:{
+								"id":userIds,
+                                "role_name":arr4,
+                                "manage_object_department":arr5
+                            },
+                            success:function(data){
+                                if(data == "1"){
+                                    layer.msg("批量授权成功！");
+                                    layer.closeAll("page");
+                                    //右上角-批量授权成功之后  刷新表格数据                                    
+                                    inquiryData();
+                                }else{
+                                    layer.msg("批量授权失败！");
+                                    layer.closeAll("page");
+                                };
+                            }
+                        });					
+
+                    });                   
+                }); 
+                
+                
+                //操作-查看             
+                function yhglcheckbtn(id){  
+                    var yhglCheckLayer = layer.open({
+                        type: 1,
+                        area: ['50%', '80%'],
+                        shadeClose: true, //点击遮罩关闭
+                        scrollbar: false,
+                        maxmin: true,
+                        title: '查看',
+                        content: $('#yhglCheck')
+                    });                    
+                    $.ajax({
+                        type:"post",
+                        url:"flxoaSystemUserDemandId",
+                        data:{
+                            //传递每条信息的某个参数，要求后台只返回该条信息的字段
+                            "id":id
+                        },
+                        dataType:"json",
+                        async: true,
+                        success: function(data){   
+                            //console.log(JSON.stringify(data));
+                            user_name = data[0].usermessage[0].userName;
+                            user_true_name = data[0].usermessage[0].realName;
+                            sex = data[0].usermessage[0].gender;
+                            birth_date = data[0].usermessage[0].birthday;
+                            highest_education = data[0].usermessage[0].highestDegreeEducation;
+                            valid_document_category = data[0].usermessage[0].validDocumentCategory;
+                            id_number = data[0].usermessage[0].identificationNumber;
+                            enter_unit_time = data[0].usermessage[0].enterUnitTime;
+                            company_name = data[0].usermessage[0].unitName;
+                            department_name = data[0].usermessage[0].departmentName;
+                            position = data[0].usermessage[0].position;
+                            work_place = data[0].usermessage[0].workPlace;
+                            status = data[0].usermessage[0].status;
+                            phone_number = data[0].usermessage[0].phone;
+                            email = data[0].usermessage[0].email;
+                            is_phone_sign = data[0].usermessage[0].isPhoneSign;
+                            timecard_id = data[0].usermessage[0].cardId;  
+                            //处理
+                            birth_date = formatDate(birth_date);
+                            enter_unit_time = formatDate(enter_unit_time);
+                            if(sex == "0"){
+                                sex = "男";
+                            }else if(sex == "1"){
+                                sex = "女";
+                            };
+                            if(highest_education == "0"){
+                                highest_education = "博士以上";
+                            }else if(highest_education == "1"){
+                                highest_education = "博士";
+                            }else if(highest_education == "2"){
+                                highest_education = "硕士";
+                            }else if(highest_education == "3"){
+                                highest_education = "学士";
+                            }else if(highest_education == "4"){
+                                highest_education = "专科";
+                            }else if(highest_education == "5"){
+                                highest_education = "专科以下";
+                            };                        
+                            if(valid_document_category == "0"){
+                                valid_document_category = "居民身份证";
+                            }else if(valid_document_category == "1"){
+                                valid_document_category = "军官证";
+                            }else if(valid_document_category == "2"){
+                                valid_document_category = "士兵证";
+                            }else if(valid_document_category == "3"){
+                                valid_document_category = "香港特区护照/身份证明";
+                            }else if(valid_document_category == "4"){
+                                valid_document_category = "其他";
+                            };
+                            if(status == "0"){
+                                status = "在职";
+                            }else if(status == "1"){
+                                status = "调出";
+                            }else if(status == "2"){
+                                status = "离职";
+                            };                                         
+                            if(is_phone_sign == "0"){
+                                is_phone_sign = "是";
+                            }else if(is_phone_sign == "1"){
+                                is_phone_sign = "否";
+                            };  
+                            if(position == null || position == "0" || position === 0){
+                                position = "";
+                            };
+                            if(work_place == null || work_place == "0" || work_place === 0){
+                                work_place = "";
+                            };                                
+                            if(timecard_id == null || timecard_id == "0" || timecard_id === 0){
+                                timecard_id = "";
+                            };
+                            $('#yhglCheck').find(".user_name").val(user_name);
+                            $('#yhglCheck').find(".user_true_name").val(user_true_name);
+                            $('#yhglCheck').find(".sex").val(sex);
+                            $('#yhglCheck').find(".birth_date").val(birth_date);
+                            $('#yhglCheck').find(".highest_education").val(highest_education);
+                            $('#yhglCheck').find(".valid_document_category").val(valid_document_category);
+                            $('#yhglCheck').find(".id_number").val(id_number);
+                            $('#yhglCheck').find(".enter_unit_time").val(enter_unit_time);
+                            $('#yhglCheck').find(".company_name").val(company_name);
+                            $('#yhglCheck').find(".department_name").val(department_name);
+                            $('#yhglCheck').find(".position").val(position);
+                            $('#yhglCheck').find(".work_place").val(work_place);
+                            $('#yhglCheck').find(".status").val(status);
+                            $('#yhglCheck').find(".phone_number").val(phone_number);
+                            $('#yhglCheck').find(".email").val(email);
+                            $('#yhglCheck').find(".is_phone_sign").val(is_phone_sign);
+                            $('#yhglCheck').find(".timecard_id").val(timecard_id);                                
+                        }
+                    });                        
+                };
+                
+                //操作-修改             
+                function yhgleditbtn(id){  
+                    var yhglEditLayer = layer.open({
+                        type: 1,
+                        area: ['50%', '80%'],
+                        shadeClose: true, //点击遮罩关闭
+                        scrollbar: false,
+                        maxmin: true,
+                        title: '修改',
+                        content: $('#yhglEdit')
+                    });   
+                    //重新加载这段html 【即清空layer表单数据 】
+                    $("#yhglEdit").html(yhglEditHtml);
+                    $("#birth_date_edit").dateDropper();
+                    $("#enter_unit_time_edit").dateDropper();
+                    $.fn.zTree.init($("#treeDemo6"), setting6, zNodes6);
+                    
+                    $.ajax({
+                        type:"post",
+                        url:"flxoaSystemUserDemandId",
+                        data:{
+                            //传递每条信息的某个参数，要求后台只返回该条信息的字段
+                            "id":id
+                        },
+                        dataType:"json",
+                        async: true,
+                        success: function(data){                                
+                            //console.log(JSON.stringify(data));
+                            user_name = data[0].usermessage[0].userName;
+                            user_true_name = data[0].usermessage[0].realName;
+                            sex = data[0].usermessage[0].gender;
+                            birth_date = data[0].usermessage[0].birthday;
+                            highest_education = data[0].usermessage[0].highestDegreeEducation;
+                            valid_document_category = data[0].usermessage[0].validDocumentCategory;
+                            id_number = data[0].usermessage[0].identificationNumber;
+                            enter_unit_time = data[0].usermessage[0].enterUnitTime;
+                            company_name = data[0].usermessage[0].unitName;
+                            department_name = data[0].usermessage[0].departmentName;
+                            position = data[0].usermessage[0].position;
+                            work_place = data[0].usermessage[0].workPlace;
+                            status = data[0].usermessage[0].status;
+                            phone_number = data[0].usermessage[0].phone;
+                            email = data[0].usermessage[0].email;
+                            is_phone_sign = data[0].usermessage[0].isPhoneSign;
+                            timecard_id = data[0].usermessage[0].cardId; 
+                            //处理
+                            birth_date = formatDate(birth_date);
+                            enter_unit_time = formatDate(enter_unit_time);
+                            if(position == null || position == "0" || position === 0){
+                                position = "";
+                            };
+                            if(work_place == null || work_place == "0" || work_place === 0){
+                                work_place = "";
+                            };                                
+                            if(timecard_id == null || timecard_id == "0" || timecard_id === 0){
+                                timecard_id = "";
+                            };
+                            $('#yhglEdit').find(".user_name").val(user_name);
+                            $('#yhglEdit').find(".user_true_name").val(user_true_name);
+                            //$('#yhglEdit').find(".sex").val(sex);
+                            $('#yhglEdit').find(".birth_date").val(birth_date);
+                            //$('#yhglEdit').find(".highest_education").val(highest_education);
+                            //$('#yhglEdit').find(".valid_document_category").val(valid_document_category);
+                            $('#yhglEdit').find(".id_number").val(id_number);
+                            $('#yhglEdit').find(".enter_unit_time").val(enter_unit_time);
+                            $('#yhglEdit').find(".company_name").val(company_name);
+                            $('#yhglEdit').find(".department_name").val(department_name);
+                            $('#yhglEdit').find(".position").val(position);
+                            $('#yhglEdit').find(".work_place").val(work_place);
+                            //$('#yhglEdit').find(".status").val(status);
+                            $('#yhglEdit').find(".phone_number").val(phone_number);
+                            $('#yhglEdit').find(".email").val(email);
+                            //$('#yhglEdit').find(".is_phone_sign").val(is_phone_sign);
+                            $('#yhglEdit').find(".timecard_id").val(timecard_id); 
+                            birth_date = formatDate(birth_date);
+                            enter_unit_time = formatDate(enter_unit_time);
+                            //性别
+                            if(sex == "0"){
+                                $("#yhglEdit .sex1").attr("checked",true);
+                                $("#yhglEdit .sex2").attr("checked",false);
+                            }else if(sex == "1"){
+                                $("#yhglEdit .sex2").attr("checked",true);
+                                $("#yhglEdit .sex1").attr("checked",false);
+                            };                                
+                            $("#yhglEdit .sex .radio").unbind("click").on("click",function(){                      
+                                sex = $(this).index();                        
+                            }); 
+                            //是否能用手机签到
+                            if(is_phone_sign == "0"){
+                                $("#yhglEdit .is_phone_sign1").attr("checked",true);
+                                $("#yhglEdit .is_phone_sign2").attr("checked",false);
+                            }else if(is_phone_sign == "1"){
+                                $("#yhglEdit .is_phone_sign2").attr("checked",true);
+                                $("#yhglEdit .is_phone_sign1").attr("checked",false);
+                            };                                
+                            $("#yhglEdit .is_phone_sign .radio").unbind("click").on("click",function(){                      
+                                is_phone_sign = $(this).index();                        
+                            });                                 
+                            //var options = document.getElementById('hhhhh').children;                                
+                            if(highest_education == "0"){                                   
+                                $("#yhglEdit .highest_education").attr("value","opt1");                                     
+                                //options[0].selected=true;
+                                $("#yhglEdit .highest_education").find("option").eq(0).attr("selected",true).siblings().attr("selected",false);
+                            }else if(highest_education == "1"){
+                                $("#yhglEdit .highest_education").attr("value","opt2");                                      
+                                //options[1].selected=true;
+                                $("#yhglEdit .highest_education").find("option").eq(1).attr("selected",true).siblings().attr("selected",false);
+                            }else if(highest_education == "2"){
+                                $("#yhglEdit .highest_education").attr("value","opt3");                                    
+                                //options[2].selected=true;
+                                $("#yhglEdit .highest_education").find("option").eq(2).attr("selected",true).siblings().attr("selected",false);
+                            }else if(highest_education == "3"){
+                                $("#yhglEdit .highest_education").attr("value","opt4");                                 
+                                //options[3].selected=true;
+                                $("#yhglEdit .highest_education").find("option").eq(3).attr("selected",true).siblings().attr("selected",false);
+                            }else if(highest_education == "4"){
+                                $("#yhglEdit .highest_education").attr("value","opt5");                                    
+                                //options[4].selected=true;
+                                $("#yhglEdit .highest_education").find("option").eq(4).attr("selected",true).siblings().attr("selected",false);
+                            }else if(highest_education == "5"){
+                                $("#yhglEdit .highest_education").attr("value","opt6");                                    
+                                //options[5].selected=true;
+                                $("#yhglEdit .highest_education").find("option").eq(5).attr("selected",true).siblings().attr("selected",false);
+                            };                        
+                            if(valid_document_category == "0"){
+                                $("#yhglEdit .valid_document_category").attr("value","opt1");                                     
+                                $("#yhglEdit .valid_document_category").find("option").eq(0).attr("selected",true).siblings().attr("selected",false);                           
+                            }else if(valid_document_category == "1"){
+                                $("#yhglEdit .valid_document_category").attr("value","opt2");                                     
+                                $("#yhglEdit .valid_document_category").find("option").eq(1).attr("selected",true).siblings().attr("selected",false);
+                            }else if(valid_document_category == "2"){
+                                $("#yhglEdit .valid_document_category").attr("value","opt3");                                     
+                                $("#yhglEdit .valid_document_category").find("option").eq(2).attr("selected",true).siblings().attr("selected",false);
+                            }else if(valid_document_category == "3"){
+                                $("#yhglEdit .valid_document_category").attr("value","opt4");                                     
+                                $("#yhglEdit .valid_document_category").find("option").eq(3).attr("selected",true).siblings().attr("selected",false);
+                            }else if(valid_document_category == "4"){
+                                $("#yhglEdit .valid_document_category").attr("value","opt5");                                     
+                                $("#yhglEdit .valid_document_category").find("option").eq(4).attr("selected",true).siblings().attr("selected",false);
+                            };
+                            if(status == "0"){
+                                $("#yhglEdit .status").attr("value","opt1");                                     
+                                $("#yhglEdit .status").find("option").eq(0).attr("selected",true).siblings().attr("selected",false);                                 
+                            }else if(status == "1"){
+                                $("#yhglEdit .status").attr("value","opt2");                                     
+                                $("#yhglEdit .status").find("option").eq(1).attr("selected",true).siblings().attr("selected",false);
+                            }else if(status == "2"){
+                                $("#yhglEdit .status").attr("value","opt3");                                     
+                                $("#yhglEdit .status").find("option").eq(2).attr("selected",true).siblings().attr("selected",false);
+                            };                                    
+                            //编辑  保存按钮
+                            $("#yhglEdit .btn-save").unbind("click").on("click",function(){                                                                                                     
+                                user_name = $("#yhglEdit .user_name").val();                        
+                                user_true_name = $("#yhglEdit .user_true_name").val();                                                                                
+                                birth_date = $("#yhglEdit .birth_date").val();                        
+                                if($("#yhglEdit .highest_education").val() == "opt1"){
+                                    highest_education = "0";
+                                }else if($("#yhglEdit .highest_education").val() == "opt2"){
+                                    highest_education = "1";
+                                }else if($("#yhglEdit .highest_education").val() == "opt3"){
+                                    highest_education = "2";
+                                }else if($("#yhglEdit .highest_education").val() == "opt4"){
+                                    highest_education = "3";
+                                }else if($("#yhglEdit .highest_education").val() == "opt5"){
+                                    highest_education = "4";
+                                }else if($("#yhglEdit .highest_education").val() == "opt6"){
+                                    highest_education = "5";
+                                };                        
+                                if($("#yhglEdit .valid_document_category").val() == "opt1"){
+                                    valid_document_category = "0";
+                                }else if($("#yhglEdit .valid_document_category").val() == "opt2"){
+                                    valid_document_category = "1";
+                                }else if($("#yhglEdit .valid_document_category").val() == "opt3"){
+                                    valid_document_category = "2";
+                                }else if($("#yhglEdit .valid_document_category").val() == "opt4"){
+                                    valid_document_category = "3";
+                                }else if($("#yhglEdit .valid_document_category").val() == "opt5"){
+                                    valid_document_category = "4";
+                                };
+                                id_number = $("#yhglEdit .id_number").val();
+                                enter_unit_time = $("#yhglEdit .enter_unit_time").val();
+                                company_name = $("#yhglEdit .company_name").val();
+                                department_name = $("#yhglEdit .department_name").val();
+                                position = $("#yhglEdit .position").val();
+                                work_place = $("#yhglEdit .work_place").val();                       
+                                if($("#yhglEdit .status").val() == "opt1"){
+                                    status = "0";
+                                }else if($("#yhglEdit .status").val() == "opt2"){
+                                    status = "1";
+                                }else if($("#yhglEdit .status").val() == "opt3"){
+                                    status = "2";
+                                };
+                                phone_number = $("#yhglEdit .phone_number").val();
+                                email = $("#yhglEdit .email").val();                                                            
+                                timecard_id = $("#yhglEdit .timecard_id").val();                                    
+                                console.log("++++++++++++++++++++");   
+                                console.log(user_name);                        
+                                console.log(user_true_name);
+                                console.log(sex);
+                                console.log(birth_date);
+                                console.log(highest_education);
+                                console.log(valid_document_category);
+                                console.log(id_number);
+                                console.log(enter_unit_time);
+                                console.log(company_name);
+                                console.log(department_name);
+                                console.log(position);
+                                console.log(work_place);
+                                console.log(status);
+                                console.log(phone_number);
+                                console.log(email);
+                                console.log(is_phone_sign);
+                                console.log(timecard_id); 
+                                
+                                //表单验证
+                                if(user_name == null || user_name == ""){
+                                    layer.msg("请输入用户名！");
+                                    return;
+                                };
+                                var reg2 = /^[a-zA-Z]{1}([a-zA-Z0-9]){3,19}$/; 
+                                if(!reg2.exec(user_name)){
+                                    layer.msg("用户名只能是4-20个以字母开头，可带数字的字符！"); 
+                                    return;
+                                };
+                                if(user_true_name == null || user_true_name == ""){
+                                    layer.msg("请输入姓名！");
+                                    return;
+                                };     
+                                var reg1 = /^([\u4e00-\u9fa5]){2,4}$/; 
+                                if(!reg1.test(user_true_name)){
+                                    layer.msg("姓名只能是2-4个中文字符！"); 
+                                    return;
+                                };
+                                if(typeof(sex) == "undefined"){
+                                    layer.msg("请选择性别！");
+                                    return;
+                                };
+                                /*if(birth_date == null || birth_date == ""){
+                                    layer.msg("请选择出生日期！");
+                                    return;
+                                };*/
+                                if(highest_education == null || highest_education == ""){
+                                    layer.msg("请选择学历！");
+                                    return;
+                                };
+                                if(id_number == null || id_number == ""){
+                                    layer.msg("请输入居民身份证号码！");
+                                    return;
+                                };
+                                var reg3 = /^(\d{6})(\d{4})(\d{2})(\d{2})(\d{3})([0-9]|X)$/; 
+                                if(!reg3.test(id_number)){
+                                    layer.msg("请输入正确格式的居民身份证号码，字母X必须大写！"); 
+                                    return;
+                                };
+                                if(enter_unit_time == null || enter_unit_time == ""){
+                                    layer.msg("请选择进入单位时间！");
+                                    return;
+                                };
+                                if(company_name == null || company_name == ""){
+                                    layer.msg("请输入公司名称！");
+                                    return;
+                                };
+                                if(department_name == null || department_name == ""){
+                                    layer.msg("请选择部门名称！");
+                                    return;
+                                };
+                                /*if(position == null || position == ""){
+                                    layer.msg("请输入职位！");
+                                    return;
+                                };
+                                if(work_place == null || work_place == ""){
+                                    layer.msg("请输入工作地点！");
+                                    return;
+                                };*/
+                                if(status == null || status == ""){
+                                    layer.msg("请选择状态！");
+                                    return;
+                                };
+                                if(phone_number == null || phone_number == ""){
+                                    layer.msg("请输入手机号码！");
+                                    return;
+                                };
+                                var reg4 = /^1\d{10}$/; 
+                                if(!reg4.test(phone_number)){
+                                    layer.msg("请输入11位手机号码，如13899998888！"); 
+                                    return;
+                                };
+                                if(email == null || email == ""){
+                                    layer.msg("请输入邮箱！");
+                                    return;
+                                };
+                                var reg5 = /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/; 
+                                if(!reg5.test(email)){
+                                    layer.msg("请输入正确格式的邮箱！"); 
+                                    return;
+                                };
+                                if(typeof(is_phone_sign) == "undefined"){
+                                    layer.msg("请选择是否能用手机签到！");
+                                    return;
+                                };                        
+                                /*if(timecard_id == null || timecard_id == ""){
+                                    layer.msg("请输入考勤卡ID！");
+                                    return;
+                                };*/
+                                
+                                $.ajax({
+                                    type:"post",
+                                    url:"flxoaSystemUserUpdate",
+                                    async:true,
+                                    dataType:"json",
+                                    data:{
+                                        "id":id,
+                                        "user_name":user_name,                                
+                                        "user_true_name":user_true_name,
+                                        "sex":sex,
+                                        "birth_date":birth_date,
+                                        "highest_education":highest_education,
+                                        "valid_document_category":0,
+                                        "id_number":id_number,
+                                        "enter_unit_time":enter_unit_time,
+                                        "company_name":company_name,
+                                        "department_name":department_name,
+                                        "position":position,
+                                        "work_place":work_place,
+                                        "status":status,
+                                        "phone_number":phone_number,
+                                        "email":email,
+                                        "is_phone_sign":is_phone_sign,
+                                        "timecard_id":timecard_id
+                                    },
+                                    success:function(data){
+                                        if(data == "1"){
+                                            layer.msg("修改成功！");
+                                            layer.close(yhglEditLayer);                                                
+                                            //修改成功之后  刷新表格数据                                               
+                                            table.draw(false);
+                                        }else{
+                                            layer.msg("修改失败！");
+                                            layer.close(yhglEditLayer);
+                                        };
+                                    }
+                                });
+                            });
+                        }
+                    });                        
+                };
+                
+                //操作-删除             
+                function  yhgdeletebtn(id){
+                    var obj = $(this).parent().parent();
+                    layer.confirm('您确定要删除这条数据吗？', {
+                        btn: ['确定', '取消'] //按钮
+                    }, function() {
+                    	 $.ajax({
+     						type : 'POST',
+     						url : "flxoaSystemUserDelete",
+     						async : true,
+     						dataType : "json",
+     						data : {
+     							"userroleid":id
+     						},
+     						success : function(data) {
+     							if (data == "1") {
+     								layer.msg('删除成功')
+     								//添加成功之后  刷新表格数据         								
+     				                table.draw(false);
+     							} else {
+     								layer.msg('删除失败')
+     							}
+     						}
+     					});
+                    }, function() {
+                        layer.msg('取消删除', {
+                            icon: 2
+                        });
+                    });
+                }; 
+                
+                //操作-授权    
+              
+               function  yhglauthorizebtn(id,usertruename){
+					//授权页面重新进入清空 上次选择的页索引
+					nowPageIndex1 = 0;
+                    layer.open({
+                        type: 1,
+                        area: ['55%', '55%'],
+                        shadeClose: true, //点击遮罩关闭
+                        scrollbar: false,
+                        maxmin: true,
+                        title: '授权',
+                        content: $('#yhglAutho')                            
+                    });
+                    //清空数据
+                    $("#yhglAutho .search-input-oy .role_name").val("");  
+                    $("#yhglAutho .search-input-oy .user_id").val(id);                        
+                    $("#yhglAutho .search-input-oy .user_true_name").val(usertruename);  
+                    user_true_name = usertruename;
+                    console.log(id);
+                    console.log(usertruename);
+                    //刷新授权表格数据                                                
+                    $.ajax({
+                        type:"post",
+                        url:"flxoaSystemUserAuthorization",
+                        async:true,
+                        dataType:"json",
+                        data:{
+                            "id":id,
+                            "user_true_name":usertruename
+                        },
+                        success:function(data){
+                        		table1.ajax.reload();
+                        }
+                    }); 
+                };
+                
+                
+                //操作-授权-查询
+                $("#yhglAutho .btn-userinquiry").unbind("click").on("click",function(){
+                    user_true_name = $("#yhglAutho .search-input-oy .user_true_name").val();                    
+                    user_role_name = $("#yhglAutho .search-input-oy .role_name").val();  
+                    //刷新授权表格数据
+                    table1.draw(false);
+                });
+                
+                //操作-授权-重置
+                $("#yhglAutho .btn-reset").unbind("click").on("click",function(){                                                                        
+                    $("#yhglAutho .search-input-oy .role_name").val(""); 
+                   	//user_true_name = "";
+    					user_role_name = "";
+                    //刷新授权表格数据   
+                    table1.draw(false);
+                });
+                
+                //操作-授权-添加用户角色
+                $("#yhglAutho .yhgl-authorize-add-btn").unbind("click").on("click",function(){
+					//清空上次填写的数据
+					var treeDemo7 = $.fn.zTree.getZTreeObj("treeDemo7");
+					treeDemo7.checkAllNodes(false);
+					$("#citySel7").val("");
+					var treeDemo8 = $.fn.zTree.getZTreeObj("treeDemo8");
+					treeDemo8.checkAllNodes(false);	
+					$("#citySel8").val("");
+                    id = $("#yhglAutho .search-input-oy .user_id").val();                    
+                    user_true_name = $("#yhglAutho .search-input-oy .user_true_name").val();                    
+                    var yhglAuthoAddLayer = layer.open({
+                        type: 1,
+                        area: ['40%', '55%'],
+                        shadeClose: true, //点击遮罩关闭
+                        scrollbar: false,
+                        maxmin: true,                       
+                        title: '授权-添加用户角色',
+                        content: $('#yhglAuthoAdd')
+                    });
+                    //清空数据
+                    $.fn.zTree.init($("#treeDemo7"), setting7, zNodes7);
+                    $.fn.zTree.init($("#treeDemo8"), setting8, zNodes8);
+                    $('#yhglAuthoAdd .user_id').val(id);
+                    $('#yhglAuthoAdd .user_true_name').val(user_true_name);
+                    $("#yhglAuthoAdd .btn-save").unbind("click").on("click",function(){
+                        var treeObj7 = $.fn.zTree.getZTreeObj("treeDemo7");
+                        var nodes7 = treeObj7.getCheckedNodes(true);                        
+                        var arr7 = [];
+                        for(var i=0;i<nodes7.length;i++){
+                            arr7.push(nodes7[i].id);
+                        };
+                        var treeObj8 = $.fn.zTree.getZTreeObj("treeDemo8");
+                        var nodes8 = treeObj8.getCheckedNodes(true);                        
+                        var arr8 = [];
+                        for(var i=0;i<nodes8.length;i++){
+                            arr8.push(nodes8[i].id);
+                        };
+                        //表单验证                                               
+                        if(arr7 == null || arr7 == ""){
+                            layer.msg("请选择角色名称！");
+                            return;
+                        };
+                        if(arr8 == null || arr8 == ""){
+                            layer.msg("请选择管理对象单位！");
+                            return;
+                        };
+                        $.ajax({
+                            type:"post",
+                            url:"flxoaSystemUserRoleAdd",
+                            async:true,
+                            dataType:"json",
+                            data:{
+                                "id":id,
+                                "role_name":arr7,
+                                "manage_object_department":arr8
+                            },
+                            success:function(data){
+                                if(data == "1"){
+                                    layer.msg("添加用户角色成功！");
+                                    layer.close(yhglAuthoAddLayer);
+                                    //授权-添加用户角色成功之后  刷新授权表格数据
+                                    $.ajax({
+                                        type:"post",
+                                        url:"flxoaSystemUserAuthorization",
+                                        async:true,
+                                        dataType:"json",
+                                        data:{
+                                            "id":id,
+                                            "user_true_name":user_true_name,
+                                            "user_true_name_autho":user_role_name
+                                        },
+                                        success:function(data){
+                                             table1.draw(false);
+                                        }
+                                    }); 
+                                }else{
+                                    layer.msg("添加用户角色失败！");
+                                    layer.close(yhglAuthoAddLayer);
+                                };
+                            }
+                        });
+                    });                    
+                });
+                
+                
+                //操作-授权-删除
+                function deleteInfo (id){
+                    user_true_name = $("#yhglAutho .search-input-oy .user_true_name").val();
+					user_role_name = $("#yhglAutho .search-input-oy .role_name").val();
+					layer.confirm('您确定要删除这条数据吗？', {
+                        btn: ['确定', '取消'] //按钮
+                    }, function() {
+                        $.ajax({
+                            type:"post",
+                            url:"/flxoa/system/flxoasystemuserroledelete",
+                            async:true,
+                            dataType:"json",
+                            data:{
+                                "userroleid":id
+                            },
+                            success:function(data){
+                                if(data == "1"){
+                                    layer.msg("删除授权数据成功！");
+                                    //授权-删除授权数据成功之后  刷新授权表格数据
+                                    $.ajax({
+                                        type:"post",
+                                        url:"flxoaSystemUserAuthorization",
+                                        async:true,
+                                        dataType:"json",
+                                        data:{
+                                            "user_true_name":user_true_name,
+                                            "user_true_name_autho":user_role_name
+                                        },
+                                        success:function(data){
+                                             table1.draw(false);
+                                        }
+                                    }); 
+                                }else{
+                                    layer.msg("删除授权数据失败！");
+                                };
+                            }
+                        });
+                    }, function() {
+                        layer.msg('取消删除', {
+                            icon: 2
+                        });
+                    });
+                };  
+                
+                
+            //绑定行操作按钮-lk0417
+            function bindRowButtonEven(){
+                //遍历每行数据
+                $("#yhglTbody tr").each(function(){
+                    //var idx = $(this).index(); 
+                    id = $(this).find(".em-id").text();
+                    var user_true_name = $(this).find(".em-realName").text(); 
+                    var user_role_name;
+                        
+                        
+                       
+                    });                                         
+            };
+            
+            
+            
+            
+            //鼠标离开事件
+            function onblurs(){ 
+                var user_name_onblur = $("#yhglAdd .user_name").val();
+                $.ajax({
+                    type:"post",
+                    url:"flxoaSystemUserNamecheck",
+                    async:true,
+                    dataType:"json",
+                    data:{
+                        "user_name":user_name_onblur,                        
+                    },
+                    success:function(data){
+                        if(data == "0"){
+                            layer.msg("用户名已存在，请重新填写！");
+                            $("#yhglAdd .user_name").focus();
+                        };
+                    }
+                });                 
+            }; 
+            
+            
+            
+            
+            //带着条件 重新加载数据
+            function inquiryData(){
+                user_name_in = $(".search-wrap-fst .user_name").val();
+                user_true_name_in = $(".search-wrap-fst .user_true_name").val();
+                department_name_in = $(".search-wrap-fst .department_name").val();
+                selectpicker_name_in = $(".search-wrap-fst .selectpicker").val();
+                    	//刷新表格数据
+                table.ajax.reload();
+            };
+            
+            
+            
+            
+            //日期范围选择器
+            $('#daterange-btn').daterangepicker({
+                    ranges: {
+                        '全部': [moment(), moment().subtract(-1, 'days')],
+                        '今天': [moment(), moment()],
+                        '昨天': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        '过去7天': [moment().subtract(6, 'days'),moment()],
+                        '过去30天': [moment().subtract(29, 'days'),moment()],
+                        '过去60天': [moment().subtract(59, 'days'),moment()]
+                    },
+                    startDate: moment(),
+                    endDate: moment()
+                },
+                function(start, end,label) {
+                    //label:通过它来知道用户选择的是什么，传给后台进行相应的展示
+            //      console.log(label)
+                    if(label=='全部'){
+                        $('#daterange-btn span').html('全部');
+                    }else if(label=='今天'){
+                        $('#daterange-btn span').html(end.format('YYYY/MM/DD'));
+                    }else if(label=='昨天'){
+                        $('#daterange-btn span').html(start.format('YYYY/MM/DD'));
+                    }else if(label=='过去7天'){
+                        $('#daterange-btn span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+                    }else if(label=='过去30天'){
+                        $('#daterange-btn span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+                    }else if(label=='过去60天'){
+                        $('#daterange-btn span').html(start.format('YYYY/MM/DD')+'-'+end.format('YYYY/MM/DD'));
+                    }
+                    
+                }
+            ); 
+            
+            
+            
+            
+            //将时间戳转化为日期
+            function formatDate(dates){
+                var date = new Date();  
+                date.setTime(dates * 1000);  
+                var y = date.getFullYear();      
+                var m = date.getMonth() + 1;      
+                m = m < 10 ? ('0' + m) : m;      
+                var d = date.getDate();      
+                d = d < 10 ? ('0' + d) : d; 
+                return y + '-' + m + '-' + d;
+            }; 
+            
+            
+            
+             
+            //ztree
+            //用户管理-查询条件-按部门查询ztree
+            var setting1 = {
+                view: {
+                    dblClickExpand: false
+                    /* enable: true,
+                    chkboxType: {"Y":"", "N":"s"},  */
+                },
+                data: {
+                    simpleData: {
+                        enable: true,
+                        idKey: "id",
+                        pIdKey: "pid",
+                        rootpId: ""      
+                    }
+                },
+                callback: {
+                    //beforeClick: beforeClick1,
+                    onClick: onClick1
+                }
+            };    
+            $.ajax({
+                url:"/flxoa/system/showSystemDept",
+                type : "post",
+                dataType:"json",
+                data : { },
+                success:function(data){
+                    zNodes1 = data;
+                    $.fn.zTree.init($("#treeDemo1"), setting1, zNodes1);                    
+               }
+            });   
+            function beforeClick1(treeId, treeNode) {
+                var check = (treeNode && !treeNode.isParent);
+                return check;
+            }            
+            function onClick1(e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("treeDemo1"),
+                nodes = zTree.getSelectedNodes(),
+                v = "";
+                nodes.sort(function compare(a,b){return a.id-b.id;});
+                for (var i=0, l=nodes.length; i<l; i++) {
+                    v += nodes[i].name + ",";
+                }
+                if (v.length > 0 ) v = v.substring(0, v.length-1);
+                var cityObj = $("#citySel1");
+                cityObj.attr("value", v);
+                hideMenu1();
+            }    
+            function showMenu1() {
+                var cityObj = $("#citySel1");
+                var cityOffset = $("#citySel1").offset();
+                $("#menuContent1").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+    
+                $("body").bind("mousedown", onBodyDown1);
+            }
+            function hideMenu1() {
+                $("#menuContent1").fadeOut("fast");
+                $("body").unbind("mousedown", onBodyDown1);
+            }
+            function onBodyDown1(event) {
+                if (!(event.target.id == "menuBtn1" || event.target.id == "menuContent1" || $(event.target).parents("#menuContent1").length>0)) {
+                    hideMenu1();
+                }
+            }
+            
+            //用户管理-添加用户-部门名称ztree
+            var setting2 = {
+                view: {
+                    dblClickExpand: false
+                    /* enable: true,
+                    chkboxType: {"Y":"", "N":"s"},  */
+                },
+                data: {
+                    simpleData: {
+                        enable: true,
+                        idKey: "id",
+                        pIdKey: "pid",
+                        rootpId: ""      
+                    }
+                },
+                callback: {
+                    //beforeClick: beforeClick1,
+                    onClick: onClick2
+                }
+            };    
+            $.ajax({
+                url:"/flxoa/system/showSystemDept",
+                type : "post",
+                dataType:"json",
+                data : { },
+                success:function(data){
+                    zNodes2 = data;
+                    $.fn.zTree.init($("#treeDemo2"), setting2, zNodes2);                    
+               }
+            });     
+            function beforeClick2(treeId, treeNode) {
+            	 	var check = (treeNode && !treeNode.isParent);
+                 return check;
+            }
+            
+            function onClick2(e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("treeDemo2"),
+                nodes = zTree.getSelectedNodes(),
+                v = "";
+                nodes.sort(function compare(a,b){return a.id-b.id;});
+                for (var i=0, l=nodes.length; i<l; i++) {
+                    v += nodes[i].name + ",";
+                }
+                if (v.length > 0 ) v = v.substring(0, v.length-1);
+                var cityObj = $("#citySel2");
+                cityObj.attr("value", v);
+                hideMenu2();
+            }    
+            function showMenu2() {
+                var cityObj = $("#citySel2");
+                var cityOffset = $("#citySel2").offset();
+                $("#menuContent2").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+    
+                $("body").bind("mousedown", onBodyDown2);
+            }
+            function hideMenu2() {
+                $("#menuContent2").fadeOut("fast");
+                $("body").unbind("mousedown", onBodyDown2);
+            }
+            function onBodyDown2(event) {
+                if (!(event.target.id == "menuBtn2" || event.target.id == "menuContent2" || $(event.target).parents("#menuContent2").length>0)) {
+                    hideMenu2();
+                }
+            }              
+            
+            //用户管理-批量授权-用户名称ztree
+            var setting3 = {
+                check: {
+                    enable: true,
+                    chkboxType: {"Y":"", "N":""}
+                },
+                view: {
+                    dblClickExpand: false
+                },
+                data: {
+                    simpleData: {
+                        enable: true
+                    }
+                },
+                callback: {
+                    beforeClick: beforeClick3,
+                    onCheck: onCheck3
+                }
+            };    
+            var zNodes3 =[
+                {id:1, pId:0, name:"北京"},
+                {id:2, pId:0, name:"天津"},
+                {id:3, pId:0, name:"上海"},
+                {id:6, pId:0, name:"重庆"},
+                {id:4, pId:0, name:"河北省", open:true, nocheck:true},
+                {id:41, pId:4, name:"石家庄"},
+                {id:42, pId:4, name:"保定"},
+                {id:43, pId:4, name:"邯郸"},
+                {id:44, pId:4, name:"承德"},
+                {id:5, pId:0, name:"广东省", open:true, nocheck:true},
+                {id:51, pId:5, name:"广州"},
+                {id:52, pId:5, name:"深圳"},
+                {id:53, pId:5, name:"东莞"},
+                {id:54, pId:5, name:"佛山"},
+                {id:6, pId:0, name:"福建省", open:true, nocheck:true},
+                {id:61, pId:6, name:"福州"},
+                {id:62, pId:6, name:"厦门"},
+                {id:63, pId:6, name:"泉州"},
+                {id:64, pId:6, name:"三明"}
+            ];    
+            function beforeClick3(treeId, treeNode) {
+                var check = (treeNode && !treeNode.isParent);
+                if (!check) layer.msg("只能选择城市...");
+                return check;
+            }            
+            function onCheck3(e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("treeDemo3"),
+                nodes = zTree.getCheckedNodes(true),
+                v = "";
+                for (var i=0, l=nodes.length; i<l; i++) {
+                    v += nodes[i].name + ",";
+                }
+                if (v.length > 0 ) v = v.substring(0, v.length-1);
+                var cityObj = $("#citySel3");
+                cityObj.attr("value", v);
+            }
+            function showMenu3() {
+                var cityObj = $("#citySel3");
+                var cityOffset = $("#citySel3").offset();
+                $("#menuContent3").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+    
+                $("body").bind("mousedown", onBodyDown3);
+            }
+            function hideMenu3() {
+                $("#menuContent3").fadeOut("fast");
+                $("body").unbind("mousedown", onBodyDown3);
+            }
+            function onBodyDown3(event) {
+                if (!(event.target.id == "menuBtn3" || event.target.id == "menuContent3" || $(event.target).parents("#menuContent3").length>0)) {
+                    hideMenu3();
+                }
+            }   
+            
+            //用户管理-批量授权-角色名称ztree
+            var setting4 = {
+                check: {
+                    enable: true,
+                    //chkboxType: {"Y":"", "N":""}
+                },
+                view: {
+                    dblClickExpand: false
+                },
+                data: {
+                    simpleData: {
+                        enable: true
+                    }
+                },
+                callback: {
+                    //beforeClick: beforeClick4,
+                    onCheck: onCheck4
+                }
+            };    
+            $.ajax({
+                url:"flxoaSystemRoleTreeInfoIrmation",
+                type : "post",
+                dataType:"json",
+                data : {
+                    
+                },
+                success:function(data){
+                    zNodes4 = data;
+                    $.fn.zTree.init($("#treeDemo4"), setting4, zNodes4);
+                    /*var t = $("#treeDemo2");
+                    t = $.fn.zTree.init(t, setting2, zNodes2);*/
+                    //展开根节点第一级
+                    //var nodes = t.getNodes();
+                    //t.expandNode(nodes[0], true, false, true);
+                }
+            });
+            function beforeClick4(treeId, treeNode) {
+                var check = (treeNode && !treeNode.isParent);
+                if (!check) layer.msg("只能选择城市...");
+                return check;
+            }            
+            function onCheck4(e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("treeDemo4"),
+                nodes = zTree.getCheckedNodes(true),
+                v = "";
+                for (var i=0, l=nodes.length; i<l; i++) {
+                    v += nodes[i].name + ",";
+                }
+                if (v.length > 0 ) v = v.substring(0, v.length-1);
+				$("#citySel4").val(v);
+                //var cityObj = $("#citySel4");
+                //cityObj.attr("value", v);
+            }
+            function showMenu4() {
+                var cityObj = $("#citySel4");
+                var cityOffset = $("#citySel4").offset();
+                $("#menuContent4").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+    
+                $("body").bind("mousedown", onBodyDown4);
+            }
+            function hideMenu4() {
+                $("#menuContent4").fadeOut("fast");
+                $("body").unbind("mousedown", onBodyDown4);
+            }
+            function onBodyDown4(event) {
+                if (!(event.target.id == "menuBtn4" || event.target.id == "menuContent4" || $(event.target).parents("#menuContent4").length>0)) {
+                    hideMenu4();
+                }
+            }  
+            
+            //用户管理-批量授权-管理对象单位ztree
+            var setting5 = {
+                check: {
+                    enable: true,
+                     chkboxType: {"Y":"s", "N":"s"},
+                },
+                view: {
+                    dblClickExpand: false
+                },
+                data: {
+                    simpleData: {
+                        enable: true,
+                        idKey: "id",
+                        pIdKey: "pid",
+                        rootpId: ""
+                    }
+                },
+                callback: {
+                    //beforeClick: beforeClick5,
+                    onCheck: onCheck5
+                }
+            };    
+            $.ajax({
+                url:"system/showSystemDept",
+                type : "get",
+                dataType:"json",
+                data : {
+                    
+                },
+                success:function(data){
+                    zNodes5 = data;
+                    $.fn.zTree.init($("#treeDemo5"), setting5, zNodes5);
+                    /*var t = $("#treeDemo6");
+                    t = $.fn.zTree.init(t, setting6, zNodes6);*/
+                    //展开根节点第一级
+                    //var nodes = t.getNodes();
+                    //t.expandNode(nodes[0], true, false, true);
+                }
+            });    
+            function beforeClick5(treeId, treeNode) {
+                var check = (treeNode && !treeNode.isParent);
+                //if (!check) layer.msg("只能选择城市...");
+                return check;
+            }            
+            function onCheck5(e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("treeDemo5"),
+                nodes = zTree.getCheckedNodes(true),
+                v = "";
+                for (var i=0, l=nodes.length; i<l; i++) {
+                    v += nodes[i].name + ",";
+                }
+                if (v.length > 0 ) v = v.substring(0, v.length-1);
+				$("#citySel5").val(v);
+                //var cityObj = $("#citySel5");
+                //cityObj.attr("value", v);
+            }
+            function showMenu5() {
+                var cityObj = $("#citySel5");
+                var cityOffset = $("#citySel5").offset();
+                $("#menuContent5").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+    
+                $("body").bind("mousedown", onBodyDown5);
+            }
+            function hideMenu5() {
+                $("#menuContent5").fadeOut("fast");
+                $("body").unbind("mousedown", onBodyDown5);
+            }
+            function onBodyDown5(event) {
+                if (!(event.target.id == "menuBtn5" || event.target.id == "menuContent5" || $(event.target).parents("#menuContent5").length>0)) {
+                    hideMenu5();
+                }
+            }  
+            
+            //用户管理-操作-修改-部门名称ztree
+            var setting6 = {
+                view: {
+                    dblClickExpand: false
+                },
+                data: {
+                    simpleData: {
+                        enable: true,
+                        idKey: "id",
+                        pIdKey: "pid",
+                        rootpId: ""      
+                    }
+                },
+                callback: {
+                    beforeClick: beforeClick6,
+                    onClick: onClick6
+                }
+            };    
+            $.ajax({
+                url:"system/showSystemDept",
+                type : "get",
+                dataType:"json",
+                data : {
+                    
+                },
+                success:function(data){
+                    zNodes6 = data;
+                    $.fn.zTree.init($("#treeDemo6"), setting6, zNodes6);
+                    /*var t = $("#treeDemo6");
+                    t = $.fn.zTree.init(t, setting6, zNodes6);*/
+                    //展开根节点第一级
+                    //var nodes = t.getNodes();
+                    //t.expandNode(nodes[0], true, false, true);
+                }
+            });    
+            function beforeClick6(treeId, treeNode) {
+                var check = (treeNode && !treeNode.isParent);
+                if (!check) layer.msg("只能选择城市...");
+                return check;
+            }            
+            function onClick6(e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("treeDemo6"),
+                nodes = zTree.getSelectedNodes(),
+                v = "";
+                nodes.sort(function compare(a,b){return a.id-b.id;});
+                for (var i=0, l=nodes.length; i<l; i++) {
+                    v += nodes[i].name + ",";
+                }
+                if (v.length > 0 ) v = v.substring(0, v.length-1);
+                var cityObj = $("#citySel6");
+                cityObj.attr("value", v);
+                $('#yhglEdit').find(".department_name").val(v);
+                hideMenu6();
+            }    
+            function showMenu6() {
+                var cityObj = $("#citySel6");
+                var cityOffset = $("#citySel6").offset();
+                $("#menuContent6").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+    
+                $("body").bind("mousedown", onBodyDown6);
+            }
+            function hideMenu6() {
+                $("#menuContent6").fadeOut("fast");
+                $("body").unbind("mousedown", onBodyDown6);
+            }
+            function onBodyDown6(event) {
+                if (!(event.target.id == "menuBtn6" || event.target.id == "menuContent6" || $(event.target).parents("#menuContent6").length>0)) {
+                    hideMenu6();
+                }
+            }            
+            
+            //用户管理-操作-授权-添加-角色名称ztree
+            var setting7 = {
+                check: {
+                    enable: true,
+                    //chkboxType: {"Y":"", "N":""}
+                },
+                /*view: {
+                    dblClickExpand: false
+                },*/
+                data: {
+                    simpleData: {
+                        enable: true
+                    }
+                },
+                callback: {
+                    //beforeClick: beforeClick7,
+                    onCheck: onCheck7
+                }
+            };
+            $.ajax({
+                url:"flxoaSystemRoleTreeInfoIrmation",
+                type : "post",
+                dataType:"json",
+                data : {
+                    
+                },
+                success:function(data){
+                    zNodes7 = data;
+                    $.fn.zTree.init($("#treeDemo7"), setting7, zNodes7);
+                    /*var t = $("#treeDemo2");
+                    t = $.fn.zTree.init(t, setting2, zNodes2);*/
+                    //展开根节点第一级
+                    //var nodes = t.getNodes();
+                    //t.expandNode(nodes[0], true, false, true);
+                }
+            });             
+            function beforeClick7(treeId, treeNode) {
+                var check = (treeNode && !treeNode.isParent);
+                if (!check) layer.msg("只能选择城市...");
+                return check;
+            }            
+            function onCheck7(e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("treeDemo7"),
+                nodes = zTree.getCheckedNodes(true),
+                v = "";
+                for (var i=0, l=nodes.length; i<l; i++) {
+                    v += nodes[i].name + ",";
+                }
+                if (v.length > 0 ) v = v.substring(0, v.length-1);
+				$("#citySel7").val(v);
+                //var cityObj = $("#citySel7");
+                //cityObj.attr("value", v);
+            }
+            function showMenu7() {
+                var cityObj = $("#citySel7");
+                var cityOffset = $("#citySel7").offset();
+                $("#menuContent7").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");    
+                $("body").bind("mousedown", onBodyDown7);
+            }
+            function hideMenu7() {
+                $("#menuContent7").fadeOut("fast");
+                $("body").unbind("mousedown", onBodyDown7);
+            }
+            function onBodyDown7(event) {
+                if (!(event.target.id == "menuBtn7" || event.target.id == "menuContent7" || $(event.target).parents("#menuContent7").length>0)) {
+                    hideMenu7();
+                }
+            } 
+            
+            //用户管理-操作-授权-添加-管理对象单位ztree
+             var setting8 = {
+                check: {
+                    enable: true,
+                    chkboxType: {"Y":"s", "N":"s"},
+                },
+                data: {
+                    simpleData: {
+                        enable: true,
+                        idKey: "id",
+                        pIdKey: "pid",
+                        rootpId: ""
+                    }
+                },
+                callback: {
+                    onCheck: onCheck8
+                }
+            };                
+            $.ajax({
+                url:"/flxoa/system/showSystemDept",
+                type : "get",
+                dataType:"json",
+                data : {
+                    
+                },
+                success:function(data){
+                    zNodes8 = data;
+                    $.fn.zTree.init($("#treeDemo8"), setting8, zNodes8);
+                    /*var t = $("#treeDemo6");
+                    t = $.fn.zTree.init(t, setting6, zNodes6);*/
+                    //展开根节点第一级
+                    //var nodes = t.getNodes();
+                    //t.expandNode(nodes[0], true, false, true);
+                }
+            });
+            function beforeClick8(treeId, treeNode) {
+                var check = (treeNode && !treeNode.isParent);
+                return check;
+            }            
+            function onCheck8(e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("treeDemo8"),
+                nodes = zTree.getCheckedNodes(true),
+                v = "";
+                for (var i=0, l=nodes.length; i<l; i++) {
+                    v += nodes[i].name + ",";
+                }
+                if (v.length > 0 ) v = v.substring(0, v.length-1);
+				$("#citySel8").val(v);
+                //var cityObj = $("#citySel8");
+                //cityObj.attr("value", v);
+            }
+            function showMenu8() {
+                var cityObj = $("#citySel8");
+                var cityOffset = $("#citySel8").offset();
+                $("#menuContent8").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");    
+                $("body").bind("mousedown", onBodyDown8);
+            }
+            function hideMenu8() {
+                $("#menuContent8").fadeOut("fast");
+                $("body").unbind("mousedown", onBodyDown8);
+            }
+            function onBodyDown8(event) {
+                if (!(event.target.id == "menuBtn8" || event.target.id == "menuContent8" || $(event.target).parents("#menuContent8").length>0)) {
+                    hideMenu8();
+                }
+            } 
+            
+            
+            $(document).ready(function(){
+                //$.fn.zTree.init($("#treeDemo1"), setting1, zNodes1);
+                //$.fn.zTree.init($("#treeDemo2"), setting2, zNodes2);                
+                //$.fn.zTree.init($("#treeDemo3"), setting3, zNodes3);
+                //$.fn.zTree.init($("#treeDemo4"), setting4, zNodes4);
+                //$.fn.zTree.init($("#treeDemo5"), setting5, zNodes5);
+                //$.fn.zTree.init($("#treeDemo6"), setting6, zNodes6);
+                //$.fn.zTree.init($("#treeDemo7"), setting7, zNodes7);
+                //$.fn.zTree.init($("#treeDemo8"), setting8, zNodes8);                
+            });
+            
+            
+            
+            
+            
+        </script>
+    </body>
+</html>

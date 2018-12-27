@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-12-17 16:47:20 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.HxSubscribe" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx_subscribe">
+        <id name="subscribeId" type="java.lang.Integer">
+            <column name="SubscribeID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="regionCode" optimistic-lock="true" type="string" unique="false">
+            <column length="6" name="RegionCode"/>
+        </property>
+        <property generated="never" lazy="false" name="region" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="Region"/>
+        </property>
+        <property generated="never" lazy="false" name="cropCategoryCode" optimistic-lock="true" type="string" unique="false">
+            <column length="6" name="CropCategoryCode"/>
+        </property>
+        <property generated="never" lazy="false" name="cropCategoryName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="CropCategoryName"/>
+        </property>
+        <property generated="never" lazy="false" name="userId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="UserID"/>
+        </property>
+        <property generated="never" lazy="false" name="price" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="Price" precision="10" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="cropOfferStr" optimistic-lock="true" type="string" unique="false">
+            <column name="CropOfferStr"/>
+        </property>
+    </class>
+</hibernate-mapping>

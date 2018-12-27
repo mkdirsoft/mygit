@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<welcome-file-list>
+		<welcome-file>front/html/templateIndex.do</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/config/application-context.xml
+			/WEB-INF/config/shiro-context.xml
+			/WEB-INF/config/configbean/flxoa-servlet-core-service.xml
+		</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<listener>
+	
+		<listener-class>com.flx.flxoa.common.util.ExecuteTaskListener</listener-class>
+	</listener>
+	
+	<!-- 编码 -->
+	<filter>
+		<filter-name>encoding</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<!--
+		用来把一个Hibernate Session和一次完整的请求过程对应的线程相绑定。目的是为了实现"Open Session in
+		View"的模式。例如： 它允许在事务提交之后延迟加载显示所需要的对象。
+	-->
+	<filter>
+		<filter-name>osivFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	
+	<!-- shiro过滤器 -->
+	<filter>
+		<filter-name>shiroFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<init-param>
+			<param-name>targetFilterLifecycle</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	
+		<filter>
+		 <filter-name>CorsFilter</filter-name>  
+	        <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>  
+	    </filter>  
+	    <filter-mapping>  
+	        <filter-name>CorsFilter</filter-name>  
+	        <url-pattern>/*</url-pattern>  
+	    </filter-mapping>  
+
+	<filter-mapping>
+		<filter-name>encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!--
+	-->
+	<filter-mapping>
+		<filter-name>osivFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping> 
+	   <filter-name>shiroFilter</filter-name> 
+	   <url-pattern>/*</url-pattern> 
+ 	</filter-mapping>
+
+	<!-- 系统后台 -->
+	<servlet>
+		<servlet-name>FlxoaAdmin</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				/WEB-INF/config/flxoa-servlet-admin.xml
+			</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FlxoaAdmin</servlet-name>
+		<url-pattern>/flxoa/*</url-pattern>
+	</servlet-mapping>
+	
+	<!--  404错误跳转页面 -->
+	<error-page>
+             <error-code>404</error-code>
+             <location>/view/flxoa/page/error.html</location>
+    </error-page>
+    
+    <init-param>
+		<param-name>errorPage</param-name>
+		<param-value>/view/flxoa/page/err500.html</param-value>
+	 </init-param>
+    <!-- 500错误跳转页面-->
+	<error-page>
+             <error-code>500</error-code>
+             <location>/view/flxoa/page/err500.html</location>
+    </error-page>
+    
+   <!-- 防止SQL注入的过滤器 -->
+  <!--   <filter>
+        <filter-name>antiSqlInjection</filter-name>
+        <filter-class>com.tarena.dingdang.filter.AntiSqlInjectionfilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>antiSqlInjection</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping> -->
+    
+    
+    <!-- 防止sql注入拦截器 -->
+	<filter>
+	<description>防止sql注入拦截</description>
+	<filter-name>antiSqlInjectionfilter</filter-name>
+	<filter-class>com.flx.flxoa.common.util.AntiSqlInjectionfilter</filter-class>
+	</filter>
+	<filter-mapping>
+	<filter-name>antiSqlInjectionfilter</filter-name>
+	<url-pattern>/flxoa/*</url-pattern>
+	</filter-mapping>
+</web-app>

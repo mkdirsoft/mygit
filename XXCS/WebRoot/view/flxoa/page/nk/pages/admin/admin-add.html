@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<link rel="Bookmark" href="favicon.ico">
+		<link rel="Shortcut Icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../static/h-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../static/h-ui.admin/css/H-ui.admin.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/Hui-iconfont/1.0.8/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../static/h-ui.admin/skin/default/skin.css" id="skin" />
+		<link rel="stylesheet" type="text/css" href="../static/h-ui.admin/css/style.css" />
+
+		<title>添加管理员 - 管理员管理</title>
+	</head>
+
+	<body>
+		<article class="cl pd-20">
+			<form action="" method="post" class="form form-horizontal" id="form-admin-add">
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>用户名：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" class="input-text" value="" placeholder="" id="user_name" name="user_name">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>手机号：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="text" class="input-text" value="" placeholder="" id="number" name="number">
+					</div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3">角色：</label>
+					<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
+				<select class="select" name="role" id = "role"size="1">
+					<option value="0">超级管理员</option>
+					<option value="1">总编</option>
+					<option value="2">栏目主辑</option>
+					<option value="3">栏目编辑</option>
+				</select>
+				</span> </div>
+				</div>
+				<div class="row cl">
+					<label class="form-label col-xs-4 col-sm-3">备注：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<textarea id="notes" name="notes" cols="" rows="" class="textarea" placeholder="说点什么...100个字符以内" dragonfly="true" onKeyUp="textarealength(this,100)"></textarea>
+						<p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+					</div>
+				</div>
+				<div class="row cl">
+					<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+						<input class="btn btn-primary radius admin_add" type="" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+					</div>
+				</div>
+			</form>
+		</article>
+
+		<script type="text/javascript" src="../lib/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../lib/layer/2.4/layer.js"></script>
+		<script type="text/javascript" src="../static/h-ui/js/H-ui.js"></script>
+		<script type="text/javascript" src="../static/h-ui.admin/js/H-ui.admin.page.js"></script>
+		<script type="text/javascript" src="../lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+		<script type="text/javascript" src="../lib/jquery.validation/1.14.0/validate-methods.js"></script>
+		<script type="text/javascript" src="../lib/jquery.validation/1.14.0/messages_zh.js"></script>
+		<script type="text/javascript">
+			/**
+			 *  管理员 新增，编辑
+			 */
+			$(".admin_add").unbind("click").on("click", function() {
+				var user_name = $("#user_name").val();
+				var number = $("#number").val();
+				var user_type = $("#user_type").val();
+				var notes = $("#notes").val();
+				//父页面传递过来的ID参数，当为空时：新增管理员信息，不为空时：编辑管理员信息
+				var id = parent.data;
+				//组装表单数据
+				$.ajax({
+					type: "POST",
+					url: "",
+					data: {
+						"user_name": user_name,
+						"number": number,
+						"user_type": user_type,
+						"notes": notes,
+						"id": id
+					},
+					dataType: "json",
+					success: function(resultdata) {
+						if(resultdata == true) {
+							layer.msg("提交成功");
+						} else {
+							layer.msg("提交失败");
+						}
+					},
+					error: function(data, errorMsg) {
+						layer.msg(data.responseText, {
+							icon: 2
+						});
+					}
+				});
+			})
+		</script>
+	</body>
+
+</html>

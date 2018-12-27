@@ -1,0 +1,39 @@
+package com.flx.flxoa.common.util;
+
+import java.security.MessageDigest;
+
+/**
+ * 类名称：MD5Encode.java
+ * 类描述：md5加密类
+ * 创建时间：2018-4-2, 下午3:50:21
+ * 
+ * @version 1.0 
+ * @since JDK版本 1.7
+ * @author 张海英
+ */
+public class MD5Encode {
+	public final static String MD5(String s)  
+    {  
+        char digits[]={'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'};  
+        try  
+        {  
+            byte[] strTemp=s.getBytes();  
+            MessageDigest mdTemp=MessageDigest.getInstance("MD5");  
+            mdTemp.update(strTemp);  
+            byte[] md=mdTemp.digest();  
+            int j=md.length;  
+            char str[]=new char[j * 2];  
+            int k=0;  
+            for(int i=0;i<j;i++)  
+            {  
+                byte byte0=md[i];  
+                str[k++]=digits[byte0 >>> 4 & 0xf];  
+                str[k++]=digits[byte0 & 0xf];  
+            }  
+            return new String(str);  
+        }catch(Exception e)  
+        {  
+            return null;  
+        }  
+    }  
+}

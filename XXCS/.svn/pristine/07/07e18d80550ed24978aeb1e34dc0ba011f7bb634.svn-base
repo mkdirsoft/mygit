@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+	default-lazy-init="true">
+
+	<!-- 
+		此文件：		
+			flxoa-servlet-admin-action.xml 	
+		被文件：		
+			flxoa-servlet-admin.xml		
+		所引用。
+		
+		作用：此文件记录所有controller处理器的bean。
+	-->
+	<!-- 合同 -->
+	<bean id="FlxoaContractInformationController" class="com.flx.flxoa.info.contractmanagement.controller.FlxoaContractInformationController"/>
+	<bean id="FlxoaContractLoanRenturnController" class="com.flx.flxoa.info.contractmanagement.controller.FlxoaContractLoanRenturnController"/>
+	<!-- 登陆界面相关请求 -->
+	<bean id="LoginController" class="com.flx.flxoa.info.system.controller.LoginController" />
+	<bean id="AuthImageController" class="com.flx.flxoa.info.system.controller.AuthImageController" />
+	<!-- 微信扫码登录 -->
+	<bean id="WeixinLoginController" class="com.flx.flxoa.info.system.controller.WeixinLoginController" />
+	<!-- 登录成功后显示页面信息相关请求 -->
+	<bean id="WelcomeController" class="com.flx.flxoa.info.system.controller.WelcomeController" />
+	<!-- 审批 -->
+	<bean id="FlxoaApplicationFormController" class="com.flx.flxoa.info.approve.controller.FlxoaApplicationFormController" />
+	<bean id="FlxoaApproveFormtemplateController" class="com.flx.flxoa.info.approve.controller.FlxoaApproveFormtemplateController" />
+	<!-- 系统 -->
+	<bean id="FlxoaSystemFuncationController" class="com.flx.flxoa.info.system.controller.FlxoaSystemFuncationController" />
+	<bean id="FlxoaApproveWorkflowController" class="com.flx.flxoa.info.system.controller.FlxoaApproveWorkflowController" />
+	<bean id="FlxoaSystemDepartmentController" class="com.flx.flxoa.info.system.controller.FlxoaSystemDepartmentController"/>
+	<!-- 角色管理 -->
+	<bean id="FlxoaSystemRoleController" class="com.flx.flxoa.info.system.controller.FlxoaSystemRoleController" />
+	<bean id="FlxoaSystemUserController" class="com.flx.flxoa.info.system.controller.FlxoaSystemUserController" />
+	<!-- 签到 -->
+	<bean id="FlxoaAttendanceSigndetailsController" class="com.flx.flxoa.info.signin.controller.FlxoaAttendanceSigndetailsController" />
+	<bean id="FlxoaAttendanceSummaryController" class="com.flx.flxoa.info.signin.controller.FlxoaAttendanceSummaryController" />
+	<bean id="FlxoaAttendanceSpecialtimesetController" class="com.flx.flxoa.info.signin.controller.FlxoaAttendanceSpecialtimesetController"/>
+	<bean id="FlxoaAttendanceHolidaysetController" class="com.flx.flxoa.info.signin.controller.FlxoaAttendanceHolidaysetController" />
+	<!-- 项目管理 -->
+	<bean id="FlxoaProjectManagementController" class="com.flx.flxoa.info.projectmanagement.controller.FlxoaProjectManagementController" />
+	<bean id="FlxoaProjectTeamController" class="com.flx.flxoa.info.projectmanagement.controller.FlxoaProjectTeamController" />
+	<bean id="FlxoaProjectBidInformationController" class="com.flx.flxoa.info.projectmanagement.controller.FlxoaProjectBidInformationController" />
+	<bean id="FlxoaProjectBidRecordController" class="com.flx.flxoa.info.projectmanagement.controller.FlxoaProjectBidRecordController" />
+	<!-- 回款-->
+	<bean id="FlxoaCashcollectionController" class="com.flx.flxoa.info.cashcollection.controller.FlxoaCashcollectionController" />
+	<!-- 发票-->
+	<bean id="FlxoaProjectInvoiceController" class="com.flx.flxoa.info.cashcollection.controller.FlxoaProjectInvoiceController" />
+	<!-- 客户管理 -->
+	<bean id="FlxoaClientCommunicationController" class="com.flx.flxoa.info.clientsManagement.controller.FlxoaClientCommunicationController"></bean>
+	<bean id="FlxoaClientContactController" class="com.flx.flxoa.info.clientsManagement.controller.FlxoaClientContactController"></bean>
+	<bean id="FlxoaClientInformationController" class="com.flx.flxoa.info.clientsManagement.controller.FlxoaClientInformationController"></bean>
+	<bean id="FlxoaClientFollowerChangeController" class="com.flx.flxoa.info.clientsManagement.controller.FlxoaClientFollowerChangeController"></bean>
+	<!-- 费用管理 -->
+	<bean id="FeeManageController" class="com.flx.flxoa.info.feeManagement.controller.FeeManageController"></bean>
+	<!-- 会议室 -->
+	<bean id="FlxoaConferenceController" class="com.flx.flxoa.info.conference.controller.FlxoaConferenceController" />
+	<bean id="FlxoaConferenceHistoryController" class="com.flx.flxoa.info.conference.controller.FlxoaConferenceHistoryController" />
+	<!-- 测试 签到导入package com.flx.flxoa.info.signin.controller-->
+	<bean id="TestImport" class="com.flx.flxoa.info.signin.controller.TestImport" />
+	<!-- 用户组-->
+	<bean id="FlxoaSystemUserGroupController" class="com.flx.flxoa.info.system.controller.FlxoaSystemUserGroupController" />	
+	<!-- 首页 -->
+	<bean id="FlxoaStatisticaController" class="com.flx.flxoa.info.statistical.controller.FlxoaStatisticaController" />
+	<!-- 信息超市-集市 -->
+	<bean id="XxcsMarketController" class="com.flx.flxoa.info.market.controller.XxcsMarketController" />
+	<bean id="XxcsCropcategoryController" class="com.flx.flxoa.info.market.controller.XxcsCropcategoryController" />
+	<bean id="XxcsRegionController" class="com.flx.flxoa.info.market.controller.XxcsRegionController" />
+	<bean id="XxcsStatisticsController" class="com.flx.flxoa.info.market.controller.XxcsStatisticsController" />
+	<bean id="XxcsMyMessageController" class="com.flx.flxoa.info.market.controller.XxcsMyMessageController" />
+	<bean id="XxcsSregisterController" class="com.flx.flxoa.info.market.controller.XxcsSregisterController" />
+	<bean id="XxcsLoginController" class="com.flx.flxoa.info.market.controller.XxcsLoginController" />
+	<bean id="XxcsAnalysisreportController" class="com.flx.flxoa.info.market.controller.XxcsAnalysisreportController" />
+	<bean id="XxcsNewsController" class="com.flx.flxoa.info.market.controller.XxcsNewsController" />
+	
+</beans>

@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.flx.flxoa.info.projectmanagement.entity">
+	<class
+		name="FlxoaProjectBidRecord"
+		table="flxoa_project_bid_record"
+	>
+		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<property
+			name="BidId"
+			column="bid_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="Name"
+			column="name"
+			type="string"
+			not-null="true"
+			length="45"
+		/>
+		<property
+			name="NameValue"
+			column="name_value"
+			type="string"
+			not-null="true"
+			length="150"
+		/>
+		<property
+			name="CreateTime"
+			column="create_time"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="UpdateTime"
+			column="update_time"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="DeleteFlag"
+			column="delete_flag"
+			type="string"
+			not-null="true"
+			length="2"
+		/>
+		<property
+			name="CreateUserId"
+			column="create_user_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="CreateDepartmentId"
+			column="create_department_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="UpdateUserId"
+			column="update_user_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="UpdateDepartmentId"
+			column="update_department_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="Url"
+			column="url"
+			type="string"
+			not-null="false"
+			length="150"
+		/>
+		<property
+			name="AccessoryName"
+			column="accessory_name"
+			type="string"
+			not-null="false"
+			length="150"
+		/>
+		<property
+			name="AccessoryTrueName"
+			column="accessory_true_name"
+			type="string"
+			not-null="false"
+			length="150"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

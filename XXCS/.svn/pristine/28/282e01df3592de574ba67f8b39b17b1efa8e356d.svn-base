@@ -1,0 +1,218 @@
+body[themebg-pattern=pattern1] {
+    background-color: #f6f7fb;
+}
+
+
+
+
+/*顶部导航 样式*/
+.header-navbar .navbar-wrapper .navbar-logo .mobile-menu {   
+    top: calc(50% - 12px);
+}
+
+
+
+
+/*表格 每行 操作按钮  加上table-wrap-public类*/
+.table-wrap-public tbody tr td a {
+		margin-left: 5px;
+		margin-right: 5px;
+}
+/*表格 顶行 表格头部样式  加上table-wrap-public类*/
+.table-wrap-public .table-primary > th {
+    background-color: #4099ff;
+}
+/*表格 底行 搜索框样式  加上table-wrap-public类*/
+.table-wrap-public tfoot .form-control {
+		width: 100% !important;
+    box-sizing: border-box;
+}
+/*表格 checkbox样式  加上table-wrap-public类*/
+.table-wrap-public tr span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #d2d2d2;
+	font-size: 12px;
+    border-radius: 2px;
+    background-color: #fff;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.table-wrap-public tr span:hover {
+	border: 1px solid #5FB878;
+}
+.table-wrap-public tr span.selected {
+	border: 1px solid #5FB878;
+	background-color: #5FB878;
+	background-image: url(../img/checkbox-true.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 12px;
+}
+.table-wrap-public tr em {
+	font-style: normal;
+}
+.table-wrap-public tbody tr:hover {
+    background-color: rgba(64,153,255,0.2);
+}
+.table-wrap-public.dataTable td, .table-wrap-public.dataTable th {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.table-wrap-public .btn-mini {
+    padding: 0px 5px;
+    line-height: 15px;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+.table-wrap-public.table-bordered.dataTable th, .table-wrap-public.table-bordered.dataTable td {
+    text-align: center;
+}
+/*下拉菜单*/
+.table-wrap-public .dropdown-menu {
+	min-width: 3rem;
+}
+.card .card-block .table-wrap-public .dropdown-menu>a {
+	padding: 5px 10px;
+    line-height: 1.429;
+    font-size: 12px;
+}
+.table-wrap-public tbody tr td a.dropdown-item {
+	margin-left: 0;
+    margin-right: 0;    
+}
+
+
+
+
+/*日期范围选择器  加上daterangepicker-btn-public类*/
+.daterangepicker-btn-public .btn {
+    display: inline-block;
+    padding: .5rem .75rem;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: 35px;
+}
+.daterangepicker-btn-public .btn-default {
+    color: #333333;
+    background-color: #ffffff;
+    border-color: #cccccc;    
+}
+.daterangepicker-btn-public .btn-default:hover, .daterangepicker-btn-public .btn-default:focus, .daterangepicker-btn-public .btn-default:active {
+    color: #333333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+}
+.daterangepicker-btn-public .btn span {
+    display: inline !important;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.daterangepicker-btn-public .btn i {
+		margin-right: 0;
+}
+.daterangepicker.dropdown-menu {    
+    font-size: 14px;
+}
+.daterangepicker.opensright:before {
+    left: 5%;
+    margin-left: -7px;
+}
+.daterangepicker.opensright:after {
+    left: 5%;
+    margin-left: -6px;
+}
+.daterangepicker .table-condensed > thead > tr > th, .daterangepicker .table-condensed > tbody > tr > th, .daterangepicker .table-condensed > tfoot > tr > th, .daterangepicker .table-condensed > thead > tr > td, .daterangepicker .table-condensed > tbody > tr > td, .daterangepicker .table-condensed > tfoot > tr > td {
+    padding: 5px;
+}
+
+
+
+
+/*单个日期选择器datedropper*/
+div.datedropper {
+	z-index: 99999999;
+}
+
+
+
+
+/*拉页layer 按钮*/
+.layui-layer-btn {
+    padding: 0 15px 20px !important;    
+}
+.layui-layer-btn .layui-layer-btn0 {
+    color: #fff !important;
+}
+.layui-layer-btn .layui-layer-btn0:hover {
+    color: #fff !important;
+}
+
+
+
+
+/*表单验证 必填项*/
+.em-required {
+	color: red;
+	font-style: normal;
+	margin-right: 5px;
+}
+
+
+
+
+/*树形插件zTree*/
+.card .card-header .ztree li span {
+	display: inline-block;
+	font-size: 12px;
+    margin-top: 0;
+}
+.ztree a:not([href]):not([tabindex]):focus, .ztree a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: underline;
+}
+ul.ztree {   
+    background: #ffffff;    
+}
+
+
+.datetimepicker {
+	z-index:19999999;
+} 
+
+
+
+
+
+
+
+/*媒体查询 小pc*/
+@media screen and (max-width: 1440px) {
+.table-wrap-public.dataTable td, .table-wrap-public.dataTable th {
+	padding: .5rem;
+    font-size: 0.6rem;
+}
+.table-wrap-public.dataTable thead>tr>th.sorting_asc, .table-wrap-public.dataTable thead>tr>th.sorting_desc, .table-wrap-public.dataTable thead>tr>th.sorting, .table-wrap-public.dataTable thead>tr>td.sorting_asc, .table-wrap-public.dataTable thead>tr>td.sorting_desc, .table-wrap-public.dataTable thead>tr>td.sorting {
+    padding-right: 20px;
+}
+.table-wrap-public.dataTable thead .sorting:before, .table-wrap-public.dataTable thead .sorting:after, .table-wrap-public.dataTable thead .sorting_asc:before, .table-wrap-public.dataTable thead .sorting_asc:after, .table-wrap-public.dataTable thead .sorting_desc:before, .table-wrap-public.dataTable thead .sorting_desc:after, .table-wrap-public.dataTable thead .sorting_asc_disabled:before, .table-wrap-public.dataTable thead .sorting_asc_disabled:after, .table-wrap-public.dataTable thead .sorting_desc_disabled:before, .table-wrap-public.dataTable thead .sorting_desc_disabled:after {
+    bottom: 0.65em;
+}
+}

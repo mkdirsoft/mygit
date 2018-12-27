@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.flx.flxoa.info.projectmanagement.entity">
+	<class
+		name="FlxoaProjectTeam"
+		table="flxoa_project_team"
+	>
+		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<property
+			name="ProjInformationId"
+			column="proj_information_id"
+			type="integer"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="ProjTeamName"
+			column="proj_team_name"
+			type="string"
+			not-null="false"
+			length="150"
+		/>		
+		<property
+			name="ProjTeam"
+			column="proj_team"
+			type="string"
+			not-null="false"
+			length="150"
+		/>
+		<property
+			name="UpdateTime"
+			column="update_time"
+			type="integer"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="CreateTime"
+			column="create_time"
+			type="integer"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="DeleteFlag"
+			column="delete_flag"
+			type="string"
+			not-null="false"
+			length="2"
+		/>
+		<property
+			name="UpdateDepartmentId"
+			column="update_department_id"
+			type="integer"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="UpdateUserId"
+			column="update_user_id"
+			type="integer"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="CreateDepartmentId"
+			column="create_department_id"
+			type="integer"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="CreateUserId"
+			column="create_user_id"
+			type="integer"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="Role"
+			column="role"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="WorkDay"
+			column="work_day"
+			type="integer"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="JoinTime"
+			column="join_time"
+			type="integer"
+			not-null="false"
+			length="10"
+		/>
+		<property
+			name="LeaveTime"
+			column="leave_time"
+			type="integer"
+			not-null="false"
+			length="10"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

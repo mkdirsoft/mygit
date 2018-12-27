@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-9 19:09:53 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.HxEnum" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx_enum">
+        <id name="enumId" type="java.lang.Integer">
+            <column name="EnumID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="enumName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="EnumName"/>
+        </property>
+        <property generated="never" lazy="false" name="enumValue" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="EnumValue"/>
+        </property>
+        <property generated="never" lazy="false" name="enumIntValue" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="EnumIntValue"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,49 @@
+{
+	"id": "1",
+	"isActive": "",
+	"name": "飞利信内部控制管理系统",
+	"subMenu": [{
+		"id": "2",
+		"isActive": "0",
+		"name": "项目管理",
+		"subMenu": [],
+		"url": ""
+	}, {
+		"id": "3",
+		"isActive": "0",
+		"name": "回款管理",
+		"subMenu": [],
+		"url": ""
+	}, {
+		"id": "4",
+		"isActive": "0",
+		"name": "签到",
+		"subMenu": [],
+		"url": ""
+	}, {
+		"id": "5",
+		"isActive": "0",
+		"name": "审批",
+		"subMenu": [],
+		"url": ""
+	}, {
+		"id": "6",
+		"isActive": "0",
+		"name": "系统管理",
+		"subMenu": [{
+			"id": "7",
+			"isActive": "0",
+			"name": "功能管理",
+			"subMenu": [],
+			"url": "/flxoa/funcation/golist"
+		}, {
+			"id": "8",
+			"isActive": "0",
+			"name": "工作流管理",
+			"subMenu": [],
+			"url": "/flxoa/workflow/golist"
+		}],
+		"url": ""
+	}],
+	"url": ""
+}

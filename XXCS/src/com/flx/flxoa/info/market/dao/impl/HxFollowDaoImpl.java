@@ -1,0 +1,164 @@
+package com.flx.flxoa.info.market.dao.impl;
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.flx.flxoa.info.market.dao.HxFollowDao;
+import com.flx.flxoa.info.market.entity.HxFollow;
+import org.springframework.stereotype.Repository;
+import com.flx.flxoa.common.hibernate3.HibernateBaseDao;
+import com.flx.flxoa.common.util.CommonUtils;
+
+/**
+ *
+ * 类名称：HxFollowDaoImpl.java
+ * 类描述：
+ * 创建时间：2018-11-08, 下午03:05:40
+ *
+ * @version 1.0 
+ * @since JDK版本1.7 
+ * @author leijun 
+ */ 
+@Repository
+public class HxFollowDaoImpl extends HibernateBaseDao<HxFollow, Integer> implements HxFollowDao {
+	/**
+	 *添加HxFollow
+	 */ 
+	public boolean add(HxFollow hxFollow) {
+		return save(hxFollow);
+	}
+	/**
+	 *删除HxFollow
+	 */ 
+	public boolean delete(HxFollow hxFollow) {
+		
+		return deleteById(hxFollow.getFollowId());
+	}
+	/**
+	 *修改HxFollow
+	 */ 
+	public boolean update(HxFollow hxFollow) {
+		return modify(hxFollow);
+	}
+	@Override
+	public boolean isExist(String username,String userID) {
+		String hql="from HxFollow where SourceCode='"+username+"' and UserID = '"+userID+"' ";
+		List list=queryByHQL(hql);
+		if(list.size()<1){
+			return true;
+		}
+		return false;
+	} 
+	/**
+	 *查询HxFollow列表
+	 */ 
+	public List<HxFollow> query(HxFollow hxFollow) {
+		String hql= "from HxFollow where delete_flag = '0'";
+		return getListByHQL(hql, null);
+	}
+	/**
+	 *分页HxFollow pageNo 查询第几页数据  pageSize 每一页显示的数量 
+	 */ 
+	public String queryForPageMore(Map<String,String> map) {
+		int start=Integer.valueOf(map.get("start"));
+		int length=Integer.valueOf(map.get("length"));
+		String hql = "SELECT" + 
+				"	C.SourceCode, " + 
+				"	C.SourceName, " + 
+				"	C.SourceType, " + 
+				"	FollowID, " + 
+				"IF " + 
+				"	( flag IS NULL, 0, 1 ) AS flag  " + 
+				"FROM " + 
+				"	( " + 
+				"	SELECT " + 
+				"		hx_source.SourceCode, " + 
+				"		hx_source.SourceName, " + 
+				"		hx_source.SourceType, " + 
+				"		b.SourceCode AS flag,  " + 
+				"		b.FollowID AS FollowID  " + 
+				"	FROM " + 
+				"		hx_source " + 
+				"		LEFT JOIN ( SELECT * FROM hx_follow WHERE UserID = '"+map.get("UserID")+"' ) AS b ON hx_source.SourceCode = b.SourceCode  " + 
+				"		WHERE " + 
+				"		hx_source.SourceType='1' " + 
+				"	) AS C";
+		//求和查询sql
+		String countSql="select count(*) "+"from hx_follow";
+		Long totalCount= countBySql(countSql,null);
+		List list= queryListForPageBySQL(start, length, hql);
+		List<Map<String,String>> dataList=new ArrayList<Map<String,String>>();
+		List<Map<String,String>> otherDataList=new ArrayList<Map<String,String>>();
+		for(int i=0;i<list.size();i++){
+			Map<String,String> dataMap=new HashMap<String,String>();
+			Object[] obj=(Object[]) list.get(i);
+			dataMap.put("SourceCode", String.valueOf(obj[0]));
+			dataMap.put("SourceName", String.valueOf(obj[1]));
+			dataMap.put("SourceType", String.valueOf(obj[2]));
+			dataMap.put("FollowID", String.valueOf(obj[3]));
+			dataMap.put("flag", String.valueOf(obj[4]));
+			dataList.add(dataMap);
+		}
+		return CommonUtils.getMarketPageJson(start, length,totalCount,dataList);
+	}
+	
+	
+	
+	/**
+	 *查询HxFollow ByID
+	 */ 
+//	public HxFollow queryById(HxFollow hxFollow) {
+//		return get(hxFollow.getId());
+//	}
+	/**
+	 *分页HxFollow pageNo 查询第几页数据  pageSize 每一页显示的数量 
+	 */ 
+	public String queryForPage(Map<String,String> map) {
+		int start=Integer.valueOf(map.get("start"));
+		int length=Integer.valueOf(map.get("length"));
+		if("0".equals(map.get("Type"))) {
+			
+			
+		}
+		String hql = " select * from hx_follow where 0 = 0 ";
+		//求和查询sql
+		String countSql="select count(*) "+"from hx_follow";
+		Long totalCount= countBySql(countSql,null);
+		//userId
+		if(!CommonUtils.isEmpty(map.get("UserID"))) {
+			hql += " and UserID = '"+map.get("UserID")+"'";
+		}
+		hql += "  GROUP BY followId asc  ";
+		List list= queryListForPageBySQL(start, length, hql);
+		List<Map<String,String>> dataList=new ArrayList<Map<String,String>>();
+		List<Map<String,String>> otherDataList=new ArrayList<Map<String,String>>();
+		for(int i=0;i<list.size();i++){
+			Map<String,String> dataMap=new HashMap<String,String>();
+			Object[] obj=(Object[]) list.get(i);
+			dataMap.put("FollowID", String.valueOf(obj[0]));
+			dataMap.put("SourceCode", String.valueOf(obj[1]));
+			dataMap.put("SourceName", String.valueOf(obj[2]));
+			dataMap.put("UserID", String.valueOf(obj[3]));
+			dataList.add(dataMap);
+		}
+		return CommonUtils.getMarketPageJson(start, length,totalCount,dataList);
+	}
+	/**
+	 *查询HxFollow数据条数 
+	 */ 
+	public Long queryCount(HxFollow hxFollow) {
+		String hql = "select count(*) from HxFollow where delete_flag = '0' ";
+		return countByHql(hql,null);
+	}
+	
+	@Override
+	protected Class<HxFollow> getEntityClass() {
+		return HxFollow.class;
+	} 
+
+}

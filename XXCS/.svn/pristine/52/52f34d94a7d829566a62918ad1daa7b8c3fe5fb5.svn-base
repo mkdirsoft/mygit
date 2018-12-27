@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>角色管理</title>
+
+        <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Gradient Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+        <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+        <meta name="author" content="codedthemes" />
+
+        <link rel="icon" type="image/x-icon" href="/view/flxoa/page/nk/public/img/favicon.ico">
+
+        <!--<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">-->
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/css/font.css" />
+
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/bootstrap/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/themify-icons/themify-icons.css">
+
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/icofont/css/icofont.css">
+
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/icon/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/pages/data-table/css/buttons.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
+                
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/assets/css/jquery.mCustomScrollbar.css">
+        
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/daterangepicker/daterangepicker.css"/>
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/files/bower_components/Datedropper3-master/datedropper.min.css" />
+           
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/zTree_v3/css/demo.css">
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/zTree_v3/css/zTreeStyle/zTreeStyle.css">
+        <!--<link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/zTree_v3/css/metroStyle/metroStyle.css">-->   
+           
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/public/css/public.css" />
+        <link rel="stylesheet" type="text/css" href="/view/flxoa/page/nk/oyxq/css/oy.css" />
+    </head>
+
+    <body themebg-pattern="pattern1">
+
+        <!--<div class="theme-loader">
+            <div class="loader-track">
+                <div class="loader-bar"></div>
+            </div>
+        </div>-->
+
+        <div id="pcoded" class="pcoded" nav-type="st2" theme-layout="vertical" vertical-placement="left" vertical-layout="wide" pcoded-device-type="desktop" vertical-nav-type="expanded" vertical-effect="shrink" vnavigation-view="view1" fream-type="theme1" sidebar-img="true" sidebar-img-type="img1" layout-type="img">
+            <div class="pcoded-overlay-box"></div>
+            <div class="pcoded-container navbar-wrapper">
+                <nav class="navbar header-navbar pcoded-header" header-theme="theme1" pcoded-header-position="fixed">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-logo">
+                            <a class="mobile-menu" id="mobile-collapse" href="dt-api.html#!">
+                                <i class="ti-menu"></i>
+                            </a>
+                            <div class="mobile-search">
+                                <div class="header-search">
+                                    <div class="main-search morphsearch-search">
+                                        <div class="input-group">
+                                            <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                            <input type="text" class="form-control" placeholder="Enter Keyword">
+                                            <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="index.html">
+                                <img class="img-fluid" src="/view/flxoa/page/nk/files/assets/images/logo.png" style="height: 32px;" alt="Theme-Logo" />
+                            </a>
+                            <a class="mobile-options">
+                                <i class="ti-more"></i>
+                            </a>
+                        </div>
+                        <div class="navbar-container container-fluid">
+                            <ul class="nav-left">
+                                <li>
+                                    <div class="sidebar_toggle">
+                                        <a href="javascript:void(0)"><i class="ti-menu"></i></a>
+                                    </div>
+                                </li>
+                                <li class="header-search">
+                                    <div class="main-search morphsearch-search">
+                                        <div class="input-group">
+                                            <span class="input-group-addon search-close"><i class="ti-close"></i></span>
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="dt-api.html#!" onclick="javascript:toggleFullScreen()">
+                                        <i class="ti-fullscreen"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav-right">
+                                <li class="header-notification">
+                                    <a href="dt-api.html#!">
+                                        <i class="ti-bell"></i>
+                                        <span class="badge bg-c-pink"></span>
+                                    </a>
+                                    <ul class="show-notification">
+                                        <li>
+                                            <h6>Notifications</h6>
+                                            <label class="label label-danger">New</label>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">John Doe</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Joseph William</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Sara Soudein</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="dt-api.html#!" class="displayChatbox">
+                                        <i class="ti-comments"></i>
+                                        <span class="badge bg-c-green"></span>
+                                    </a>
+                                </li>
+                                <li class="user-profile header-notification">
+                                    <a href="dt-api.html#!">
+                                        <img src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                        <span>John Doe</span>
+                                        <i class="ti-angle-down"></i>
+                                    </a>
+                                    <ul class="show-notification profile-notification">
+                                        <li>
+                                            <a href="dt-api.html#!">
+                                                <i class="ti-settings"></i> Settings
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="user-profile.html">
+                                                <i class="ti-user"></i> Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="email-inbox.html">
+                                                <i class="ti-email"></i> My Messages
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="auth-lock-screen.html">
+                                                <i class="ti-lock"></i> Lock Screen
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="auth-normal-sign-in.html">
+                                                <i class="ti-layout-sidebar-left"></i> Logout
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="sidebar" class="users p-chat-user showChat">
+                    <div class="had-container">
+                        <div class="card card_main p-fixed users-main">
+                            <div class="user-box">
+                                <div class="chat-search-box">
+                                    <a class="back_friendlist">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </a>
+                                    <div class="right-icon-control">
+                                        <input type="text" class="form-control  search-text" placeholder="Search Friend" id="search-friends">
+                                        <div class="form-icon">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-friend-list">
+                                    <div class="media userlist-box" data-id="1" data-status="online" data-username="Josephin Doe" data-toggle="tooltip" data-placement="left" title="Josephin Doe">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image ">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Josephin Doe</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="2" data-status="online" data-username="Lary Doe" data-toggle="tooltip" data-placement="left" title="Lary Doe">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Lary Doe</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice" data-toggle="tooltip" data-placement="left" title="Alice">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Alice</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia" data-toggle="tooltip" data-placement="left" title="Alia">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Alia</div>
+                                        </div>
+                                    </div>
+                                    <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen" data-toggle="tooltip" data-placement="left" title="Suzen">
+                                        <a class="media-left" href="dt-api.html#!">
+                                            <img class="media-object img-radius" src="/view/flxoa/page/nk/files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                        <div class="media-body">
+                                            <div class="f-13 chat-header">Suzen</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="showChat_inner">
+                    <div class="media chat-inner-header">
+                        <a class="back_chatBox">
+                            <i class="fa fa-chevron-left"></i> Josephin Doe
+                        </a>
+                    </div>
+                    <div class="media chat-messages">
+                        <a class="media-left photo-table" href="dt-api.html#!">
+                            <img class="media-object img-radius img-radius m-t-5" src="/view/flxoa/page/nk/files/assets/images/avatar-3.jpg" alt="Generic placeholder image">
+                        </a>
+                        <div class="media-body chat-menu-content">
+                            <div class="">
+                                <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+                                <p class="chat-time">8:20 a.m.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media chat-messages">
+                        <div class="media-body chat-menu-reply">
+                            <div class="">
+                                <p class="chat-cont">I'm just looking around. Will you tell me something about yourself?</p>
+                                <p class="chat-time">8:20 a.m.</p>
+                            </div>
+                        </div>
+                        <div class="media-right photo-table">
+                            <a href="dt-api.html#!">
+                                <img class="media-object img-radius img-radius m-t-5" src="/view/flxoa/page/nk/files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="chat-reply-box p-b-20">
+                        <div class="right-icon-control">
+                            <input type="text" class="form-control search-text" placeholder="Share Your Thoughts">
+                            <div class="form-icon">
+                                <i class="fa fa-paper-plane"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcoded-main-container" style="margin-top: 56px;">
+                    <div class="pcoded-wrapper">
+                        <nav class="pcoded-navbar" navbar-theme="theme1" active-item-theme="theme5" sub-item-theme="theme2" active-item-style="style0" pcoded-navbar-position="fixed">
+                            <div class="sidebar_toggle">
+                                <a href="index.html#"><i class="icon-close icons"></i></a>
+                            </div>
+                            <div class="pcoded-inner-navbar main-menu">
+                                <!--<div class="pcoded-navigation-label" menu-title-theme="theme6">Navigation</div>-->
+                                <ul class="pcoded-item pcoded-left-item" id="navi">
+                                    
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="pcoded-content">
+                            <div class="pcoded-inner-content">
+                                <div class="main-body">
+                                    <div class="page-wrapper">
+                                        <div class="page-header card">
+                                            <div class="card-block">                                           
+                                                <ul class="breadcrumb-title">
+                                                    <li class="breadcrumb-item">
+                                                        <a href="index.html"> <i class="fa fa-home"></i> </a>
+                                                    </li>
+                                                    <li class="breadcrumb-item">
+                                                        <a href="javascript:void(0);">系统</a>
+                                                    </li>
+                                                    <li class="breadcrumb-item">
+                                                        <a href="javascript:void(0);">角色管理</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="page-body">
+                                            <div class="row">
+                                                <div class="col-sm-12">                                                                     
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="search-wrap-oy search-wrap-fst">
+                                                                <form>
+                                                                    <div class="form-group">
+                                                                        <div class="row search-input-oy">
+                                                                            <div class="col-sm-6">    
+                                                                                <input type="text" class="form-control role_name" placeholder="按角色名称查询" />
+                                                                            </div> 
+                                                                            <div class="col-sm-6">
+                                                                                <button type="button" class="btn btn-primary m-b-0 btn-inquiry">查询</button>
+                                                                                <button type="button" class="btn btn-success m-b-0 btn-reset">重置</button>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="row search-btn-oy">
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-block">                                                           
+                                                            <div class="dt-responsive table-responsive">
+                                                                <div class="action-buttons-oy">
+                                                                    <button type="button" class="btn btn-sm btn-primary m-b-0 jsgl-add-role-btn">添加角色</button>                                                                    
+                                                                </div>
+                                                                <table id="jsglTable" class="table table-striped table-bordered table-styling nowrap table-wrap-public">
+                                                                    <thead>
+                                                                        <tr class="table-primary">
+                                                                            <th width="5%">序号</th>
+                                                                            <th width="83%">角色名称</th>       
+                                                                            <th width="12%">操作</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody id="jsglTbody">
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="styleSelector">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                        
+        
+        
+        <!--表格右上角-添加角色按钮-->
+        <div class="layui-layer-con-oy" id="jsglAdd" style="display: none;">
+            <form>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>角色名称</label>
+                    <div class="col-sm-9">
+                        <input id="addRoleName" type="text" class="form-control role_name">                        
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>角色功能选择</label>
+                    <div class="col-sm-9">
+                        <input id="citySel8" type="text" class="form-control" placeholder="角色功能选择" readonly value="" onclick="showMenu8(); return false;" />
+                    </div>
+                </div>
+                <div class="form-group row search-btn-oy">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary m-b-0 role-save">提交</button>                            
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        
+        <!--操作-表格右上角-添加角色按钮-选择角色-->
+        <div class="layui-layer-con-oy" id="jsglRoleSearch" style="display: none;">
+            <form>
+                <h6>角色查询</h6>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">角色名称</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control role_name" placeholder="请输入角色名称">
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button" class="btn btn-sm btn-primary m-b-0">查询</button>  
+                        <button type="button" class="btn btn-sm btn-primary m-b-0">重置</button>  
+                        <button type="button" class="btn btn-sm btn-primary m-b-0">清空</button>  
+                    </div>
+                </div>
+                <h6>角色查询结果</h6>
+                <div class="dt-responsive table-responsive">                
+                    <table id="jsglRoleSearchResultTable" class="table table-striped table-bordered table-styling nowrap table-wrap-public">
+                        <thead>
+                            <tr class="table-primary">
+                                <th>序号</th>
+                                <th>角色名称</th>
+                                <th>角色描述</th>
+                                <th>是否管理员</th>                                
+                            </tr>
+                        </thead>
+                        <tbody id="jsglRoleSearchResultTbody">
+                            <!--<tr>
+                                <td>张三</td>
+                                <td>前端</td>
+                                <td>20180126</td>
+                                <td>20180228</td>                                                            
+                            </tr>-->                        
+                        </tbody>
+                        <!--<tfoot>
+                            <tr>
+                                <th>序号</th>
+                                <th>角色名称</th>
+                                <th>角色描述</th>
+                                <th>是否管理员</th>
+                            </tr>
+                        </tfoot>-->
+                    </table>
+                </div>  
+            </form>
+        </div>
+        
+        
+        <!--操作-查看-->
+        <div class="layui-layer-con-oy" id="jsglCheck" style="display: none;">
+            <form>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">角色名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control role_name" readonly="" value="111">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">角色描述</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control role_desc" readonly="" value="111">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">是否生效</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control role_is_valid" readonly="" value="111">
+                    </div>
+                </div> 
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">是否管理员</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control role_is_admin" readonly="" value="111">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">角色功能</label>
+                    <div class="col-sm-9">
+                        ztree（不可编辑）
+                    </div>
+                </div>    
+            </form>
+        </div>
+        
+        
+        <!--操作-查看-->
+        <div class="layui-layer-con-oy" id="yhglAutho" style="display: none;">
+            <div class="search-wrap-oy">
+                <form>
+                    <div class="form-group">
+                        <div class="row search-input-oy">
+                            <div class="col-sm-6" style="display: none;">                                                                         
+                                <input type="text" class="form-control user_id" placeholder="id" readonly="" />
+                            </div>
+                            <div class="col-sm-6">                                                                         
+                                <input type="text" class="form-control user_true_name" placeholder="按用户名称查询" readonly="" />
+                            </div>
+                        </div>                                                                     
+                    </div>
+                </form>
+            </div>
+            <div class="dt-responsive table-responsive">
+                <table id="yhglAuthoTable" class="table table-striped table-bordered table-styling nowrap table-wrap-public">
+                    <thead>
+                        <tr class="table-primary">                            
+                            <th>序号</th>
+                            <th>角色</th>
+                            <th>功能名称</th>                            
+                        </tr>
+                    </thead>
+                    <tbody id="yhglAuthoTbody">
+                        <!--<tr>
+                            <td>张三</td>
+                            <td>前端</td>
+                            <td>20180126</td>
+                            <td>20180228</td>
+                            <td>30</td>
+                            <td>30</td>                            
+                        </tr>-->                        
+                    </tbody>
+                    <!--<tfoot>
+                        <tr>
+                            <th><input type="checkbox" value=""></th>
+                            <th>序号</th>
+                            <th>角色</th>
+                            <th>功能名称</th>    
+                        </tr>
+                    </tfoot>-->
+                </table>
+            </div>   
+        </div>
+        
+        <!--操作-修改-->
+        <div class="layui-layer-con-oy" id="jsglEdit" style="display: none;">
+            <form>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>角色名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control role_name" value="111">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"><em class="em-required">*</em>角色功能选择</label>
+                    <div class="col-sm-9">
+                        <input id="citySel4" type="text" class="form-control " placeholder="角色功能选择" readonly value="" onclick="showMenu4(); return false;" />
+                    </div>
+                </div>  
+                <div class="form-group row search-btn-oy">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary m-b-0">保存</button>                            
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        
+        <!--ztree菜单容器-->        
+        <div id="menuContent8" class="menuContent" style="display:none; position: absolute; z-index: 999999999999;">
+            <ul id="treeDemo8" class="ztree" style="margin-top:0; width:300px;"></ul>
+        </div>
+        <div id="menuContent4" class="menuContent" style="display:none; position: absolute; z-index: 999999999999;">
+            <ul id="treeDemo4" class="ztree" style="margin-top:0; width:300px;"></ul>
+        </div>        
+                                       
+            
+            
+            
+        <!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="/view/flxoa/page/nk/files/assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="/view/flxoa/page/nk/files/assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="/view/flxoa/page/nk/files/assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="/view/flxoa/page/nk/files/assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="/view/flxoa/page/nk/files/assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery/js/jquery.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/popper.js/js/popper.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="/view/flxoa/page/nk/files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+
+        <script src="/view/flxoa/page/nk/files/bower_components/modernizr/js/modernizr.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/modernizr/js/css-scrollbars.js"></script>
+        
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/data-table/js/jszip.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/data-table/js/pdfmake.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/data-table/js/vfs_fonts.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+                        
+        <script type="text/javascript" src="/view/flxoa/page/nk/public/daterangepicker/moment.js"></script>
+        <script type="text/javascript" src="/view/flxoa/page/nk/public/daterangepicker/daterangepicker.js"></script>
+        <script src="/view/flxoa/page/nk/files/bower_components/Datedropper3-master/datedropper.min.js"></script>
+                
+        <script src="/view/flxoa/page/nk/files/bower_components/spectrum/js/spectrum.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/pages/advance-elements/custom-picker.js"></script>
+                
+        <script src="/view/flxoa/page/nk/files/assets/pages/data-table/js/data-table-custom.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/pcoded.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/navbar-image/vertical-layout.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/script.js"></script>
+        <script src="/view/flxoa/page/nk/files/assets/js/app.js"></script>
+        <script src="/view/flxoa/page/nk/public/layer/layer.js"></script>   
+        
+        <script type="text/javascript" src="/view/flxoa/page/nk/public/zTree_v3/js/jquery.ztree.core.js"></script>
+        <script type="text/javascript" src="/view/flxoa/page/nk/public/zTree_v3/js/jquery.ztree.excheck.js"></script>
+        <!--<script type="text/javascript" src="/view/flxoa/page/nk/public/zTree_v3/js/jquery.ztree.exedit.js"></script>-->
+        
+        <script src="/view/flxoa/page/nk/public/js/public.js"></script>
+        <script src="/view/flxoa/page/nk/oyxq/js/oy.js"></script>
+        
+        <script>
+            //$.fn.dataTable.ext.errMode = 'throw';
+            
+            
+            //当前页索引
+            var nowPageIndex = 0;
+            
+            
+            //表格数据
+            $.ajax({
+                type:"get",
+                url:"flxoaSystemRoleInif",
+                data:{
+                },
+                dataType:"json",
+                async: true,  //默认是true  ajax请求是异步的
+                success:function(data){
+                	console.log(data);
+                		initData(data);
+                }
+            });  
+            
+                        
+            //初始化表格【角色管理】
+            $('#jsglTable').DataTable({
+                "retrieve": true,
+                "destroy" : true, 
+                "language": {
+                    "url": "/view/flxoa/page/nk/public/resource/zh_CN.json"
+                },
+                "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 2 ] }],
+                "aaSorting": [[0, "asc"]],                    
+                "infoCallback": function( settings, start, end, max, total, pre ) {
+                    bindRowButtonEven();             
+                    return "显示第 "+start+" 至 "+end+" 项结果，共 "+total+" 项";                  
+                }   
+            }); 
+               
+               
+            //初始化表格【角色管理-查看-角色功能】
+            $('#yhglAuthoTable').DataTable({
+                "retrieve": true,
+                "destroy" : true, 
+                "language": {
+                    "url": "/view/flxoa/page/nk/public/resource/zh_CN.json"
+                },
+                "aoColumnDefs": [ { "bSortable": false, "aTargets": [  ] }],
+                "aaSorting": [[0, "asc"]],                    
+                "infoCallback": function( settings, start, end, max, total, pre ) {
+                    //bindRowButtonEven();             
+                    return "显示第 "+start+" 至 "+end+" 项结果，共 "+total+" 项";                  
+                }   
+            }); 
+          
+            
+            //初始化数据【角色管理】
+            function initData(data){                
+                //定义表格对象
+                var jsgl = $("#jsglTable").DataTable();
+                //清空表格数据
+                jsgl.clear().draw();                
+                //添加表格数据
+                var jsonData = data[0].rolemessage;
+                var i = 0;
+                for(i;i<jsonData.length;i++){
+                    //为表格添加每一行数据
+                    jsgl.row.add([                          
+                        '<em class="em-number">'+(i+1)+'</em>',
+                        '<em class="role_name">'+jsonData[i].name+'</em>',
+                        '<em class="em-id" style="display:none;">'+jsonData[i].id+'</em>'+
+                        '<a href="javascript:void(0);" class="jsgl-check-btn"><i class="fa fa-eye" title="查看"></i></a>'+
+                        '<a href="javascript:void(0);" class="jsgl-edit-btn"><i class="fa fa-pencil" title="修改"></i></a>'+
+                        '<a href="javascript:void(0);" class="jsgl-delete-btn"><i class="fa fa-trash" title="删除"></i></a>',
+                    ]).draw();
+                };  
+                //跳转到上次点击的页索引
+                jsgl.page(nowPageIndex).draw(false);
+                //绑定表格每行操作按钮
+                bindRowButtonEven();
+            };
+            
+            
+            //保存翻页后的当前页索引
+            $('#jsglTable').on( 'page.dt', function () {
+                var info = $('#jsglTable').DataTable().page.info();
+                nowPageIndex = info.page;
+            });
+          
+          
+          	//初始化数据【角色管理-查看-角色功能】
+            function initRoleFunData(data){
+                //定义表格对象
+                var yhglAuthoTable = $("#yhglAuthoTable").DataTable();
+                //清空表格数据
+                yhglAuthoTable.clear().draw();
+                //添加表格数据
+                var jsonData = data[0].rolefunmessage;
+                var i = 0;
+                for(i;i<jsonData.length;i++){
+                    //为表格添加每一行数据
+                    yhglAuthoTable.row.add([                        
+                        '<em class="em-number">'+(i+1)+'</em>',
+                        '<em class="em-roleName">'+jsonData[i].roleName+'</em>',
+                        '<em class="em-id" style="display:none;">'+jsonData[i].id+'</em>'+jsonData[i].functionName,
+                    ]).draw();
+                };  
+                //表格CheckBox操作
+                //tableCheckbox("#yhglAuthoTable");
+            };
+            
+            
+            //操作按钮hover提示效果
+            selfTips("#jsglTable tr td .jsgl-check-btn","查看");
+            selfTips("#jsglTable tr td .jsgl-edit-btn","修改");
+            selfTips("#jsglTable tr td .jsgl-delete-btn","删除");
+            
+                                                
+            //搜索-查询
+            $(".search-wrap-fst .btn-inquiry").bind("click").on("click",function(){                
+                inquiryData();                                                
+            });
+            
+            
+            //搜索-重置
+            $(".search-wrap-fst .btn-reset").bind("click").on("click",function(){
+                $(".search-wrap-fst .role_name").val("");   
+                inquiryData(); 
+                /*$.ajax({
+                    type:"post",
+                    url:"flxoaSystemRoleInif",
+                    data:{},
+                    dataType:"json",
+                    async:true,  //默认是true  ajax请求是异步的
+                    success:function(data){
+                    	initData(data);
+                    }
+                });*/ 
+            });
+            
+            
+            //添加角色
+            $(".jsgl-add-role-btn").bind("click").on("click",function(){
+				//清空数据
+				$("#addRoleName").val("");
+				$("#citySel8").val("");
+				treeInit("");
+                var jsglAddLayer = layer.open({
+                    type: 1,
+                    area: ['40%', '40%'],
+                    shadeClose: true, //点击遮罩关闭
+                    scrollbar: false,
+                    maxmin:true,
+                    title: '添加角色',
+                    content: $('#jsglAdd')
+                });				
+				$("#jsglAdd  .role-save").unbind();
+                $("#jsglAdd  .role-save").on("click",function(){
+            		var roleName = $("#jsglAdd .role_name").val(); 
+            		//获取选中功能id
+            		var treeObj4 = $.fn.zTree.getZTreeObj("treeDemo8");
+                    var nodes4 = treeObj4.getCheckedNodes(true);                        
+                    var arr4 = [];
+                    for(var i=0;i<nodes4.length;i++){
+                        arr4.push(nodes4[i].id);
+                    }; 
+                    //表单验证    
+                    if(roleName == null || roleName == ""){
+                        layer.msg("请输入角色名称！");
+                        return;
+                    };
+                    if(arr4 == null || arr4 == ""){
+                        layer.msg("请选择角色功能！");
+                        return;
+                    };                    
+                    $.ajax({
+                        type:"post",
+                        url:"flxoaSystemRoleAdd",
+                        async:true,
+                        dataType:"json",
+                        data:{                                
+                            "role_funct":arr4,
+                            "roleName":roleName
+                        },
+                        success:function(data){
+                            if(data == "1"){
+                                layer.msg("添加成功！");
+                                layer.close(jsglAddLayer);
+                                //刷新表格数据
+                                inquiryData();                                                                             
+                            }else{
+                                layer.msg("添加失败！");
+                                layer.close(jsglAddLayer);
+                            };
+                        }
+                    });                	
+                });
+            });
+            
+            
+            //绑定行操作按钮
+            function bindRowButtonEven(){
+                //遍历每行数据
+                $("#jsglTbody tr").each(function(){
+                	var roleid = $(this).find(".em-id").text();
+                    var role_name = $(this).find(".role_name").text();
+                		
+        			
+            		//操作-删除             
+                    $(this).find(".jsgl-delete-btn").unbind("click").on('click', function(){
+                        var obj = $(this).parent().parent();
+                        layer.confirm('您确定要删除这条数据吗？', {
+                            btn: ['确定', '取消'] //按钮
+                        }, function() {
+                            obj.remove();
+                            $.ajax({
+                                type:"post",
+                                url:"flxoaSystemRoleDelete",
+                                async:true,
+                                dataType:"json",
+                                data:{                                
+                                    "roleid":roleid
+                                },
+                                success:function(data){
+                                    if(data == "1"){        								     
+                                        layer.msg("删除成功！");
+                                        //layer.closeAll("page");
+                                        //刷新表格数据
+                                        inquiryData();   
+                                    }else{
+                                        layer.msg("删除失败！");
+                                        //layer.closeAll("page");
+                                    };
+                                }
+                            });
+                            layer.msg('删除成功', {
+                                icon: 1
+                            });
+                        }, function() {
+                            
+                        });
+                    }); 
+                		
+                		
+                	//操作-修改             
+                    $(this).find(".jsgl-edit-btn").unbind("click").on('click', function(){  
+						//alert(idx);
+						$('#jsglAdd').find(".role_name").val(role_name);
+						$.ajax({
+							type:"post",
+							url:"flxoaSystemRoleFuncation",
+							data:{
+								"roleId":roleid
+							},
+							dataType:"json",
+							async: true,
+							success: function(data){
+								var checkIds = "";
+								var roleNames = "";
+								var jsonData = data[0].rolefunmessage
+								if(null != jsonData){
+									var i = 0;
+									for(i;i<jsonData.length;i++){
+										checkIds += jsonData[i].funcationId + ",";
+										roleNames +=  jsonData[i].functionName + ",";
+									}
+									if("" != checkIds){
+										checkIds = checkIds.substring(0,checkIds.length-1);
+									}
+								}
+								//角色功能树被选中
+								treeInit(checkIds);
+								//角色功能
+								$("#citySel8").val(roleNames);
+							},
+							error: function(){
+								alert("网络繁忙，请稍后再试");
+							}
+						}); 					  
+                        var jsglAddLayer = layer.open({
+                            type: 1,
+                            area: ['40%', '40%'],
+                            shadeClose: true, //点击遮罩关闭
+                            scrollbar: false,
+                            maxmin:true,
+                            title: '修改',
+                            content: $('#jsglAdd')
+                        });    
+						$("#jsglAdd  .role-save").unbind();
+                		$("#jsglAdd  .role-save").on("click",function(){
+                		    var roleNameapdata = $("#jsglAdd .role_name").val(); 
+     	            		//获取选中功能id
+     	            		var treeObj4 = $.fn.zTree.getZTreeObj("treeDemo8");
+                            var nodes4 = treeObj4.getCheckedNodes(true);                        
+                            var arr4 = [];
+                            for(var i=0;i<nodes4.length;i++){
+                                arr4.push(nodes4[i].id);
+                            }; 
+                            //表单验证    
+                            if(roleNameapdata == null || roleNameapdata == ""){
+                                layer.msg("请输入角色名称！");
+                                return;
+                            };
+                            if(arr4 == null || arr4 == ""){
+                                layer.msg("请选择角色功能！");
+                                return;
+                            };  
+                            $.ajax({
+                                type:"post",
+                                url:"flxoaSystemRoleUpdata",
+                                async:true,
+                                dataType:"json",
+                                data:{                                
+                                    "role_funct":arr4,
+                                    "roleName":roleNameapdata,
+                                    "roleid":roleid,
+                                },
+                                success:function(data){
+                                    if(data == "1"){
+                                        layer.msg("修改成功！");
+                                        layer.close(jsglAddLayer);
+                                        //刷新表格数据
+                                        inquiryData();                                                                                  
+                                    }else{
+                                        layer.msg("添加失败！");
+                                        layer.close(jsglAddLayer);
+                                    };
+                                }
+                            });
+                        });
+                    });
+                		
+                		
+                	//操作-查看             
+                    $(this).find(".jsgl-check-btn").unbind("click").on('click', function(){  
+                        layer.open({
+                            type: 1,
+                            area: ['60%', '70%'],
+                            shadeClose: true, //点击遮罩关闭
+                            scrollbar: false,
+                            maxmin:true,
+                            title: '查看',
+                            content: $('#yhglAutho')
+                        }); 
+                        $('#yhglAutho').find(".user_true_name").val(role_name);
+                        $.ajax({
+                            type:"post",
+                            url:"flxoaSystemRoleFuncation",
+                            data:{
+                            	"roleId":roleid
+                                //传递每条信息的某个参数，要求后台只返回该条信息的字段
+                            },
+                            dataType:"json",
+                            async: true,
+                            success: function(data){                                
+                            	initRoleFunData(data);
+                             	console.log(data);
+                            },
+                            error: function(){
+                                alert("网络繁忙，请稍后再试");
+                            }
+                        });                        
+                    });
+                });
+            };   
+            
+            
+            //功能树
+            var setting8 = {
+                check: {
+                    enable: true,
+                    chkboxType: {"Y":"s", "N":"s"}
+                    
+                },
+                /*view: {
+                    dblClickExpand: false
+                },*/
+                data: {
+                    simpleData: {
+                        enable: true,
+                        idKey: "id",
+                        pIdKey: "parentId",
+                        rootpId: ""
+                    }
+                },
+                callback: {
+                    //beforeClick: beforeClick8,
+                    onCheck: onCheck8
+                }
+            };
+			
+			function treeInit(checkIds){
+				$.ajax({
+					url:"/flxoa/function/getlist",
+					type : "get",
+					dataType:"json",
+					data : {
+						"checkIds":checkIds
+					},
+					success:function(data){
+						//alert(JSON.stringify(data))
+						zNodes8 = data;
+						var t = $.fn.zTree.init($("#treeDemo8"), setting8, zNodes8);
+						/*var t = $("#treeDemo6");
+						t = $.fn.zTree.init(t, setting6, zNodes6);*/
+						//展开根节点第一级
+						var nodes = t.getNodes();
+						t.expandNode(nodes[0], true, false, true);
+					}
+				});			
+			}
+			treeInit("");
+            function beforeClick8(treeId, treeNode) {
+                var check = (treeNode && !treeNode.isParent);
+                //if (!check) layer.msg("只能选择城市...");
+                return check;
+            }            
+            function onCheck8(e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("treeDemo8"),
+                nodes = zTree.getCheckedNodes(true),
+                v = "";
+                for (var i=0, l=nodes.length; i<l; i++) {
+                    v += nodes[i].name + ",";
+                }
+                if (v.length > 0 ) v = v.substring(0, v.length-1);
+				$("#citySel8").val(v);
+                //var cityObj = $("#citySel8");
+                //cityObj.attr("value", v);
+            }
+            function showMenu8() {
+                var cityObj = $("#citySel8");
+                var cityOffset = $("#citySel8").offset();
+                $("#menuContent8").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");    
+                $("body").bind("mousedown", onBodyDown8);
+            }
+            function hideMenu8() {
+                $("#menuContent8").fadeOut("fast");
+                $("body").unbind("mousedown", onBodyDown8);
+            }
+            function onBodyDown8(event) {
+                if (!(event.target.id == "menuBtn8" || event.target.id == "menuContent8" || $(event.target).parents("#menuContent8").length>0)) {
+                    hideMenu8();
+                }
+            }
+            
+            
+            
+            
+            //刷新表格数据【带查询条件】
+            function inquiryData(){
+                var role_name = $(".search-wrap-fst .role_name").val();  
+                $.ajax({
+                    type:"post",
+                    url:"flxoaSystemRoleInif",
+                    data:{
+                        "role_name":role_name
+                    },
+                    dataType:"json",
+                    async:true,  //默认是true  ajax请求是异步的
+                    success:function(data){
+                        initData(data);
+                    }
+                }); 
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+package com.flx.flxoa.info.market.controller;
+
+
+import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JsonConfig;
+import net.sf.json.util.CycleDetectionStrategy;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.flx.flxoa.info.market.entity.HxCropcategory;
+import com.flx.flxoa.info.market.manager.HxCropcategoryService;
+
+
+
+@Controller
+public class XxcsCropcategoryController {
+	protected HxCropcategoryService hxCropcategoryService;
+	
+	
+	@Autowired
+	public void setFlxoaProjectInformationService(
+			HxCropcategoryService hxCropcategoryService) {
+		this.hxCropcategoryService = hxCropcategoryService;
+	}
+	
+	@RequestMapping(value = "/CropCategory", produces = "text/html;charset=UTF-8")
+	@ResponseBody
+	public String marketCropcategory(HttpServletRequest request,HttpServletResponse response ,HxCropcategory model) throws UnsupportedEncodingException  {
+		HxCropcategory hxCropcategory = new HxCropcategory();
+		//查询品类信息
+		List<HxCropcategory> list = hxCropcategoryService.query(null);
+		JSONArray jsonArray = JSONArray.fromObject(list);  
+		
+		System.out.println(list);
+		return jsonArray.toString();
+	}
+	
+	@RequestMapping(value = "/CropCategoryType", produces = "text/html;charset=UTF-8")
+	@ResponseBody
+	public String CropCategoryType(HttpServletRequest request,HttpServletResponse response) {
+		Map<String,String> map  = new HashMap<>();
+		return hxCropcategoryService.queryForPage(map);
+	}
+
+}
+	
+	
+	
+	
+	
+	
+	

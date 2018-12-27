@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.flx.flxoa.info.system.entity">
+	<class
+		name="FlxoaSystemUserRole"
+		table="flxoa_system_user_role"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<property
+			name="UserId"
+			column="user_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="RoleId"
+			column="role_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="DepartmentId"
+			column="department_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="CreateTime"
+			column="create_time"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="UpdateTime"
+			column="update_time"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="DeleteFlag"
+			column="delete_flag"
+			type="string"
+			not-null="true"
+			length="2"
+		/>
+		<property
+			name="CreateUserId"
+			column="create_user_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="CreateDepartmentId"
+			column="create_department_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="UpdateUserId"
+			column="update_user_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="UpdateDepartmentId"
+			column="update_department_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

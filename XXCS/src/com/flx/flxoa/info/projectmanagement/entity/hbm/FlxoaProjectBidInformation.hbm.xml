@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.flx.flxoa.info.projectmanagement.entity">
+	<class
+		name="FlxoaProjectBidInformation"
+		table="flxoa_project_bid_information"
+	>
+		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
+		<meta attribute="sync-DAO">false</meta>
+
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+
+		<property
+			name="OldId"
+			column="old_id"
+			type="string"
+			not-null="false"
+			length="40"
+		/>
+			<property
+			name="ProjectId"
+			column="project_id"
+			type="integer"
+			not-null="true"
+			length="32"
+		/>
+		<property
+			name="BiddingDirector"
+			column="bidding_director"
+			type="string"
+			not-null="true"
+			length="45"
+		/>
+		<property
+			name="BiddingDate"
+			column="bidding_date"
+			type="integer"
+			not-null="true"
+			length="11"
+		/>
+		<property
+			name="FollowerId"
+			column="follower_id"
+			type="integer"
+			not-null="true"
+			length="32"
+		/>
+		<property
+			name="OldFollowerName"
+			column="old_follower_name"
+			type="string"
+			not-null="false"
+			length="40"
+		/>
+		<property
+			name="ProjectBiddingStatus"
+			column="project_bidding_status"
+			type="string"
+			not-null="true"
+			length="2"
+		/>
+		<property
+			name="BiddingResults"
+			column="bidding_results"
+			type="string"
+			not-null="true"
+			length="2"
+		/>
+		<property
+			name="CreateTime"
+			column="create_time"
+			type="integer"
+			not-null="true"
+			length="11"
+		/>
+		<property
+			name="UpdateTime"
+			column="update_time"
+			type="integer"
+			not-null="true"
+			length="11"
+		/>
+		<property
+			name="DeleteFlag"
+			column="delete_flag"
+			type="string"
+			not-null="true"
+			length="2"
+		/>
+		<property
+			name="CreateUserId"
+			column="create_user_id"
+			type="integer"
+			not-null="true"
+			length="32"
+		/>
+		<property
+			name="CreateDepartmentId"
+			column="create_department_id"
+			type="integer"
+			not-null="true"
+			length="32"
+		/>
+		<property
+			name="UpdateUserId"
+			column="update_user_id"
+			type="integer"
+			not-null="true"
+			length="32"
+		/>
+		<property
+			name="UpdateDepartmentId"
+			column="update_department_id"
+			type="integer"
+			not-null="true"
+			length="32"
+		/>
+		<property
+			name="BidSchedule"
+			column="bid_schedule"
+			type="string"
+			not-null="true"
+			length="32"
+		/>
+		<property
+			name="Reason"
+			column="reason"
+			type="string"
+			not-null="true"
+			length="500"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

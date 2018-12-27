@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-16 10:52:53 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.HxPersonalsubscriptionsdel" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx_personalsubscriptionsdel">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="cropOfferCode" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="CropOfferCode">
+                <comment>报价表ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="userId" optimistic-lock="true" type="string" unique="false">
+            <column length="11" name="UserID">
+                <comment>用户id</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="subscribeCode" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="SubscribeCode">
+                <comment>订阅表id</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

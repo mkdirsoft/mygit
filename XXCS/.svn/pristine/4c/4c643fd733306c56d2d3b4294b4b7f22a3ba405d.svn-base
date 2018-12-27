@@ -1,0 +1,176 @@
+/* .table-responsive{
+    overflow-x: inherit;
+} */
+.bar-bg{
+    background-color:#ccc;
+    padding: 10px;
+}
+.wid33{
+    width: 33%;
+}
+.wid60{
+    width: 60%;
+}
+.wid20{
+    width: 20%;
+}
+
+.wid100{
+    width: 100%;
+}
+.tex-cent{
+    text-align: center;
+}
+.disp-in-blk{
+    display: inline-block;
+}
+.btn-middle{
+    margin: 0 10%;
+}
+table thead tr th,tbody tr td,th{
+    text-align: center;
+    font-size: 0.6rem;
+    padding: 8px;
+}
+/*tbody>tr:nth-child(odd){
+    background-color: #bee5eb;
+}*/
+/* tbody>tr:nth-child(even){
+     background-color: #bee5eb;
+ }*/
+
+tbody tr td button{
+    cursor: pointer;
+}
+.mrg-tp20{
+    margin-top: 20px;
+}
+.mrg-tb0-lf20{
+    margin: 0 20px;
+}
+.mrg-lf20{
+    margin-left: 20%;
+}
+.mrg-lf8{
+    margin-left: 8%;
+}
+.mrg-l-r10{
+    margin: 0 10px;
+}
+.mrg-l-r5{
+    margin: 0 5px;
+}
+.mrg-b10{
+    margin-bottom: 10px;
+}
+.mrg-b20{
+    margin-bottom: 20px;
+}
+.pad-20{
+   padding: 20px;
+}
+.modal-content{
+    width: 800px;
+    /*  height: 200px;*/
+    /* overflow:auto;*/
+}
+/*#item_nub .form-control,.det-blk{
+    display: inline-block;
+    width: 28%;
+}*/
+.mrg-to-lf10{
+    margin: 0 10px;
+}
+.disp-tab{
+    display: table;
+}
+.bg-c-hui{
+    background-color:#D7D7D7 ;
+    
+}
+.bg-c-lan{
+    background-color:#4099ff ;
+
+}
+.pad-t10-lf0{
+    padding: 10px 0px;
+}
+.pad-t5-lf10{
+    padding: 5px 10px;
+}
+
+.mrg-tb20-lf5{
+    margin: 20px 5px;
+}
+.mrg-cent{
+    margin: 0 auto;
+}
+/*
+a.jFiler-input-choose-btn.btn.btn-primary.waves-effect.waves-light{
+    background-color: red;
+}*/
+.t-alg-cent{
+    text-align: center;
+}
+.but-success{
+    background-color: #2ed8b6;
+    color: #ffffff;
+}
+
+/* .invoice-show-list{
+    overflow-x: auto;
+
+} */
+.invoice-show-list-nav{
+    background-color: #4099ff;
+    color: #ffffff;
+}
+
+/*财务回款列表按钮组*/
+ul.cas-btn-warp>button{
+    margin: 0 5px;
+}
+.col-w{
+    color: #ffffff;
+}
+
+/*功能列表样式*/
+.show-chunk-wrap{
+
+}
+.btu-add-workflow{
+    padding: 6px;
+    font-size: 0.4rem;
+
+}
+
+/*申请表*/
+
+.apply-title{
+
+}
+.btn-trsfm-jsn{
+    padding: 8px 15px;
+}
+/*审批表*/
+
+
+.posion-re{
+    position: relative;
+}
+.posion-ab{
+    position: absolute;
+    left: -17%;
+    bottom: 95%;
+}
+.examine-pop-sty{
+    width: 130%;
+    min-height: 100px;
+    background-color: #666;
+    color: #ffffff;
+}
+.monitoring{
+    background-color: #1b8bf9;
+    color: #fff;
+    border: 1px solid #1b8bf9;
+}

@@ -1,0 +1,166 @@
+'use strict';
+$(document).ready(function() {
+	function buildchartoption() {
+		return {
+			title: {
+				display: !1
+			},
+			tooltips: {
+				enabled: true,
+				intersect: !1,
+				mode: "nearest",
+				xPadding: 10,
+				yPadding: 10,
+				caretPadding: 10
+			},
+			legend: {
+				display: !1,
+				labels: {
+					usePointStyle: !1
+				}
+			},
+			responsive: !0,
+			maintainAspectRatio: !0,
+			hover: {
+				mode: "index"
+			},
+			scales: {
+				xAxes: [{
+					display: !1,
+					gridLines: !1,
+					scaleLabel: {
+						display: !0,
+						labelString: "Month"
+					}
+				}],
+				yAxes: [{
+					display: !1,
+					gridLines: !1,
+					scaleLabel: {
+						display: !0,
+						labelString: "Value"
+					},
+					ticks: {
+						beginAtZero: !0
+					}
+				}]
+			},
+			elements: {
+				point: {
+					radius: 4,
+					borderWidth: 12
+				}
+			},
+			layout: {
+				padding: {
+					left: 0,
+					right: 0,
+					top: 0,
+					bottom: 0
+				}
+			}
+		}
+	}
+	var chart = AmCharts.makeChart("Statistics-chart", {
+		"type": "serial",
+		"theme": "light",
+		"dataDateFormat": "YYYY-MM-DD",
+		"precision": 2,
+		"valueAxes": [{
+			"id": "v1",
+			"title": "Sales",
+			"position": "left",
+			"autoGridCount": false,
+			"labelFunction": function(value) {
+				return "$" + Math.round(value) + "M"
+			}
+		}, {
+			"id": "v2",
+			"gridAlpha": 0.1,
+			"autoGridCount": false
+		}],
+		"graphs": [{
+			"id": "g1",
+			"valueAxis": "v2",
+			"lineThickness": 0,
+			"fillAlphas": 0.2,
+			"lineColor": "#4099ff",
+			"type": "line",
+			"title": "Laptop",
+			"useLineColorForBulletBorder": true,
+			"valueField": "market1",
+			"balloonText": "[[title]]<br /><b style='font-size: 130%'>[[value]]</b>"
+		}, {
+			"id": "g2",
+			"valueAxis": "v2",
+			"fillAlphas": 0.6,
+			"lineThickness": 0,
+			"lineColor": "#4099ff",
+			"type": "line",
+			"title": "TV",
+			"useLineColorForBulletBorder": true,
+			"valueField": "market2",
+			"balloonText": "[[title]]<br /><b style='font-size: 130%'>[[value]]</b>"
+		}],
+		"chartCursor": {
+			"pan": true,
+			"valueLineEnabled": true,
+			"valueLineBalloonEnabled": true,
+			"cursorAlpha": 0,
+			"valueLineAlpha": 0.2
+		},
+		"categoryField": "date",
+		"categoryAxis": {
+			"parseDates": true,
+			"gridAlpha": 0,
+			"minorGridEnabled": true
+		},
+		"legend": {
+			"position": "top",
+		},
+		"balloon": {
+			"borderThickness": 1,
+			"shadowAlpha": 0
+		},
+		"export": {
+			"enabled": true
+		},
+		"dataProvider": [{
+			"date": "2013-01-01",
+			"market1": 0,
+			"market2": 0,
+			"sales1": 0
+		}, {
+			"date": "2013-02-01",
+			"market1": 130,
+			"market2": 110,
+			"sales1": 0
+		}, {
+			"date": "2013-03-01",
+			"market1": 80,
+			"market2": 60,
+			"sales1": 0
+		}, {
+			"date": "2013-04-01",
+			"market1": 70,
+			"market2": 200,
+			"sales1": 0
+		}, {
+			"date": "2013-05-01",
+			"market1": 180,
+			"market2": 150,
+			"sales1": 0
+		}, {
+			"date": "2013-06-01",
+			"market1": 105,
+			"market2": 90,
+			"sales1": 0
+		}, {
+			"date": "2013-07-01",
+			"market1": 250,
+			"market2": 150,
+			"sales1": 0
+		}]
+	});
+	  
+});

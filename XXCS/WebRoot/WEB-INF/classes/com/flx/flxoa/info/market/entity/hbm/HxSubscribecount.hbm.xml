@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2018-11-9 19:09:53 by Hibernate Tools 5.1.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="flxoa" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.flx.flxoa.info.market.entity.HxSubscribecount" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="hx_subscribecount">
+        <composite-id class="com.flx.flxoa.info.market.entity.HxSubscribecountId" mapped="false" name="id" unsaved-value="undefined">
+            <key-property name="regionCode" type="string">
+                <column length="6" name="RegionCode"/>
+            </key-property>
+            <key-property name="cropCategoryCode" type="string">
+                <column length="6" name="CropCategoryCode"/>
+            </key-property>
+        </composite-id>
+        <property generated="never" lazy="false" name="subscribeCount" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="SubscribeCount"/>
+        </property>
+    </class>
+</hibernate-mapping>

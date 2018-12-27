@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.flx.flxoa.info.cashcollection.entity">
+	<class
+		name="FlxoaCashcollectionClaimAffirm"
+		table="flxoa_cashcollection_claim_affirm"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<property
+			name="CaroId"
+			column="caro_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="ProjectId"
+			column="project_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="CreateTime"
+			column="create_time"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="UpdateTime"
+			column="update_time"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="DeleteFlag"
+			column="delete_flag"
+			type="string"
+			not-null="true"
+			length="2"
+		/>
+		<property
+			name="CreateUserId"
+			column="create_user_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="CreateDepartmentId"
+			column="create_department_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="UpdateUserId"
+			column="update_user_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="UpdateDepartmentId"
+			column="update_department_id"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="Status"
+			column="status"
+			type="string"
+			not-null="true"
+			length="2"
+		/>
+		<property
+			name="RevocationReason"
+			column="revocation_reason"
+			type="string"
+			not-null="true"
+			length="500"
+		/>
+		<property
+			name="OperationContent"
+			column="operation_content"
+			type="string"
+			not-null="true"
+			length="2000"
+		/>
+
+	</class>	
+</hibernate-mapping>
