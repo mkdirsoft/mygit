@@ -314,24 +314,36 @@ public class HxCropofferDaoImpl extends HibernateBaseDao<HxCropoffer, Integer> i
 			List list= queryListForPageBySQL(start, length, hql);
 			for(int i=0;i<list.size();i++){
 				Map<String,String> dataMap=new HashMap<String,String>();
-				Object[] obj=(Object[]) list.get(i);
-				dataMap.put("HxCropofferID", String.valueOf(obj[0]));
-				dataMap.put("RegionCode", String.valueOf(obj[1]));
-				dataMap.put("RegionName", String.valueOf(obj[2]));
-				dataMap.put("CropCategoryCode", String.valueOf(obj[3]));
-				dataMap.put("CropCategoryName", String.valueOf(obj[4]));
-				dataMap.put("HxCropofferStr", String.valueOf(obj[5]));
-				dataMap.put("OfferDate", String.valueOf(obj[6]));
-				dataMap.put("Price", String.valueOf(obj[7]));
-				dataMap.put("Unit", String.valueOf(obj[8]));
-				dataMap.put("UnitName", String.valueOf(obj[9]));
-				dataMap.put("todayTrend", String.valueOf(obj[10]));
-				dataMap.put("fiveDayTrend", String.valueOf(obj[11]));
-				dataMap.put("weekAverage", String.valueOf(obj[12]));
-				dataMap.put("weekTrend", String.valueOf(obj[13]));
-				dataMap.put("reason", String.valueOf(obj[14]));
-				dataMap.put("weekAverage", String.valueOf(obj[15]));
-				dataList.add(dataMap);
+					Object[] obj=(Object[]) list.get(i);
+					dataMap.put("HxCropofferID", String.valueOf(obj[0]));
+					dataMap.put("RegionCode", String.valueOf(obj[1]));
+					dataMap.put("RegionName", String.valueOf(obj[2]));
+					dataMap.put("CropCategoryCode", String.valueOf(obj[3]));
+					dataMap.put("CropCategoryName", String.valueOf(obj[4]));
+					dataMap.put("HxCropofferStr", String.valueOf(obj[5]));
+					dataMap.put("OfferDate", String.valueOf(obj[6]));
+					dataMap.put("Price", String.valueOf(obj[7]));
+					dataMap.put("Unit", String.valueOf(obj[8]));
+					dataMap.put("UnitName", String.valueOf(obj[9]));
+					if(obj[10] == null) {
+						obj[10] = 0;
+					}
+					dataMap.put("todayTrend", String.valueOf(obj[10]));
+					if(obj[11] == null) {
+						obj[11] = 0;
+					}
+					dataMap.put("fiveDayTrend", String.valueOf(obj[11]));
+					if(obj[12] == null) {
+						obj[12] = 0;
+					}
+					dataMap.put("weekAverage", String.valueOf(obj[12]));
+					if(obj[13] == null) {
+						obj[13] = 0;
+					}
+					dataMap.put("weekTrend", String.valueOf(obj[13]));
+					dataMap.put("reason", String.valueOf(obj[14]));
+					dataMap.put("weekAverage", String.valueOf(obj[15]));
+					dataList.add(dataMap);
 			}
 		}catch (Exception e) {
 			throw new RuntimeException();  
