@@ -67,21 +67,12 @@ public class HxAnalysisreportDaoImpl extends HibernateBaseDao<HxAnalysisreport, 
 		if(!CommonUtils.isEmpty(map.get("CropCategoryCode"))) {
 			hql += " and cropCategoryCode = '"+map.get("CropCategoryCode")+"'";
 		}
-		//品类
-		if(!CommonUtils.isEmpty(map.get("Top"))) {
-			hql += " and cropCategoryName = '%"+map.get("Top")+"'";
-		}
 		//开始日期
 		if( !CommonUtils.isEmpty(map.get("ReportDateStart")) && CommonUtils.isEmpty(map.get("ReportDateEnd")) ) {
 			hql += " and analysisReportDate = '"+map.get("OfferDateStart")+"'";
 		}
-		//时间段查询
-		if(!CommonUtils.isEmpty(map.get("ReportDateEnd")) && !CommonUtils.isEmpty(map.get("ReportDateStart"))) {
-			hql += " AND analysisReportDate between  '"+map.get("ReportDateStart")+"' and '"+map.get("ReportDateEnd")+"'";
-		}
 		try {
 			List list= queryListForPageIconBySQL(hql);
-			
 			for(int i=0;i<list.size();i++){
 				Map<String,String> dataMap=new HashMap<String,String>();
 				Object[] obj=(Object[]) list.get(i);

@@ -40,17 +40,11 @@ protected HxAnalysisreportService hxAnalysisreportService;
 	public String analysisReport(HttpServletRequest request,HttpServletResponse response) {
 		HxAnalysisreport hxAnalysisreport = new HxAnalysisreport();
 		String CropCategoryCode = request.getParameter("CropCategoryCode");
-		String Top = request.getParameter("Top");
 		String ReportDateStart = request.getParameter("ReportDateStart");
-		String ReportDateEnd = request.getParameter("ReportDateEnd");
 		//将前台请求参数统一放入map中
 		Map<String,String> map  = new HashMap<>();
 		map.put("CropCategoryCode", CropCategoryCode);
-		map.put("Top", Top);
 		map.put("ReportDateStart", ReportDateStart);
-		map.put("ReportDateEnd", ReportDateEnd);
-		
-		
 		return  hxAnalysisreportService.queryForPage(map);
 	}
 	
